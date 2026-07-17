@@ -6,7 +6,7 @@ import type { FormEvent, KeyboardEvent, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { API_BASE_URL, ApiError, apiFetch } from "@/lib/api";
-import { emptyRegistrationForm, flowStep, normaliseForm, RARE_CASE_CODES } from "@/lib/session";
+import { emptyRegistrationForm, flowStep, mergeConversationFacts, normaliseForm, RARE_CASE_CODES } from "@/lib/session";
 import type {
   AudioTranscriptionResponse,
   CaseSummary,
@@ -127,16 +127,19 @@ export function CaseBadges({ primaryCase, cases }: { primaryCase: CaseSummary | 
   return (
     <section className="case-badges" aria-labelledby="case-result-title" aria-live="polite">
       <header className="case-badges-heading">
-        <div><i aria-hidden="true" /><span>Kết quả nhận diện hồ sơ</span></div>
+        <div><i aria-hidden="true" /><span>Trường hợp của bạn</span></div>
         <strong>{caseCount} {caseCount === 1 ? "trường hợp" : "yếu tố"}</strong>
       </header>
 
       <div className="case-primary">
         <span className="case-primary-marker" aria-hidden="true">01</span>
         <div>
-          <p>Hướng dẫn chính</p>
+          <p>Trường hợp chính</p>
           <h2 id="case-result-title">{primary?.name}</h2>
-          <span>Checklist hiện được ưu tiên theo trường hợp này.</span>
+          <div className="case-primary-reason">
+            <strong>Vì sao hệ thống xác định như vậy?</strong>
+            <span>{primary?.description || "Hệ thống đang tiếp tục làm rõ trường hợp này từ câu trả lời của bạn."}</span>
+          </div>
         </div>
         <small className={primary?.requires_officer_confirmation ? "needs-officer" : "auto-guided"}>
           {primary?.requires_officer_confirmation ? "Cần cán bộ xác nhận" : "Có thể tiếp tục tự hướng dẫn"}
@@ -150,7 +153,7 @@ export function CaseBadges({ primaryCase, cases }: { primaryCase: CaseSummary | 
             {relatedCases.map((item, index) => (
               <li key={item.code}>
                 <span aria-hidden="true">{String(index + 2).padStart(2, "0")}</span>
-                <div><small>Yếu tố liên quan</small><strong>{item.name}</strong></div>
+                <div><small>Yếu tố liên quan</small><strong>{item.name}</strong>{item.description && <p>{item.description}</p>}</div>
                 {item.requires_officer_confirmation && <em>Cần cán bộ</em>}
               </li>
             ))}
@@ -160,7 +163,7 @@ export function CaseBadges({ primaryCase, cases }: { primaryCase: CaseSummary | 
         <div className="case-single"><i aria-hidden="true">✓</i><p><strong>Chưa ghi nhận yếu tố đi kèm</strong><span>Hệ thống vẫn tiếp tục cập nhật theo câu trả lời mới.</span></p></div>
       )}
 
-      <footer className="case-explainer"><span aria-hidden="true">i</span><p>Trường hợp có thể thay đổi khi bạn cung cấp thêm thông tin. Giấy tờ chỉ được lấy từ checklist của backend.</p></footer>
+      <footer className="case-explainer"><span aria-hidden="true">i</span><p>Kết quả dựa trên những gì bạn đã chia sẻ và có thể được cập nhật khi có thêm thông tin.</p></footer>
     </section>
   );
 }
@@ -416,12 +419,13 @@ export function IntakeChat({ messages, pending, confidence, onSend, onTranscribe
   async function submit() {
     const message = draft.trim();
     if (!message || pending) return;
+    setDraft("");
+    resetVoice();
     try {
       await onSend(message);
-      setDraft("");
-      resetVoice();
     } catch {
-      // Draft stays intact so the user can retry.
+      setDraft(message);
+      requestAnimationFrame(() => textareaRef.current?.focus());
     }
   }
 
@@ -562,7 +566,7 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
   return (
     <form className="form-card" onSubmit={submit} aria-labelledby="form-title">
       <div className="content-heading"><div><p>Thông tin đăng ký</p><h1 id="form-title">Kiểm tra thông tin trước khi nộp</h1></div></div>
-      <p className="form-intro">Điền đúng như giấy tờ hiện có. Các trường có dấu * là bắt buộc.</p>
+      <p className="form-intro"><strong>Thông tin bạn đã chia sẻ được điền sẵn.</strong> Hãy kiểm tra lại và chỉ bổ sung những ô còn trống. Các trường có dấu * là bắt buộc.</p>
 
       <fieldset>
         <legend>Thông tin của trẻ</legend>
@@ -668,6 +672,7 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
   const [sending, setSending] = useState(false);
   const [checking, setChecking] = useState(false);
   const [error, setError] = useState("");
+  const editedFieldsRef = useRef<Set<keyof RegistrationForm>>(new Set());
 
   async function loadChecklist(id: string, quiet = false) {
     try {
@@ -691,7 +696,7 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
         setSession(detail);
         setMessages(detail.messages);
         setIssues(detail.precheck_results);
-        setForm({ ...emptyRegistrationForm(), ...detail.form_data } as RegistrationForm);
+        setForm(mergeConversationFacts(emptyRegistrationForm(), detail.form_data));
         setNeedsOfficer(detail.cases.some((item) => item.requires_officer_confirmation));
         setView(detail.status === "precheck" || detail.status === "ready" ? "form" : "chat");
         localStorage.setItem(STORAGE_KEY, detail.id);
@@ -708,23 +713,24 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
 
   async function sendMessage(message: string) {
     if (!session || sending) return;
+    const optimisticId = `pending-${Date.now()}`;
+    const optimisticMessage: ChatMessage = { role: "user", content: message, created_at: optimisticId };
     setSending(true);
     setError("");
+    setMessages((current) => [...current, optimisticMessage]);
     try {
       const result = await apiFetch<IntakeResponse>("/intake/message", {
         method: "POST",
         body: JSON.stringify({ session_id: session.id, message }),
       }, 30_000);
-      const newMessages: ChatMessage[] = [
-        { role: "user", content: message },
-        { role: "assistant", content: result.reply },
-      ];
-      setMessages((current) => [...current, ...newMessages]);
+      setMessages((current) => [...current, { role: "assistant", content: result.reply }]);
       setSession((current) => current ? { ...current, ...result.session } : current);
+      setForm((current) => mergeConversationFacts(current, result.form_data, editedFieldsRef.current));
       setConfidence(result.confidence);
       setNeedsOfficer(result.needs_officer_confirmation || result.session.cases.some((item) => item.requires_officer_confirmation));
       if (result.session.cases.length) await loadChecklist(result.session.id);
     } catch (cause) {
+      setMessages((current) => current.filter((item) => item.created_at !== optimisticId));
       setError(cause instanceof Error ? cause.message : "Không thể gửi câu trả lời.");
       throw cause;
     } finally {
@@ -776,6 +782,15 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
     });
   }
 
+  function updateForm(next: RegistrationForm) {
+    setForm((current) => {
+      for (const key of Object.keys(current) as (keyof RegistrationForm)[]) {
+        if (current[key] !== next[key]) editedFieldsRef.current.add(key);
+      }
+      return next;
+    });
+  }
+
   if (restoring) {
     return <AppShell session><main className="session-loading" aria-live="polite"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><p>Đang khôi phục phiên làm việc...</p></main></AppShell>;
   }
@@ -813,7 +828,7 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
               </>
             ) : (
               <>
-                <BirthRegistrationForm cases={session.cases} form={form} pending={checking} onChange={setForm} onSubmit={runPrecheck} />
+                <BirthRegistrationForm cases={session.cases} form={form} pending={checking} onChange={updateForm} onSubmit={runPrecheck} />
                 <PrecheckResults issues={issues} status={session.status} onFix={focusField} />
                 {officerRequired && session.status !== "ready" && issues.some((issue) => issue.source === "llm") && <OfficerConfirmationBanner />}
                 {(session.status === "precheck" || session.status === "ready") && <PdfPreview sessionId={session.id} />}

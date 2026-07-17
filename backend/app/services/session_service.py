@@ -28,6 +28,7 @@ def case_summaries(db: Session, session_id: uuid.UUID) -> list[CaseSummary]:
         CaseSummary(
             code=case.code,
             name=case.name,
+            description=case.description,
             is_primary=is_primary,
             requires_officer_confirmation=case.requires_officer_confirmation,
         )

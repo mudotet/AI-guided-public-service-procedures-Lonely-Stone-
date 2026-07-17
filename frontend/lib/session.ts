@@ -43,6 +43,19 @@ export function normaliseForm(form: RegistrationForm, caseCodes: string[]): Reco
   };
 }
 
+export function mergeConversationFacts(
+  form: RegistrationForm,
+  facts: Record<string, unknown>,
+  editedFields: ReadonlySet<keyof RegistrationForm> = new Set(),
+): RegistrationForm {
+  const next = { ...form } as Record<string, unknown>;
+  for (const key of Object.keys(form) as (keyof RegistrationForm)[]) {
+    const value = facts[key];
+    if (!editedFields.has(key) && value !== undefined && value !== null && value !== "") next[key] = value;
+  }
+  return next as RegistrationForm;
+}
+
 export function flowStep(status: SessionStatus, view: "chat" | "form", hasCases: boolean): number {
   if (status === "ready") return 3;
   if (status === "precheck" || view === "form") return 2;

@@ -74,6 +74,7 @@ class SessionCreate(BaseModel):
 class CaseSummary(BaseModel):
     code: str
     name: str
+    description: str | None = None
     is_primary: bool
     requires_officer_confirmation: bool
 
@@ -96,6 +97,7 @@ class IntakeMessageRequest(BaseModel):
 class IntakeMessageResponse(BaseModel):
     session: SessionResponse
     reply: str
+    form_data: dict[str, Any]
     missing_fields: list[str]
     confidence: float
     needs_officer_confirmation: bool

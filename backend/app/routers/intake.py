@@ -113,6 +113,7 @@ def intake_message(payload: IntakeMessageRequest, db: Session = Depends(get_db))
     return IntakeMessageResponse(
         session=session_response(db, session),
         reply=reply,
+        form_data=stored_form.data,
         missing_fields=classification.missing_fields,
         confidence=classification.confidence,
         needs_officer_confirmation=(
