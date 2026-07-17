@@ -1,32 +1,58 @@
 import uuid
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
+from fastapi.responses import Response
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.database import get_db
 from app.models import (
-    PrecheckResult,
     Procedure,
     SessionFormData,
     SessionMessage,
     UserSession,
 )
 from app.schemas import (
+    AudioTranscriptionResponse,
     IntakeMessageRequest,
     IntakeMessageResponse,
-    MessageResponse,
-    PrecheckIssue,
     SessionCreate,
     SessionDetail,
     SessionResponse,
 )
 from app.services.case_classifier import classify_case, merged_case_codes, replace_session_cases
 from app.services.openai_client import OpenAIClient
-from app.services.session_service import case_summaries, session_response, trusted_context
+from app.services.pdf_generator import build_birth_registration_pdf
+from app.services.session_service import case_summaries, session_detail, session_response, trusted_context
 
 router = APIRouter(tags=["sessions", "intake"])
+
+MAX_AUDIO_BYTES = 10 * 1024 * 1024
+SUPPORTED_AUDIO_TYPES = {
+    "audio/m4a": "m4a",
+    "audio/mp4": "m4a",
+    "audio/mpeg": "mp3",
+    "audio/wav": "wav",
+    "audio/webm": "webm",
+    "audio/x-m4a": "m4a",
+    "audio/x-wav": "wav",
+}
+
+
+def validate_audio(content_type: str | None, audio: bytes) -> tuple[str, str]:
+    normalized_type = (content_type or "").split(";", 1)[0].strip().lower()
+    extension = SUPPORTED_AUDIO_TYPES.get(normalized_type)
+    if not extension:
+        raise HTTPException(
+            status_code=415,
+            detail="Định dạng ghi âm chưa được hỗ trợ. Hãy dùng WebM, M4A, MP3 hoặc WAV.",
+        )
+    if not audio:
+        raise HTTPException(status_code=422, detail="Đoạn ghi âm đang trống. Vui lòng thu âm lại.")
+    if len(audio) > MAX_AUDIO_BYTES:
+        raise HTTPException(status_code=413, detail="Đoạn ghi âm quá lớn. Vui lòng ghi tối đa 90 giây.")
+    return normalized_type, extension
 
 
 @router.post("/sessions", response_model=SessionResponse, status_code=status.HTTP_201_CREATED)
@@ -96,30 +122,58 @@ def intake_message(payload: IntakeMessageRequest, db: Session = Depends(get_db))
     )
 
 
+@router.post("/intake/audio", response_model=AudioTranscriptionResponse)
+def transcribe_audio(
+    session_id: uuid.UUID = Form(...),
+    audio: UploadFile = File(..., description="Đoạn ghi âm WebM, M4A, MP3 hoặc WAV; tối đa 10 MB"),
+    db: Session = Depends(get_db),
+) -> AudioTranscriptionResponse:
+    if not db.get(UserSession, session_id):
+        raise HTTPException(status_code=404, detail="Không tìm thấy phiên làm việc")
+    if not settings.openai_api_key:
+        raise HTTPException(status_code=503, detail="OPENAI_API_KEY chưa được cấu hình")
+
+    try:
+        audio_bytes = audio.file.read(MAX_AUDIO_BYTES + 1)
+    finally:
+        audio.file.close()
+    content_type, extension = validate_audio(audio.content_type, audio_bytes)
+
+    try:
+        transcript = OpenAIClient().transcribe(
+            filename=f"recording.{extension}",
+            audio=audio_bytes,
+            content_type=content_type,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail="Không thể chuyển giọng nói thành văn bản lúc này") from exc
+    return AudioTranscriptionResponse(transcript=transcript)
+
+
 @router.get("/sessions/{session_id}", response_model=SessionDetail)
 def get_session(session_id: uuid.UUID, db: Session = Depends(get_db)) -> SessionDetail:
     session = db.get(UserSession, session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Không tìm thấy phiên làm việc")
-    summary = session_response(db, session)
-    messages = list(
-        db.scalars(
-            select(SessionMessage)
-            .where(SessionMessage.session_id == session.id)
-            .order_by(SessionMessage.created_at, SessionMessage.id)
-        )
-    )
+    return session_detail(db, session)
+
+
+@router.get("/sessions/{session_id}/birth-registration.pdf", response_class=Response)
+def get_birth_registration_pdf(
+    session_id: uuid.UUID,
+    download: bool = False,
+    db: Session = Depends(get_db),
+) -> Response:
+    session = db.get(UserSession, session_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phiên làm việc")
     form = db.scalar(select(SessionFormData).where(SessionFormData.session_id == session.id))
-    results = list(
-        db.scalars(
-            select(PrecheckResult)
-            .where(PrecheckResult.session_id == session.id)
-            .order_by(PrecheckResult.created_at, PrecheckResult.id)
-        )
-    )
-    return SessionDetail(
-        **summary.model_dump(),
-        messages=[MessageResponse.model_validate(message) for message in messages],
-        form_data=form.data if form else {},
-        precheck_results=[PrecheckIssue.model_validate(result) for result in results],
+    if not form:
+        raise HTTPException(status_code=409, detail="Chưa có thông tin biểu mẫu để tạo PDF")
+
+    disposition = "attachment" if download else "inline"
+    return Response(
+        content=build_birth_registration_pdf(form.data, str(session.id)),
+        media_type="application/pdf",
+        headers={"Content-Disposition": f'{disposition}; filename="birth-registration-{session.id}.pdf"'},
     )

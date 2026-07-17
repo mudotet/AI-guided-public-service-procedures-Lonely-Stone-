@@ -1,5 +1,5 @@
 import uuid
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -101,6 +101,10 @@ class IntakeMessageResponse(BaseModel):
     needs_officer_confirmation: bool
 
 
+class AudioTranscriptionResponse(BaseModel):
+    transcript: str
+
+
 class ChecklistDocument(BaseModel):
     code: str
     name: str
@@ -163,3 +167,63 @@ class SessionDetail(SessionResponse):
     messages: list[MessageResponse]
     form_data: dict[str, Any]
     precheck_results: list[PrecheckIssue]
+
+
+class AdminStats(BaseModel):
+    total: int
+    intake: int
+    checklist: int
+    precheck: int
+    ready: int
+    needs_officer_confirmation: int
+
+
+class AdminCaseStat(BaseModel):
+    code: str
+    name: str
+    description: str | None
+    requires_officer_confirmation: bool
+    total: int
+
+
+class AdminSessionSummary(BaseModel):
+    id: uuid.UUID
+    status: str
+    primary_case: CaseSummary | None
+    cases: list[CaseSummary]
+    needs_officer_confirmation: bool
+    last_user_message: str | None
+    created_at: datetime
+    updated_at: datetime
+
+
+class AdminDashboardResponse(BaseModel):
+    stats: AdminStats
+    case_stats: list[AdminCaseStat]
+    sessions: list[AdminSessionSummary]
+    result_count: int
+    page: int
+    page_size: int
+    total_pages: int
+
+
+class AdminSessionUpdate(BaseModel):
+    form_data: dict[str, Any]
+
+
+class OfficialSource(BaseModel):
+    code: str
+    title: str
+    publisher: str
+    domain: str
+    url: str
+
+
+class TrustResponse(BaseModel):
+    procedure_code: str
+    last_reviewed_on: date
+    training_disclosure: str
+    ai_role: str
+    deterministic_role: str
+    human_role: str
+    sources: list[OfficialSource]
