@@ -11,9 +11,11 @@ class Settings(BaseSettings):
     openai_api_key: str | None = None
     openai_classifier_model: str = "gpt-4.1-mini"
     openai_assistant_model: str = "gpt-4.1"
+    openai_transcription_model: str = "gpt-4o-transcribe"
+    admin_api_key: str | None = None
     cors_origins: str = "http://localhost:3000,http://localhost:5173"
 
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(env_file=(".env", ".env.local"), extra="ignore")
 
     @field_validator("database_url", mode="before")
     @classmethod

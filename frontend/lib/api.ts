@@ -16,11 +16,16 @@ function statusMessage(status: number): string | undefined {
 export async function apiFetch<T>(path: string, init: RequestInit = {}, timeoutMs = 15_000): Promise<T> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  const headers = new Headers(init.headers);
+  const isFormData = typeof FormData !== "undefined" && init.body instanceof FormData;
+  if (init.body && !isFormData && !headers.has("Content-Type")) {
+    headers.set("Content-Type", "application/json");
+  }
 
   try {
     const response = await fetch(`${API_BASE_URL}${path}`, {
       ...init,
-      headers: init.body ? { "Content-Type": "application/json", ...init.headers } : init.headers,
+      headers,
       signal: controller.signal,
     });
     const text = await response.text();
@@ -28,7 +33,7 @@ export async function apiFetch<T>(path: string, init: RequestInit = {}, timeoutM
 
     if (!response.ok) {
       const detail = typeof data.detail === "string" ? data.detail : undefined;
-      throw new ApiError(statusMessage(response.status) || detail || `Yêu cầu thất bại (${response.status}).`, response.status);
+      throw new ApiError(detail || statusMessage(response.status) || `Yêu cầu thất bại (${response.status}).`, response.status);
     }
     return data as T;
   } catch (error) {

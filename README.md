@@ -155,7 +155,13 @@ uvicorn app.main:app --reload
 
 Swagger UI: `http://localhost:8000/docs`
 
-### Frontend
+## Cổng quản lý
+
+Đặt `ADMIN_API_KEY` trong `backend/.env.local`, sau đó mở `http://localhost:3000/admin`. Phiên mới chỉ phát sinh từ luồng hướng dẫn của người dân; cổng cán bộ cho phép xem, cập nhật và xóa phiên hỗ trợ, đồng thời xem hoặc tải bản PDF biểu mẫu đã điền. Mọi thao tác đều yêu cầu mã truy cập, mã chỉ được giữ trong `sessionStorage` của trình duyệt. Đây là quản lý phiên hỗ trợ, không phải thao tác cấp giấy khai sinh chính thức.
+
+Backend nhận ghi âm tại `POST /intake/audio` và chuyển giọng nói tiếng Việt thành chữ bằng model cấu hình qua `OPENAI_TRANSCRIPTION_MODEL`. File audio chỉ được xử lý trong request, không được lưu vào cơ sở dữ liệu.
+
+## Quy ước case
 
 ```bash
 cd frontend

@@ -4,14 +4,17 @@ from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.models import (
+    PrecheckResult,
     Procedure,
     ProcedureCase,
     ProcedureQuestion,
     RequiredDocument,
+    SessionFormData,
     SessionCase,
+    SessionMessage,
     UserSession,
 )
-from app.schemas import CaseSummary, SessionResponse
+from app.schemas import CaseSummary, MessageResponse, PrecheckIssue, SessionDetail, SessionResponse
 
 
 def case_summaries(db: Session, session_id: uuid.UUID) -> list[CaseSummary]:
@@ -42,6 +45,31 @@ def session_response(db: Session, session: UserSession) -> SessionResponse:
         cases=cases,
         created_at=session.created_at,
         updated_at=session.updated_at,
+    )
+
+
+def session_detail(db: Session, session: UserSession) -> SessionDetail:
+    summary = session_response(db, session)
+    messages = list(
+        db.scalars(
+            select(SessionMessage)
+            .where(SessionMessage.session_id == session.id)
+            .order_by(SessionMessage.created_at, SessionMessage.id)
+        )
+    )
+    form = db.scalar(select(SessionFormData).where(SessionFormData.session_id == session.id))
+    results = list(
+        db.scalars(
+            select(PrecheckResult)
+            .where(PrecheckResult.session_id == session.id)
+            .order_by(PrecheckResult.created_at, PrecheckResult.id)
+        )
+    )
+    return SessionDetail(
+        **summary.model_dump(),
+        messages=[MessageResponse.model_validate(message) for message in messages],
+        form_data=form.data if form else {},
+        precheck_results=[PrecheckIssue.model_validate(result) for result in results],
     )
 
 

@@ -73,6 +73,10 @@ export type IntakeResponse = {
   needs_officer_confirmation: boolean;
 };
 
+export type AudioTranscriptionResponse = {
+  transcript: string;
+};
+
 export type PrecheckResponse = {
   session_id: string;
   status: SessionStatus;
@@ -96,4 +100,60 @@ export type RegistrationForm = {
   foreign_documents_translated: boolean | null;
   foreign_documents_legalized: boolean | null;
   rare_case: string | null;
+};
+
+export type AdminStats = {
+  total: number;
+  intake: number;
+  checklist: number;
+  precheck: number;
+  ready: number;
+  needs_officer_confirmation: number;
+};
+
+export type AdminCaseStat = {
+  code: string;
+  name: string;
+  description: string | null;
+  requires_officer_confirmation: boolean;
+  total: number;
+};
+
+export type AdminSessionSummary = {
+  id: string;
+  status: SessionStatus;
+  primary_case: CaseSummary | null;
+  cases: CaseSummary[];
+  needs_officer_confirmation: boolean;
+  last_user_message: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+export type AdminDashboardResponse = {
+  stats: AdminStats;
+  case_stats: AdminCaseStat[];
+  sessions: AdminSessionSummary[];
+  result_count: number;
+  page: number;
+  page_size: number;
+  total_pages: number;
+};
+
+export type OfficialSource = {
+  code: string;
+  title: string;
+  publisher: string;
+  domain: string;
+  url: string;
+};
+
+export type TrustResponse = {
+  procedure_code: string;
+  last_reviewed_on: string;
+  training_disclosure: string;
+  ai_role: string;
+  deterministic_role: string;
+  human_role: string;
+  sources: OfficialSource[];
 };

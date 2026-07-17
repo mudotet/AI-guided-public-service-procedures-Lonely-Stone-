@@ -25,13 +25,16 @@ export function emptyRegistrationForm(): RegistrationForm {
 export function normaliseForm(form: RegistrationForm, caseCodes: string[]): Record<string, string | boolean | null> {
   const outOfWedlock = caseCodes.includes("out_of_wedlock");
   const foreignElement = caseCodes.includes("foreign_element");
+  const wantsFather = outOfWedlock ? (form.wants_father_on_certificate ?? false) : true;
 
   return {
     ...form,
     parents_married: form.parents_married ?? false,
-    wants_father_on_certificate: outOfWedlock ? (form.wants_father_on_certificate ?? false) : false,
+    wants_father_on_certificate: wantsFather,
+    father_full_name: wantsFather ? form.father_full_name : "",
+    father_nationality: wantsFather ? form.father_nationality : "",
     parentage_evidence:
-      outOfWedlock && form.wants_father_on_certificate ? (form.parentage_evidence ?? false) : false,
+      outOfWedlock && wantsFather ? (form.parentage_evidence ?? false) : false,
     has_foreign_documents: foreignElement ? (form.has_foreign_documents ?? false) : false,
     foreign_documents_translated:
       foreignElement && form.has_foreign_documents ? (form.foreign_documents_translated ?? false) : false,

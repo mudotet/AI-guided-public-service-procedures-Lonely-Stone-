@@ -54,6 +54,22 @@ class OpenAIClient:
         )
         return response.output_text
 
+    def transcribe(self, filename: str, audio: bytes, content_type: str) -> str:
+        response = self.client.audio.transcriptions.create(
+            model=settings.openai_transcription_model,
+            file=(filename, audio, content_type),
+            language="vi",
+            prompt=(
+                "Người nói đang trả lời về thủ tục đăng ký khai sinh bằng tiếng Việt. "
+                "Chép nguyên văn bằng chữ Quốc ngữ có dấu; không dịch sang ngôn ngữ khác. "
+                "Các từ thường gặp: giấy chứng sinh, hộ tịch, cha, mẹ, trẻ em, quốc tịch, đăng ký kết hôn."
+            ),
+        )
+        transcript = response.text.strip()
+        if not transcript:
+            raise RuntimeError("OpenAI returned an empty transcript")
+        return transcript
+
     def explain_issues(self, issues: list[dict[str, Any]]) -> IssueRewriteBatch:
         response = self.client.responses.parse(
             model=settings.openai_assistant_model,
@@ -89,4 +105,3 @@ class OpenAIClient:
             text_format=LlmConcernBatch,
         )
         return self._parsed(response, LlmConcernBatch)
-

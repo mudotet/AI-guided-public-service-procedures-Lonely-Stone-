@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation";
 import type { FormEvent, KeyboardEvent, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
-import { ApiError, apiFetch } from "@/lib/api";
+import { API_BASE_URL, ApiError, apiFetch } from "@/lib/api";
 import { emptyRegistrationForm, flowStep, normaliseForm, RARE_CASE_CODES } from "@/lib/session";
 import type {
+  AudioTranscriptionResponse,
   CaseSummary,
   ChatMessage,
   ChecklistResponse,
@@ -21,15 +22,15 @@ import type {
 
 const STORAGE_KEY = "birth-registration-session-id";
 
-export function AppShell({ children }: { children: ReactNode }) {
+export function AppShell({ children, home = false, session = false }: { children: ReactNode; home?: boolean; session?: boolean }) {
   return (
-    <div className="app-shell">
+    <div className={`app-shell${home ? " app-shell-home" : ""}${session ? " app-shell-session" : ""}`}>
       <header className="site-header">
         <Link href="/" className="brand" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
           <span className="brand-mark" aria-hidden="true">KS</span>
           <span><strong>Dịch vụ công</strong><small>Hướng dẫn đăng ký khai sinh</small></span>
         </Link>
-        <span className="header-note">Thông tin được lưu theo phiên</span>
+        <div className="header-actions"><Link className="header-admin-link" href="/admin">Cổng cán bộ</Link></div>
       </header>
       {children}
       <footer className="site-footer">
@@ -71,11 +72,11 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
     <div className={`start-actions ${compact ? "start-actions-compact" : ""}`}>
       <div className="action-row">
         <button className="button button-primary" type="button" onClick={start} disabled={pending}>
-          {pending ? "Đang tạo phiên..." : "Bắt đầu hướng dẫn"}
+          <span>{pending ? "Đang tạo phiên..." : "Bắt đầu hướng dẫn"}</span><i className="button-arrow" aria-hidden="true">↗</i>
         </button>
         {savedId && (
           <Link className="button button-secondary" href={`/session/${savedId}`}>
-            Tiếp tục phiên trước
+            <span>Tiếp tục phiên trước</span><i className="button-arrow" aria-hidden="true">→</i>
           </Link>
         )}
       </div>
@@ -108,16 +109,58 @@ export function ProgressStepper({ current }: { current: number }) {
 
 export function CaseBadges({ primaryCase, cases }: { primaryCase: CaseSummary | null; cases: CaseSummary[] }) {
   if (!primaryCase && cases.length === 0) {
-    return <div className="case-empty"><span>Trường hợp</span><strong>Đang xác định</strong></div>;
+    return (
+      <section className="case-empty" aria-live="polite" aria-label="Hệ thống đang xác định trường hợp">
+        <div className="case-empty-visual" aria-hidden="true"><span /><i /><i /></div>
+        <div className="case-empty-copy">
+          <p><i aria-hidden="true" />Đang nhận diện hồ sơ</p>
+          <h2>Chưa đủ dữ kiện để xác định trường hợp</h2>
+          <span>Trả lời thêm vài câu ngắn. Checklist sẽ xuất hiện ngay khi hệ thống nhận diện được tình huống của bạn.</span>
+        </div>
+        <div className="case-empty-progress" aria-hidden="true"><span /><span /><span /></div>
+      </section>
+    );
   }
   const primary = primaryCase || cases.find((item) => item.is_primary) || cases[0];
+  const relatedCases = cases.filter((item) => item.code !== primary?.code);
+  const caseCount = Math.max(cases.length, primary ? 1 : 0);
   return (
-    <section className="case-badges" aria-label="Trường hợp đã xác định">
-      <p>Trường hợp chính</p>
-      <strong>{primary?.name}</strong>
-      <div className="case-tags">
-        {cases.filter((item) => item.code !== primary?.code).map((item) => <span key={item.code}>{item.name}</span>)}
+    <section className="case-badges" aria-labelledby="case-result-title" aria-live="polite">
+      <header className="case-badges-heading">
+        <div><i aria-hidden="true" /><span>Kết quả nhận diện hồ sơ</span></div>
+        <strong>{caseCount} {caseCount === 1 ? "trường hợp" : "yếu tố"}</strong>
+      </header>
+
+      <div className="case-primary">
+        <span className="case-primary-marker" aria-hidden="true">01</span>
+        <div>
+          <p>Hướng dẫn chính</p>
+          <h2 id="case-result-title">{primary?.name}</h2>
+          <span>Checklist hiện được ưu tiên theo trường hợp này.</span>
+        </div>
+        <small className={primary?.requires_officer_confirmation ? "needs-officer" : "auto-guided"}>
+          {primary?.requires_officer_confirmation ? "Cần cán bộ xác nhận" : "Có thể tiếp tục tự hướng dẫn"}
+        </small>
       </div>
+
+      {relatedCases.length ? (
+        <div className="case-related">
+          <div className="case-related-heading"><div><p>Yếu tố đi kèm</p><span>Được cộng thêm vào checklist</span></div><strong>+{relatedCases.length}</strong></div>
+          <ul>
+            {relatedCases.map((item, index) => (
+              <li key={item.code}>
+                <span aria-hidden="true">{String(index + 2).padStart(2, "0")}</span>
+                <div><small>Yếu tố liên quan</small><strong>{item.name}</strong></div>
+                {item.requires_officer_confirmation && <em>Cần cán bộ</em>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div className="case-single"><i aria-hidden="true">✓</i><p><strong>Chưa ghi nhận yếu tố đi kèm</strong><span>Hệ thống vẫn tiếp tục cập nhật theo câu trả lời mới.</span></p></div>
+      )}
+
+      <footer className="case-explainer"><span aria-hidden="true">i</span><p>Trường hợp có thể thay đổi khi bạn cung cấp thêm thông tin. Giấy tờ chỉ được lấy từ checklist của backend.</p></footer>
     </section>
   );
 }
@@ -209,15 +252,166 @@ type IntakeChatProps = {
   pending: boolean;
   confidence: number | null;
   onSend: (message: string) => Promise<void>;
+  onTranscribe: (audio: Blob, filename: string) => Promise<string>;
 };
 
-export function IntakeChat({ messages, pending, confidence, onSend }: IntakeChatProps) {
+type VoicePhase = "idle" | "recording" | "transcribing" | "review";
+
+export function IntakeChat({ messages, pending, confidence, onSend, onTranscribe }: IntakeChatProps) {
   const [draft, setDraft] = useState("");
+  const [voicePhase, setVoicePhase] = useState<VoicePhase>("idle");
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [audioUrl, setAudioUrl] = useState("");
+  const [recordedAudio, setRecordedAudio] = useState<Blob | null>(null);
+  const [voiceError, setVoiceError] = useState("");
+  const [transcriptReady, setTranscriptReady] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const audioUrlRef = useRef("");
+  const timerRef = useRef<number | null>(null);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [messages, pending]);
+
+  useEffect(() => () => {
+    if (timerRef.current !== null) window.clearInterval(timerRef.current);
+    if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
+    if (recorderRef.current) recorderRef.current.onstop = null;
+    if (recorderRef.current?.state === "recording") recorderRef.current.stop();
+    streamRef.current?.getTracks().forEach((track) => track.stop());
+    if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
+  }, []);
+
+  function clearVoiceTimers() {
+    if (timerRef.current !== null) window.clearInterval(timerRef.current);
+    if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
+    timerRef.current = null;
+    timeoutRef.current = null;
+  }
+
+  function stopMicrophone() {
+    streamRef.current?.getTracks().forEach((track) => track.stop());
+    streamRef.current = null;
+  }
+
+  function replaceAudioUrl(nextUrl: string) {
+    if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
+    audioUrlRef.current = nextUrl;
+    setAudioUrl(nextUrl);
+  }
+
+  function resetVoice() {
+    clearVoiceTimers();
+    stopMicrophone();
+    replaceAudioUrl("");
+    setRecordedAudio(null);
+    setVoicePhase("idle");
+    setElapsedSeconds(0);
+    setVoiceError("");
+    setTranscriptReady(false);
+  }
+
+  function recordingFilename(type: string) {
+    if (type.includes("mp4")) return "ghi-am.m4a";
+    if (type.includes("mpeg")) return "ghi-am.mp3";
+    if (type.includes("wav")) return "ghi-am.wav";
+    return "ghi-am.webm";
+  }
+
+  async function transcribe(audio: Blob) {
+    setVoicePhase("transcribing");
+    setVoiceError("");
+    setTranscriptReady(false);
+    try {
+      const transcript = await onTranscribe(audio, recordingFilename(audio.type));
+      setDraft((current) => current.trim() ? `${current.trim()} ${transcript}` : transcript);
+      setTranscriptReady(true);
+      setVoicePhase("review");
+      requestAnimationFrame(() => textareaRef.current?.focus());
+    } catch (cause) {
+      setVoiceError(cause instanceof Error ? cause.message : "Không thể chuyển ghi âm thành chữ.");
+      setVoicePhase("review");
+    }
+  }
+
+  async function startRecording() {
+    if (pending || voicePhase === "recording" || voicePhase === "transcribing") return;
+    setVoiceError("");
+    setTranscriptReady(false);
+
+    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+      setVoiceError("Trình duyệt này chưa hỗ trợ ghi âm. Bạn vẫn có thể nhập câu trả lời bằng bàn phím.");
+      return;
+    }
+
+    const supportedType = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"]
+      .find((type) => MediaRecorder.isTypeSupported(type));
+    if (!supportedType) {
+      setVoiceError("Trình duyệt không có định dạng ghi âm phù hợp. Bạn vẫn có thể nhập bằng bàn phím.");
+      return;
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream, { mimeType: supportedType });
+      replaceAudioUrl("");
+      setRecordedAudio(null);
+      chunksRef.current = [];
+      streamRef.current = stream;
+      recorderRef.current = recorder;
+
+      recorder.ondataavailable = (event) => {
+        if (event.data.size) chunksRef.current.push(event.data);
+      };
+      recorder.onstop = () => {
+        clearVoiceTimers();
+        stopMicrophone();
+        const audio = new Blob(chunksRef.current, { type: recorder.mimeType || supportedType });
+        setRecordedAudio(audio);
+        if (!audio.size) {
+          setVoiceError("Không thu được âm thanh. Vui lòng kiểm tra micro và thử lại.");
+          setVoicePhase("idle");
+          return;
+        }
+        replaceAudioUrl(URL.createObjectURL(audio));
+        void transcribe(audio);
+      };
+      recorder.onerror = () => {
+        setVoiceError("Quá trình ghi âm bị gián đoạn. Vui lòng thử lại.");
+      };
+
+      recorder.start(250);
+      const startedAt = Date.now();
+      setElapsedSeconds(0);
+      setVoicePhase("recording");
+      timerRef.current = window.setInterval(() => {
+        setElapsedSeconds(Math.min(90, Math.floor((Date.now() - startedAt) / 1000)));
+      }, 500);
+      timeoutRef.current = window.setTimeout(() => {
+        if (recorder.state === "recording") recorder.stop();
+      }, 90_000);
+    } catch (cause) {
+      stopMicrophone();
+      const denied = cause instanceof DOMException && cause.name === "NotAllowedError";
+      setVoiceError(denied
+        ? "Micro chưa được cấp quyền. Hãy cho phép dùng micro trong trình duyệt rồi thử lại."
+        : "Không mở được micro. Hãy kiểm tra thiết bị và thử lại.");
+      setVoicePhase("idle");
+    }
+  }
+
+  function stopRecording() {
+    const recorder = recorderRef.current;
+    if (recorder?.state !== "recording") return;
+    clearVoiceTimers();
+    setVoicePhase("transcribing");
+    recorder.stop();
+  }
 
   async function submit() {
     const message = draft.trim();
@@ -225,6 +419,7 @@ export function IntakeChat({ messages, pending, confidence, onSend }: IntakeChat
     try {
       await onSend(message);
       setDraft("");
+      resetVoice();
     } catch {
       // Draft stays intact so the user can retry.
     }
@@ -262,18 +457,50 @@ export function IntakeChat({ messages, pending, confidence, onSend }: IntakeChat
         <div ref={endRef} />
       </div>
       <div className="composer">
+        <div className={`voice-recorder voice-${voicePhase}`} aria-live="polite">
+          {voicePhase === "idle" && (
+            <button className="voice-start" type="button" onClick={() => void startRecording()} disabled={pending}>
+              <span className="voice-start-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 15.5a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v6a3.5 3.5 0 0 0 3.5 3.5Zm-1 2.92V21H8v2h8v-2h-3v-2.58A7 7 0 0 0 19 11.5h-2a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92Z" /></svg></span>
+              <span className="voice-start-copy"><strong>Trả lời bằng giọng nói</strong><small>Bấm bắt đầu, nói tự nhiên bằng tiếng Việt, rồi kiểm tra lại nội dung.</small></span>
+              <span className="voice-start-action">Bắt đầu ghi</span>
+            </button>
+          )}
+
+          {voicePhase === "recording" && (
+            <div className="voice-recording-panel">
+              <div className="voice-recording-status"><span aria-hidden="true" /><div><strong>Đang nghe bạn nói</strong><small>Tự dừng sau 90 giây</small></div><time>{String(Math.floor(elapsedSeconds / 60)).padStart(2, "0")}:{String(elapsedSeconds % 60).padStart(2, "0")}</time></div>
+              <button className="voice-stop-button" type="button" onClick={stopRecording}><span aria-hidden="true" />Dừng và chuyển thành chữ</button>
+            </div>
+          )}
+
+          {voicePhase === "transcribing" && (
+            <div className="voice-processing"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><div><strong>Đang chuyển giọng nói thành chữ</strong><small>Lần đầu có thể mất khoảng 1–2 phút. Bạn không cần bấm lại.</small></div></div>
+          )}
+
+          {audioUrl && voicePhase === "review" && (
+            <div className={`voice-review ${transcriptReady ? "voice-review-success" : "voice-review-failed"}`}>
+              <div className="voice-review-heading"><span aria-hidden="true">{transcriptReady ? "✓" : "!"}</span><div><strong>{transcriptReady ? "Đã chuyển thành chữ" : "Chưa chuyển được thành chữ"}</strong><small>{transcriptReady ? "Hãy nghe và kiểm tra phần nội dung bên dưới." : "Ghi âm vẫn được giữ để bạn thử lại."}</small></div><button className="text-button" type="button" onClick={resetVoice}>Thu lại</button></div>
+              <audio controls src={audioUrl}>Trình duyệt không hỗ trợ nghe lại ghi âm.</audio>
+              {!transcriptReady && recordedAudio && <button className="button button-secondary" type="button" onClick={() => void transcribe(recordedAudio)}>Thử chuyển lại thành chữ</button>}
+            </div>
+          )}
+
+          {voiceError && <div className="voice-error" role="alert"><span aria-hidden="true">!</span><div><strong>Không thể xử lý ghi âm</strong><p>{voiceError}</p></div></div>}
+        </div>
+        <div className="input-divider"><span>Hoặc nhập bằng bàn phím</span></div>
         <label htmlFor="intake-message">Nội dung trả lời</label>
         <textarea
+          ref={textareaRef}
           id="intake-message"
           value={draft}
           onChange={(event) => setDraft(event.target.value)}
           onKeyDown={keyDown}
           rows={3}
           maxLength={5000}
-          disabled={pending}
+          disabled={pending || voicePhase === "recording" || voicePhase === "transcribing"}
           placeholder="Ví dụ: Bé sinh ngày 01/07/2026 tại Việt Nam..."
         />
-        <div><small>Enter để gửi, Shift + Enter để xuống dòng</small><button className="button button-primary" type="button" onClick={() => void submit()} disabled={pending || !draft.trim()}>Gửi câu trả lời</button></div>
+        <div className="composer-actions"><small>Enter để gửi, Shift + Enter để xuống dòng</small><button className="button button-primary session-action" type="button" onClick={() => void submit()} disabled={pending || voicePhase === "recording" || voicePhase === "transcribing" || !draft.trim()}><span>Gửi câu trả lời</span><i aria-hidden="true">↗</i></button></div>
       </div>
     </section>
   );
@@ -352,6 +579,7 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
         <div className="form-grid">
           <BooleanSelect id="parents_married" label="Cha mẹ đã đăng ký kết hôn chưa?" value={form.parents_married} onChange={(value) => setField("parents_married", value)} required />
           <div className="form-field"><label htmlFor="field-mother_full_name">Họ tên mẹ <span aria-hidden="true">*</span></label><input id="field-mother_full_name" value={form.mother_full_name} onChange={(event) => setField("mother_full_name", event.target.value)} required autoComplete="name" /></div>
+          {!outOfWedlock && <div className="form-field"><label htmlFor="field-father_full_name">Họ tên cha <span aria-hidden="true">*</span></label><input id="field-father_full_name" value={form.father_full_name} onChange={(event) => setField("father_full_name", event.target.value)} required autoComplete="name" /></div>}
           <div className="form-field"><label htmlFor="field-mother_nationality">Quốc tịch mẹ <span aria-hidden="true">*</span></label><input id="field-mother_nationality" value={form.mother_nationality} onChange={(event) => setField("mother_nationality", event.target.value)} required /></div>
           <div className="form-field"><label htmlFor="field-father_nationality">Quốc tịch cha, nếu đã xác định</label><input id="field-father_nationality" value={form.father_nationality} onChange={(event) => setField("father_nationality", event.target.value)} /></div>
         </div>
@@ -383,7 +611,7 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
         </fieldset>
       )}
 
-      <div className="form-actions"><p>Dữ liệu chỉ được gửi tới backend của hệ thống.</p><button className="button button-primary" type="submit" disabled={pending}>{pending ? "Đang kiểm tra..." : "Kiểm tra thông tin"}</button></div>
+      <div className="form-actions"><p>Dữ liệu chỉ được gửi tới backend của hệ thống.</p><button className="button button-primary session-action" type="submit" disabled={pending}><span>{pending ? "Đang kiểm tra..." : "Kiểm tra thông tin"}</span><i aria-hidden="true">↗</i></button></div>
     </form>
   );
 }
@@ -391,7 +619,7 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
 export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIssue[]; status: string; onFix: (field: string) => void }) {
   if (status === "ready") {
     return (
-      <section className="ready-panel" aria-live="polite">
+      <section id="precheck-results" className="ready-panel" aria-live="polite">
         <span aria-hidden="true">OK</span>
         <div><p>Đã vượt qua kiểm tra tự động</p><h2>Thông tin đã sẵn sàng</h2><p>Không còn lỗi bắt buộc trong kết quả kiểm tra hiện tại.</p></div>
       </section>
@@ -401,7 +629,7 @@ export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIss
   const errors = issues.filter((issue) => issue.severity === "error").length;
   const warnings = issues.length - errors;
   return (
-    <section className="precheck-results" aria-labelledby="precheck-title" aria-live="polite">
+    <section id="precheck-results" className="precheck-results" aria-labelledby="precheck-title" aria-live="polite">
       <div className="result-summary"><div><p>Kết quả kiểm tra</p><h2 id="precheck-title">{errors ? `${errors} lỗi cần sửa` : "Không có lỗi bắt buộc"}</h2></div><span>{warnings} cảnh báo</span></div>
       <div className="issue-list">
         {issues.map((issue, index) => (
@@ -413,6 +641,16 @@ export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIss
           </article>
         ))}
       </div>
+    </section>
+  );
+}
+
+export function PdfPreview({ sessionId }: { sessionId: string }) {
+  const source = `${API_BASE_URL}/sessions/${encodeURIComponent(sessionId)}/birth-registration.pdf`;
+  return (
+    <section className="pdf-preview" aria-labelledby="pdf-preview-title">
+      <div className="pdf-preview-heading"><div><p>Bản xem trước</p><h2 id="pdf-preview-title">Tờ khai từ thông tin đã điền</h2><span>Kiểm tra nội dung bên dưới, sau đó tải bản PDF về thiết bị.</span></div><div className="pdf-actions"><a className="button button-secondary session-action" href={source} target="_blank" rel="noreferrer"><span>Mở toàn màn hình</span><i aria-hidden="true">↗</i></a><a className="button button-primary session-action pdf-download" href={`${source}?download=true`}><span><strong>Tải bản PDF</strong><small>Lưu về thiết bị</small></span><i aria-hidden="true">↓</i></a></div></div>
+      <div className="pdf-frame"><iframe src={source} title="Bản xem trước tờ khai đăng ký khai sinh" /></div>
     </section>
   );
 }
@@ -494,6 +732,18 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
     }
   }
 
+  async function transcribeAudio(audio: Blob, filename: string) {
+    if (!session) throw new ApiError("Không tìm thấy phiên làm việc.");
+    const body = new FormData();
+    body.append("session_id", session.id);
+    body.append("audio", audio, filename);
+    const result = await apiFetch<AudioTranscriptionResponse>("/intake/audio", {
+      method: "POST",
+      body,
+    }, 180_000);
+    return result.transcript;
+  }
+
   async function runPrecheck() {
     if (!session || checking) return;
     setChecking(true);
@@ -509,7 +759,7 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
       const refreshed = await apiFetch<SessionDetail>(`/sessions/${session.id}`);
       setSession(refreshed);
       if (refreshed.cases.length) await loadChecklist(refreshed.id, true);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      requestAnimationFrame(() => document.getElementById("precheck-results")?.scrollIntoView({ behavior: "smooth", block: "start" }));
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Không thể kiểm tra thông tin.");
     } finally {
@@ -527,11 +777,11 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
   }
 
   if (restoring) {
-    return <AppShell><main className="session-loading" aria-live="polite"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><p>Đang khôi phục phiên làm việc...</p></main></AppShell>;
+    return <AppShell session><main className="session-loading" aria-live="polite"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><p>Đang khôi phục phiên làm việc...</p></main></AppShell>;
   }
 
   if (!session) {
-    return <AppShell><main className="fatal-state" role="alert"><p>Không thể mở phiên làm việc</p><h1>{error || "Phiên không tồn tại."}</h1><Link className="button button-primary" href="/">Về trang bắt đầu</Link></main></AppShell>;
+    return <AppShell session><main className="fatal-state" role="alert"><p>Không thể mở phiên làm việc</p><h1>{error || "Phiên không tồn tại."}</h1><Link className="button button-primary" href="/">Về trang bắt đầu</Link></main></AppShell>;
   }
 
   const hasCases = session.cases.length > 0;
@@ -539,7 +789,7 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
   const officerRequired = needsOfficer || session.cases.some((item) => item.requires_officer_confirmation);
 
   return (
-    <AppShell>
+    <AppShell session>
       <main className="session-page">
         <div className="session-topbar">
           <div><p>Mã phiên</p><strong>{session.id.slice(0, 8).toUpperCase()}</strong></div>
@@ -558,14 +808,15 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
 
             {view === "chat" ? (
               <>
-                <IntakeChat messages={messages} pending={sending} confidence={confidence} onSend={sendMessage} />
-                {hasCases && <div className="next-step-callout"><div><strong>Đã có checklist ban đầu</strong><p>Bạn vẫn có thể tiếp tục trao đổi hoặc chuyển sang điền thông tin.</p></div><button className="button button-primary" type="button" onClick={() => setView("form")}>Điền thông tin</button></div>}
+                <IntakeChat messages={messages} pending={sending} confidence={confidence} onSend={sendMessage} onTranscribe={transcribeAudio} />
+                {hasCases && <div className="next-step-callout"><div><strong>Đã có checklist ban đầu</strong><p>Bạn vẫn có thể tiếp tục trao đổi hoặc chuyển sang điền thông tin.</p></div><button className="button button-primary session-action" type="button" onClick={() => setView("form")}><span>Điền thông tin</span><i aria-hidden="true">→</i></button></div>}
               </>
             ) : (
               <>
+                <BirthRegistrationForm cases={session.cases} form={form} pending={checking} onChange={setForm} onSubmit={runPrecheck} />
                 <PrecheckResults issues={issues} status={session.status} onFix={focusField} />
                 {officerRequired && session.status !== "ready" && issues.some((issue) => issue.source === "llm") && <OfficerConfirmationBanner />}
-                <BirthRegistrationForm cases={session.cases} form={form} pending={checking} onChange={setForm} onSubmit={runPrecheck} />
+                {(session.status === "precheck" || session.status === "ready") && <PdfPreview sessionId={session.id} />}
               </>
             )}
           </div>

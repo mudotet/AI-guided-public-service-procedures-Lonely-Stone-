@@ -6,5 +6,6 @@ psycopg[binary]>=3.2,<4
 pydantic>=2.9,<3
 pydantic-settings>=2.5,<3
 openai>=1.66,<3
+python-multipart>=0.0.9,<1
+reportlab>=4.2,<5
 pytest>=8,<10
-
