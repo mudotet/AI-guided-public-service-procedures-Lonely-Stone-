@@ -1,7 +1,3 @@
-<!-- Replace the final project name, banner, demo links, screenshot, team details, and license before submission. -->
-
-<!-- BANNER / LOGO HERE -->
-
 <h1 align="center">CivicPath AI</h1>
 <p align="center"><strong>AI-guided public service procedures — starting with birth registration</strong><br>Understand the procedure. Prepare the right documents. Check before you submit.</p>
 
