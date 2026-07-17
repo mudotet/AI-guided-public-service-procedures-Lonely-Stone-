@@ -163,29 +163,29 @@ Sản phẩm ưu tiên người dân không chuyên về kỹ thuật. Người 
 
 <!-- SCREENSHOT HERE -->
 
-> 🖼️ Replace **[SCREENSHOT]** with a product screenshot or a short, optimized GIF showing: conversation → checklist → pre-check → PDF.
+> 🖼️ Replace **[SCREENSHOT]** with a product screenshot or an optimized GIF showing: conversation → checklist → pre-check → PDF.
 
 ---
 
 ## 💡 Problem Statement
 
-Public service procedures are often difficult for citizens to complete correctly on the first attempt:
+Citizens completing public-service procedures commonly face three obstacles:
 
-- **Unclear preparation:** people do not know which documents, forms, or authority apply to their situation.
+- **Unclear preparation:** they do not know which documents, forms, or authority apply to their situation.
 - **Late error discovery:** missing or conflicting information is often found only after an officer reviews the application.
 - **Limited support capacity:** high question volume and limited staff lead to repeated visits, long queues, and avoidable delays.
 
-Birth registration is the first procedure implemented deeply in this prototype. The underlying approach is designed to extend to other public services without forcing citizens to install another application.
+Birth registration is the first procedure implemented deeply in this prototype. The approach is designed to extend to other public services without requiring citizens to install another application.
 
 ## ✨ Solution
 
 **CivicPath AI** turns an everyday conversation into a clear, case-aware preparation flow:
 
 1. **Guided intake** — citizens describe their situation by text or Vietnamese voice input; AI asks one clear follow-up question at a time.
-2. **Dynamic checklist** — the system detects one or multiple applicable cases and returns the exact documents and steps stored by the backend, including legal references.
-3. **Pre-submission check** — deterministic rules identify missing fields and conflicts; AI rewrites explanations in plain language and flags uncertain exceptions for an officer.
-4. **Prefilled application** — facts captured during the conversation automatically populate the form, leaving only missing information for the citizen to complete.
-5. **Review and hand-off** — citizens can preview and download a PDF; authorized officers can review sessions through a protected, paginated dashboard.
+2. **Dynamic checklist** — the system detects one or multiple applicable cases and returns the documents and steps stored by the backend, including legal references.
+3. **Pre-submission check** — deterministic rules identify missing fields and conflicts; AI explains issues in plain language and flags uncertain exceptions for an officer.
+4. **Prefilled application** — facts captured during the conversation automatically populate the form, leaving only missing information to complete.
+5. **Review and hand-off** — citizens preview and download a PDF; authorized officers review sessions through a protected, paginated dashboard.
 
 > **Scope:** this prototype helps citizens prepare information. It does not issue an official birth certificate or replace the decision of a civil-status authority.
 
@@ -211,7 +211,6 @@ flowchart LR
     PDF --> DB
 
     Sources[Official public-service references] -->|Curated runtime context| DB
-
     API -->|Cases, checklist, issues, PDF| Web
 ```
 
@@ -234,7 +233,7 @@ flowchart LR
     Facts --> Assistant
 
     Detector --> MultiCase[Multi-case session]
-    MultiCase --> Output[Plain-language explanation, checklist and prefilled form]
+    MultiCase --> Output[Explanation, checklist and prefilled form]
     Output --> Precheck[Deterministic pre-check]
     Precheck --> Result[Errors, AI warnings, officer escalation or ready state]
 ```
@@ -245,21 +244,21 @@ flowchart LR
 - Default models are configurable: `gpt-4.1-mini` for structured classification, `gpt-4.1` for guided conversation, and `gpt-4o-transcribe` for Vietnamese speech-to-text.
 - Official public-service pages are used as **curated runtime references**, not claimed as model training data.
 - Mandatory errors come from the deterministic rule engine; AI wording never replaces the original legal basis.
-- Rare, contradictory, or unsupported situations are marked: **“Requires direct confirmation from a civil-status officer.”**
+- Rare, contradictory, or unsupported situations are escalated for direct confirmation by a civil-status officer.
 
 ## 🧰 Tech Stack
 
 | Layer | Technology | Purpose |
 |---|---|---|
 | Frontend | Next.js 16, React 19, TypeScript 5.9 | Responsive citizen flow and officer dashboard |
-| UI | Native HTML, CSS, Web APIs | Accessible forms, recording, animation, and zero UI-framework overhead |
+| UI | Native HTML, CSS, Web APIs | Accessible forms, recording, and animation without a UI framework |
 | Backend | FastAPI, Pydantic | Typed REST API and OpenAPI contract |
-| Data | PostgreSQL 16, SQLAlchemy 2, Alembic | Sessions, multi-case assignments, rules, documents, and migrations |
-| AI | OpenAI Responses API | Structured extraction, plain-language guidance, and exception review |
+| Data | PostgreSQL 16, SQLAlchemy 2, Alembic | Sessions, cases, rules, documents, and migrations |
+| AI | OpenAI Responses API | Structured extraction, guidance, and exception review |
 | Speech | `gpt-4o-transcribe` | Vietnamese voice-to-text |
-| PDF | ReportLab | Prefilled birth-registration form preview and download |
-| Testing | Pytest, Node Test Runner, TypeScript | Backend rules, API helpers, frontend data normalization, and type safety |
-| Local infrastructure | Docker Compose | Reproducible PostgreSQL setup |
+| PDF | ReportLab | Prefilled form preview and download |
+| Testing | Pytest, Node Test Runner, TypeScript | Backend rules, frontend normalization, and type safety |
+| Infrastructure | Docker Compose | Reproducible local PostgreSQL setup |
 
 ## 🌟 Key Features
 
@@ -273,8 +272,24 @@ flowchart LR
 - ✍️ **Conversation-to-form autofill** without overwriting fields edited by the citizen.
 - 📄 **PDF preview and download** from the completed form.
 - 🧑‍💼 **Protected officer dashboard** with filters, pagination, session review, update, delete, and authenticated PDF access.
-- ♿ **Accessible and responsive UX** with semantic labels, keyboard support, focus states, and live status announcements.
+- ♿ **Accessible and responsive UX** with keyboard support, focus states, and live status announcements.
 - 🔌 **API-first design** suitable for future portal, widget, or chatbot integration.
+
+## 🔌 Core API
+
+| Endpoint | Purpose |
+|---|---|
+| `GET /health` | Check backend availability |
+| `POST /sessions` | Create a citizen guidance session |
+| `POST /intake/message` | Extract facts, classify cases, and return the next guidance message |
+| `POST /intake/audio` | Transcribe Vietnamese voice input |
+| `GET /checklist/{session_id}` | Return case-aware documents and steps |
+| `POST /precheck` | Validate the completed form and return errors or warnings |
+| `GET /sessions/{session_id}` | Restore chat, cases, form data, and pre-check results |
+| `GET /sessions/{session_id}/birth-registration.pdf` | Preview or download the generated PDF |
+| `GET /trust` | Return official source links and AI-method disclosure |
+
+Interactive API documentation is available at `http://localhost:8000/docs` when the backend is running.
 
 ## 🚀 Installation & Usage
 
@@ -294,8 +309,6 @@ cd AI-guided-public-service-procedures-Lonely-Stone-
 
 ### 2. Start PostgreSQL
 
-### Backend
-
 ```bash
 cd backend
 docker compose up -d
@@ -312,11 +325,7 @@ alembic upgrade head
 uvicorn app.main:app --reload
 ```
 
-<<<<<<< HEAD
 Set at least the following value in `backend/.env` before starting:
-=======
-Swagger UI: `http://localhost:8000/docs`
->>>>>>> 5de8d9179a36d2770b390b216bb50441e6d47aec
 
 ```dotenv
 OPENAI_API_KEY=your_openai_api_key
@@ -331,24 +340,9 @@ ADMIN_API_KEY=your_private_admin_access_code
 Backend: `http://localhost:8000`<br>
 Swagger UI: `http://localhost:8000/docs`
 
-<<<<<<< HEAD
 ### 4. Run the frontend
 
-Open a second terminal:
-=======
-```bash
-cd frontend
-cp .env.example .env.local
-npm install
-npm run dev
-```
-
-Frontend local: `http://localhost:3000`
-
-## Kiểm thử
->>>>>>> 5de8d9179a36d2770b390b216bb50441e6d47aec
-
-### Backend
+Open a second terminal from the repository root:
 
 ```bash
 cd frontend
@@ -357,7 +351,6 @@ npm ci
 npm run dev
 ```
 
-<<<<<<< HEAD
 Citizen application: `http://localhost:3000`<br>
 Officer dashboard: `http://localhost:3000/admin`
 
@@ -379,6 +372,12 @@ npm test
 npm run build
 ```
 
+## 🗺️ Pilot Roadmap
+
+- **Phase 1 — Birth-registration pilot:** deploy the current flow with one local civil-status office and measure completion rate, pre-check errors, and repeated visits.
+- **Phase 2 — Portal integration:** embed the experience through the REST API or a lightweight widget and collect structured officer feedback.
+- **Phase 3 — Procedure expansion:** reuse the architecture for additional civil-status services, then evaluate household registration and building permits.
+
 ## 👥 Team — Lonely Stone
 
 | Member | Role | Profile |
@@ -398,11 +397,3 @@ No license file is currently included. Choose and add the final license before p
 ---
 
 <p align="center"><strong>Built for a smarter public-service experience: clearer for citizens, more manageable for officers.</strong></p>
-=======
-### Frontend
-
-```bash
-cd frontend
-npm test
-```
->>>>>>> 5de8d9179a36d2770b390b216bb50441e6d47aec
