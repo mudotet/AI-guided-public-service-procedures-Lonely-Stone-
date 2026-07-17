@@ -3,6 +3,7 @@ export type SessionStatus = "intake" | "checklist" | "precheck" | "ready";
 export type CaseSummary = {
   code: string;
   name: string;
+  description: string | null;
   is_primary: boolean;
   requires_officer_confirmation: boolean;
 };
@@ -68,6 +69,7 @@ export type ChecklistResponse = {
 export type IntakeResponse = {
   session: SessionResponse;
   reply: string;
+  form_data: Record<string, unknown>;
   missing_fields: string[];
   confidence: number;
   needs_officer_confirmation: boolean;

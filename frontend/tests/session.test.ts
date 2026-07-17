@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { emptyRegistrationForm, flowStep, normaliseForm } from "../lib/session.ts";
+import { emptyRegistrationForm, flowStep, mergeConversationFacts, normaliseForm } from "../lib/session.ts";
 
 test("normaliseForm luôn gửi boolean, không gửi chuỗi có/không", () => {
   const form = emptyRegistrationForm();
@@ -32,4 +32,19 @@ test("normaliseForm giữ thông tin cha cho case chuẩn và xóa khi không y�
   assert.equal(withoutFather.wants_father_on_certificate, false);
   assert.equal(withoutFather.father_full_name, "");
   assert.equal(withoutFather.father_nationality, "");
+});
+
+test("dữ kiện từ hội thoại điền sẵn form nhưng không ghi đè ô người dùng đã sửa", () => {
+  const form = emptyRegistrationForm();
+  form.mother_full_name = "Tên người dùng đã sửa";
+  const merged = mergeConversationFacts(
+    form,
+    { child_full_name: "Nguyễn An", parents_married: false, mother_full_name: "Tên từ AI", unknown: "bỏ qua" },
+    new Set(["mother_full_name"]),
+  );
+
+  assert.equal(merged.child_full_name, "Nguyễn An");
+  assert.equal(merged.parents_married, false);
+  assert.equal(merged.mother_full_name, "Tên người dùng đã sửa");
+  assert.equal("unknown" in merged, false);
 });

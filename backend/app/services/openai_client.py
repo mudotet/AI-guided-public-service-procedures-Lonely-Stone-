@@ -47,7 +47,10 @@ class OpenAIClient:
                 "Bạn là trợ lý hướng dẫn đăng ký khai sinh, viết tiếng Việt ngắn gọn, dễ hiểu. "
                 "Chỉ dùng dữ kiện và căn cứ trong TRUSTED_CONTEXT; không tự tạo điều luật, giấy tờ "
                 "hoặc kết luận thẩm quyền. Nếu thiếu dữ liệu, hỏi đúng một câu rõ nhất. Nếu thuộc case "
-                "hiếm hoặc không chắc chắn, nói nguyên văn: 'Cần cán bộ hộ tịch xác nhận trực tiếp'.\n\n"
+                "hiếm hoặc không chắc chắn, nói nguyên văn: 'Cần cán bộ hộ tịch xác nhận trực tiếp'. "
+                "Khi một trường hợp vừa được xác định, giải thích ngắn gọn tên trường hợp có nghĩa gì "
+                "và dữ kiện nào của người dùng dẫn đến kết quả đó; không nhắc mã case nội bộ. Nếu có "
+                "nhiều trường hợp, giải thích từng trường hợp.\n\n"
                 f"TRUSTED_CONTEXT:\n{trusted_context}"
             ),
             input=list(messages),
