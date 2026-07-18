@@ -48,3 +48,13 @@ OpenAPI: `http://localhost:8000/openapi.json`
 The officer dashboard supports paginated session review, updates, deletion, and authenticated PDF preview/download. `ADMIN_API_KEY` stays in the backend configuration; the entered access code is held only in `sessionStorage`.
 
 Voice recordings are sent to the backend for Vietnamese transcription and are not persisted in the frontend session. Never expose `OPENAI_API_KEY` in frontend files or environment variables.
+
+## Vercel
+
+Import the repository, set the Vercel **Root Directory** to `frontend`, and add:
+
+```dotenv
+VITE_API_BASE_URL=https://YOUR_RENDER_SERVICE.onrender.com
+```
+
+Next.js is auto-detected, so no custom Vercel build configuration is required. Add the final Vercel origin to the backend `CORS_ORIGINS` value on Render.

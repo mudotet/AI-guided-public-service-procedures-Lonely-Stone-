@@ -7,7 +7,7 @@
   <a href="https://nextjs.org/"><img alt="Next.js 16" src="https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&amp;logo=nextdotjs&amp;logoColor=white"></a>
   <a href="https://tailwindcss.com/"><img alt="Tailwind CSS 4" src="https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&amp;logo=tailwindcss&amp;logoColor=white"></a>
   <a href="https://fastapi.tiangolo.com/"><img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white"></a>
-  <a href="https://www.postgresql.org/"><img alt="PostgreSQL 16" src="https://img.shields.io/badge/PostgreSQL_16-4169E1?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white"></a>
+  <a href="https://neon.com/"><img alt="Neon Postgres" src="https://img.shields.io/badge/Neon-Postgres-00E599?style=for-the-badge&amp;logo=neon&amp;logoColor=black"></a>
   <a href="https://openai.com/"><img alt="OpenAI API" src="https://img.shields.io/badge/OpenAI-API-412991?style=for-the-badge&amp;logo=openai&amp;logoColor=white"></a>
   <a href="#license"><img alt="License pending" src="https://img.shields.io/badge/license-pending-667085?style=for-the-badge"></a>
 </p>
@@ -60,7 +60,7 @@ flowchart LR
     API --> PDF[PDF Generator]
 
     Intake -->|Structured extraction and response| OpenAI[OpenAI Models]
-    Rules --> DB[(PostgreSQL 16)]
+    Rules --> DB[(Neon Postgres)]
     Checklist --> DB
     Intake --> DB
     PDF --> DB
@@ -108,7 +108,7 @@ flowchart LR
 | Frontend | Next.js 16, React 19, TypeScript 5.9 | Responsive citizen flow and officer dashboard |
 | UI | Tailwind CSS 4, local Roboto variable font, native Web APIs | Token-based responsive design, accessible forms, recording, and motion |
 | Backend | FastAPI, Pydantic | Typed REST API and OpenAPI contract |
-| Data | PostgreSQL 16, SQLAlchemy 2, Alembic | Sessions, cases, rules, documents, and migrations |
+| Data | Neon Postgres, SQLAlchemy 2, Alembic | Sessions, cases, rules, documents, and migrations |
 | AI | OpenAI Responses API | Structured extraction, guidance, and exception review |
 | Speech | `gpt-4o-transcribe` | Vietnamese voice-to-text |
 | PDF | ReportLab | Prefilled form preview and download |
@@ -212,6 +212,48 @@ Officer dashboard: `http://localhost:3000/admin`
 The frontend uses Tailwind CSS v4 through the PostCSS plugin. Design tokens live in `frontend/app/globals.css`; component styling is expressed with Tailwind utility classes, with only global accessibility defaults and reusable keyframes kept in CSS.
 
 > Never expose `OPENAI_API_KEY` in the frontend. All AI requests must go through the backend.
+
+## ☁️ Deploy to Render + Vercel
+
+### 1. Prepare Neon
+
+Copy the connection string from the Neon **Connect** dialog. Keep its TLS parameters, for example `sslmode=require`. The backend supports either `DATABASE_URL` or `NEO_CONNECTION`; when both exist, `NEO_CONNECTION` wins.
+
+### 2. Deploy the backend on Render
+
+1. In Render, create a **Blueprint** from this repository. Render reads the root [`render.yaml`](render.yaml).
+2. Enter the prompted secrets:
+
+| Variable | Value |
+|---|---|
+| `NEO_CONNECTION` | Full Neon Postgres connection string |
+| `OPENAI_API_KEY` | Server-side OpenAI key |
+| `ADMIN_API_KEY` | Private access code for the officer dashboard |
+| `CORS_ORIGINS` | Exact Vercel origin, such as `https://your-project.vercel.app` |
+
+3. Deploy and verify:
+
+```text
+https://YOUR_RENDER_SERVICE.onrender.com/health
+https://YOUR_RENDER_SERVICE.onrender.com/docs
+```
+
+The free single-instance service runs `alembic upgrade head` before Uvicorn starts. Move migrations to Render's `preDeployCommand` before scaling to multiple paid instances.
+
+### 3. Deploy the frontend on Vercel
+
+1. Import this Git repository into Vercel.
+2. Set **Root Directory** to `frontend`.
+3. Keep the auto-detected **Next.js** framework and default build settings.
+4. Add this environment variable to Production and Preview:
+
+```dotenv
+VITE_API_BASE_URL=https://YOUR_RENDER_SERVICE.onrender.com
+```
+
+5. Deploy. If the final Vercel domain differs from the origin configured on Render, update `CORS_ORIGINS` with the exact origin and redeploy the backend. Multiple origins are comma-separated; do not include a trailing slash.
+
+`VITE_API_BASE_URL` is a public backend URL. Database credentials, `OPENAI_API_KEY`, and `ADMIN_API_KEY` belong only on Render and must never be added to Vercel.
 
 <a id="testing"></a>
 
