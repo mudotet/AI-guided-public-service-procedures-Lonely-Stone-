@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     neo_connection: str | None = None
     openai_api_key: str | None = None
     openai_classifier_model: str = "gpt-4.1-mini"
-    openai_assistant_model: str = "gpt-4.1"
+    openai_assistant_model: str = "gpt-4.1-mini"
     openai_transcription_model: str = "gpt-4o-transcribe"
     admin_api_key: str | None = None
     cors_origins: str = "http://localhost:3000,http://localhost:5173"

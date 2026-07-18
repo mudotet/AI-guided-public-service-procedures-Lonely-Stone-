@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/logo.jpg" alt="CivicPath AI logo" width="132"></p>
+
 <h1 align="center">CivicPath AI</h1>
 <p align="center"><strong>AI-guided public service procedures — starting with birth registration</strong><br>Understand the procedure. Prepare the right documents. Check before you submit.</p>
 
@@ -84,7 +86,7 @@ flowchart LR
 
     Official[Official references from dichvucong.gov.vn] --> Context[Curated trusted context]
     RulesDB[Versioned cases, documents and validation rules] --> Context
-    Context --> Assistant[gpt-4.1 guided response]
+    Context --> Assistant[gpt-4.1-mini guided response]
     Facts --> Assistant
 
     Detector --> MultiCase[Multi-case session]
@@ -96,7 +98,7 @@ flowchart LR
 ### Responsible AI and Model Training
 
 - **No custom model training or fine-tuning is used.**
-- Default models are configurable: `gpt-4.1-mini` for structured classification, `gpt-4.1` for guided conversation, and `gpt-4o-transcribe` for Vietnamese speech-to-text.
+- Default models are configurable: `gpt-4.1-mini` for structured classification and guided conversation, and `gpt-4o-transcribe` for Vietnamese speech-to-text.
 - Official public-service pages are used as **curated runtime references**, not claimed as model training data.
 - Mandatory errors come from the deterministic rule engine; AI wording never replaces the original legal basis.
 - Rare, contradictory, or unsupported situations are escalated for direct confirmation by a civil-status officer.

@@ -1,12 +1,13 @@
 import json
 from collections.abc import Sequence
+from functools import lru_cache
 from typing import Any, TypeVar
 
 from openai import OpenAI
 from pydantic import BaseModel
 
 from app.config import settings
-from app.schemas import CaseClassification, IssueRewriteBatch, LlmConcernBatch
+from app.schemas import CaseClassification, LlmConcernBatch
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -44,7 +45,7 @@ class OpenAIClient:
         response = self.client.responses.create(
             model=settings.openai_assistant_model,
             instructions=(
-                "Bạn là trợ lý hướng dẫn đăng ký khai sinh, viết tiếng Việt ngắn gọn, dễ hiểu. "
+                "Bạn là trợ lý hướng dẫn đăng ký khai sinh, viết tiếng Việt ngắn gọn, dễ hiểu, tối đa 100 từ. "
                 "Chỉ dùng dữ kiện và căn cứ trong TRUSTED_CONTEXT; không tự tạo điều luật, giấy tờ "
                 "hoặc kết luận thẩm quyền. Nếu thiếu dữ liệu, hỏi đúng một câu rõ nhất. Nếu thuộc case "
                 "hiếm hoặc không chắc chắn, nói nguyên văn: 'Cần cán bộ hộ tịch xác nhận trực tiếp'. "
@@ -54,6 +55,7 @@ class OpenAIClient:
                 f"TRUSTED_CONTEXT:\n{trusted_context}"
             ),
             input=list(messages),
+            max_output_tokens=180,
         )
         return response.output_text
 
@@ -73,23 +75,6 @@ class OpenAIClient:
             raise RuntimeError("OpenAI returned an empty transcript")
         return transcript
 
-    def explain_issues(self, issues: list[dict[str, Any]]) -> IssueRewriteBatch:
-        response = self.client.responses.parse(
-            model=settings.openai_assistant_model,
-            input=[
-                {
-                    "role": "system",
-                    "content": (
-                        "Viết lại từng lỗi bằng tiếng Việt đơn giản. Giữ nguyên rule_code, không thêm lỗi, "
-                        "không thêm hoặc sửa căn cứ pháp lý. Trả đủ đúng một item cho mỗi lỗi đầu vào."
-                    ),
-                },
-                {"role": "user", "content": json.dumps(issues, ensure_ascii=False)},
-            ],
-            text_format=IssueRewriteBatch,
-        )
-        return self._parsed(response, IssueRewriteBatch)
-
     def review_exception(self, form_data: dict[str, Any], trusted_context: str) -> LlmConcernBatch:
         response = self.client.responses.parse(
             model=settings.openai_assistant_model,
@@ -108,3 +93,9 @@ class OpenAIClient:
             text_format=LlmConcernBatch,
         )
         return self._parsed(response, LlmConcernBatch)
+
+
+@lru_cache
+def get_openai_client() -> OpenAIClient:
+    """Reuse the SDK HTTP connection pool across requests."""
+    return OpenAIClient()

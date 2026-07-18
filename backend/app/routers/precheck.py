@@ -1,5 +1,3 @@
-from dataclasses import replace
-
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import delete, or_, select
 from sqlalchemy.orm import Session
@@ -15,7 +13,7 @@ from app.models import (
 )
 from app.schemas import PrecheckIssue, PrecheckRequest, PrecheckResponse
 from app.services.case_classifier import replace_session_cases
-from app.services.openai_client import OpenAIClient
+from app.services.openai_client import get_openai_client
 from app.services.rule_engine import RuleDefinition, ValidationIssue, detect_case_codes, run_rules
 from app.services.session_service import case_summaries, trusted_context
 
@@ -64,39 +62,13 @@ def precheck(payload: PrecheckRequest, db: Session = Depends(get_db)) -> Prechec
     )
     issues = run_rules(payload.form_data, map(_rule_definition, rules))
 
-    if settings.openai_api_key and issues:
-        try:
-            rewrites = OpenAIClient().explain_issues(
-                [
-                    {
-                        "rule_code": issue.rule_code,
-                        "message": issue.message,
-                        "suggested_fix": issue.suggested_fix,
-                    }
-                    for issue in issues
-                ]
-            )
-            by_code = {item.rule_code: item for item in rewrites.items}
-            issues = [
-                replace(
-                    issue,
-                    message=by_code[issue.rule_code].message,
-                    suggested_fix=by_code[issue.rule_code].suggested_fix,
-                )
-                if issue.rule_code in by_code
-                else issue
-                for issue in issues
-            ]
-        except Exception:
-            pass  # Deterministic results remain usable if the wording call fails.
-
     assigned_cases = case_summaries(db, session.id)
     needs_officer = detection.requires_officer_confirmation or any(
         case.requires_officer_confirmation for case in assigned_cases
     )
     if settings.openai_api_key and (needs_officer or not case_ids):
         try:
-            concerns = OpenAIClient().review_exception(payload.form_data, trusted_context(db, session))
+            concerns = get_openai_client().review_exception(payload.form_data, trusted_context(db, session))
             for concern in concerns.items:
                 message = concern.message
                 if "Cần cán bộ hộ tịch xác nhận trực tiếp" not in message:

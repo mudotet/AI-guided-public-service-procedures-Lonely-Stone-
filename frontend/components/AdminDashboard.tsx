@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import type { FormEvent } from "react";
 import { useEffect, useRef, useState } from "react";
@@ -61,7 +62,7 @@ function authHeaders(token: string) {
 function AdminBrand() {
   return (
     <Link href="/admin" className="inline-flex items-center gap-3">
-      <span className="grid size-11 place-items-center rounded-xl bg-white text-xs font-black tracking-widest text-government shadow-lg">KS</span>
+      <span className="relative size-11 overflow-hidden rounded-xl border border-white/20 bg-white shadow-lg"><Image className="h-full w-full object-cover" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={44} height={44} priority /></span>
       <div className="grid leading-tight"><strong className="text-sm text-white">Cổng quản lý hộ tịch</strong><small className="mt-1 text-[9px] text-blue-200">Trung tâm điều phối hồ sơ khai sinh</small></div>
     </Link>
   );
@@ -197,7 +198,7 @@ export function AdminDashboard() {
           </section>
           <div className="rounded-[36px] border border-white/15 bg-white/10 p-2 shadow-[0_40px_100px_rgba(0,0,0,.3)] backdrop-blur-xl">
             <section className="rounded-[30px] bg-white p-6 text-ink sm:p-9" aria-labelledby="admin-login-title">
-              <div className="grid size-16 place-items-center rounded-2xl bg-government text-sm font-black tracking-widest text-white shadow-xl" aria-hidden="true">KS</div>
+              <Image className="size-16 rounded-2xl border border-government/10 object-cover shadow-xl" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={64} height={64} priority />
               <p className="mt-9 text-[9px] font-black tracking-widest text-primary uppercase">Xác thực cán bộ</p>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight text-government" id="admin-login-title">Mở cổng quản lý</h2>
               <span className="mt-3 block text-xs leading-6 text-muted">Dữ liệu có thể chứa thông tin cá nhân. Chỉ sử dụng mã truy cập được cấp.</span>

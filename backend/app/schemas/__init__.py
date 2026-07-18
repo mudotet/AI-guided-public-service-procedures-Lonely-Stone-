@@ -47,16 +47,6 @@ class CaseClassification(BaseModel):
     rationale: str
 
 
-class IssueRewrite(BaseModel):
-    rule_code: str
-    message: str
-    suggested_fix: str
-
-
-class IssueRewriteBatch(BaseModel):
-    items: list[IssueRewrite]
-
-
 class LlmConcern(BaseModel):
     field_name: str | None
     message: str
