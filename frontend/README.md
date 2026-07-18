@@ -1,23 +1,30 @@
-# AI hướng dẫn đăng ký khai sinh
+# CivicPath AI Frontend
 
-Frontend Next.js + TypeScript kết nối backend FastAPI tại `VITE_API_BASE_URL`.
+Next.js 16 + React 19 + TypeScript frontend for the AI-guided birth-registration workflow. The interface is styled with Tailwind CSS 4 and connects to the FastAPI backend through native `fetch` using `VITE_API_BASE_URL`.
 
-## Chạy frontend
+## Run locally
 
 ```bash
 cd frontend
 cp .env.example .env.local
-npm install
+npm ci
 npm run dev
 ```
 
-Mở `http://localhost:3000`.
+Open:
 
-Cổng quản lý phiên dành cho cán bộ ở `http://localhost:3000/admin`: xem, cập nhật, xóa phiên và xem hoặc tải PDF biểu mẫu đã điền. Phiên mới chỉ phát sinh từ luồng hướng dẫn của người dân. Backend phải có `ADMIN_API_KEY` trong `backend/.env.local`; mã truy cập không được đóng gói vào frontend và chỉ được giữ trong `sessionStorage`. Các thao tác này quản lý phiên hỗ trợ, không thay thế quy trình cấp giấy khai sinh chính thức.
+- Citizen flow: `http://localhost:3000`
+- Officer dashboard: `http://localhost:3000/admin`
 
-Trong màn hình trao đổi, chọn **Bấm để nói** và cấp quyền micro. Ghi âm tối đa 90 giây; hệ thống tự chuyển thành chữ để người dùng nghe lại, đọc và sửa trước khi gửi. File ghi âm không được lưu trong phiên.
+## Tailwind CSS
 
-## Build và kiểm thử
+- Tailwind v4 is loaded from `app/globals.css` with `@import "tailwindcss"`.
+- Government color, typography, easing, and shadow tokens are defined in the `@theme` block.
+- Roboto is bundled locally through `@fontsource-variable/roboto`, so rendering does not depend on a third-party font request.
+- Components use utility classes directly; global CSS is limited to base accessibility rules, reveal motion, and keyframes.
+- PostCSS integration is configured in `postcss.config.mjs`.
+
+## Test and build
 
 ```bash
 npm test
@@ -25,7 +32,7 @@ npm run build
 npm start
 ```
 
-## Chạy backend local
+## Backend
 
 ```bash
 cd ../backend
@@ -35,4 +42,9 @@ alembic upgrade head
 uvicorn app.main:app --reload
 ```
 
-Backend chạy tại `http://localhost:8000`; OpenAPI tại `http://localhost:8000/openapi.json`.
+Backend: `http://localhost:8000`<br>
+OpenAPI: `http://localhost:8000/openapi.json`
+
+The officer dashboard supports paginated session review, updates, deletion, and authenticated PDF preview/download. `ADMIN_API_KEY` stays in the backend configuration; the entered access code is held only in `sessionStorage`.
+
+Voice recordings are sent to the backend for Vietnamese transcription and are not persisted in the frontend session. Never expose `OPENAI_API_KEY` in frontend files or environment variables.

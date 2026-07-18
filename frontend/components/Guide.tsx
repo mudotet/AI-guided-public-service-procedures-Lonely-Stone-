@@ -21,20 +21,22 @@ import type {
 } from "@/lib/types";
 
 const STORAGE_KEY = "birth-registration-session-id";
+const fieldClass = "grid gap-2 text-xs font-bold text-slate-700 [&_input]:min-h-12 [&_input]:w-full [&_input]:rounded-xl [&_input]:border [&_input]:border-line [&_input]:bg-white [&_input]:px-3.5 [&_input]:text-sm [&_input]:font-normal [&_input]:text-ink [&_input]:outline-none [&_input]:transition [&_input]:focus:border-primary [&_input]:focus:ring-4 [&_input]:focus:ring-primary/10 [&_select]:min-h-12 [&_select]:w-full [&_select]:rounded-xl [&_select]:border [&_select]:border-line [&_select]:bg-white [&_select]:px-3.5 [&_select]:text-sm [&_select]:font-normal [&_select]:text-ink [&_select]:outline-none [&_select]:transition [&_select]:focus:border-primary [&_select]:focus:ring-4 [&_select]:focus:ring-primary/10 [&_select]:disabled:cursor-not-allowed [&_select]:disabled:bg-slate-100";
+const primaryActionClass = "group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-white shadow-[0_14px_34px_rgba(11,94,215,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-government disabled:cursor-not-allowed disabled:opacity-55";
 
 export function AppShell({ children, home = false, session = false }: { children: ReactNode; home?: boolean; session?: boolean }) {
   return (
-    <div className={`app-shell${home ? " app-shell-home" : ""}${session ? " app-shell-session" : ""}`}>
-      <header className="site-header">
-        <Link href="/" className="brand" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
-          <span className="brand-mark" aria-hidden="true">KS</span>
-          <span><strong>Dịch vụ công</strong><small>Hướng dẫn đăng ký khai sinh</small></span>
+    <div className="min-h-screen overflow-x-hidden bg-canvas font-sans text-ink" data-page={home ? "home" : session ? "session" : undefined}>
+      <header className="sticky top-3 z-50 mx-auto flex min-h-18 w-[calc(100%_-_24px)] max-w-[1240px] items-center justify-between rounded-full border border-government/10 bg-white/92 px-4 shadow-[0_18px_55px_rgba(6,59,130,0.09)] backdrop-blur-xl sm:w-[calc(100%_-_48px)] sm:px-6">
+        <Link href="/" className="inline-flex items-center gap-3" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
+          <span className="grid size-10 place-items-center rounded-xl bg-government text-xs font-black tracking-widest text-white shadow-lg shadow-government/15" aria-hidden="true">KS</span>
+          <span className="flex flex-col leading-tight"><strong className="text-sm font-extrabold text-government">Dịch vụ công</strong><small className="text-[10px] text-muted sm:text-xs">Hướng dẫn đăng ký khai sinh</small></span>
         </Link>
-        <div className="header-actions"><Link className="header-admin-link" href="/admin">Cổng cán bộ</Link></div>
+        <div className="flex items-center gap-4"><Link className="inline-flex min-h-10 items-center rounded-full border border-line bg-white px-4 text-xs font-extrabold text-government transition hover:-translate-y-0.5 hover:border-primary hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/admin">Cổng cán bộ</Link></div>
       </header>
       {children}
-      <footer className="site-footer">
-        <p>Hệ thống hỗ trợ chuẩn bị thông tin, không thay thế quyết định của cơ quan hộ tịch.</p>
+      <footer className="mx-auto flex w-[calc(100%_-_32px)] max-w-[1240px] justify-center border-t border-government/10 py-8 text-center text-xs leading-6 text-muted">
+        <p className="m-0">Hệ thống hỗ trợ chuẩn bị thông tin, không thay thế quyết định của cơ quan hộ tịch.</p>
       </footer>
     </div>
   );
@@ -69,24 +71,24 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
   }
 
   return (
-    <div className={`start-actions ${compact ? "start-actions-compact" : ""}`}>
-      <div className="action-row">
-        <button className="button button-primary" type="button" onClick={start} disabled={pending}>
-          <span>{pending ? "Đang tạo phiên..." : "Bắt đầu hướng dẫn"}</span><i className="button-arrow" aria-hidden="true">↗</i>
+    <div className={compact ? "w-full lg:w-auto" : "w-full"}>
+      <div className={`flex flex-wrap gap-3 ${compact ? "lg:justify-end" : ""}`}>
+        <button className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-sm font-extrabold text-white shadow-[0_16px_40px_rgba(11,94,215,0.22)] transition duration-500 hover:-translate-y-0.5 hover:bg-government disabled:cursor-not-allowed disabled:opacity-60" type="button" onClick={start} disabled={pending}>
+          <span>{pending ? "Đang tạo phiên..." : "Bắt đầu hướng dẫn"}</span><i className="grid size-10 place-items-center rounded-full bg-white/16 font-normal not-italic transition duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">↗</i>
         </button>
         {savedId && (
-          <Link className="button button-secondary" href={`/session/${savedId}`}>
-            <span>Tiếp tục phiên trước</span><i className="button-arrow" aria-hidden="true">→</i>
+          <Link className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-line bg-white py-1.5 pr-1.5 pl-5 text-sm font-extrabold text-government transition duration-500 hover:-translate-y-0.5 hover:border-primary hover:bg-blue-50" href={`/session/${savedId}`}>
+            <span>Tiếp tục phiên trước</span><i className="grid size-10 place-items-center rounded-full bg-blue-50 font-normal not-italic transition duration-500 group-hover:translate-x-1" aria-hidden="true">→</i>
           </Link>
         )}
       </div>
       {!compact && (
-        <p className={`health-status health-${health}`}>
-          <span aria-hidden="true" />
+        <p className={`mt-4 flex items-center gap-2 text-xs font-semibold ${health === "ok" ? "text-success" : health === "error" ? "text-danger" : "text-muted"}`}>
+          <span className={`size-2 rounded-full ${health === "ok" ? "bg-success" : health === "error" ? "bg-danger" : "animate-pulse bg-muted"}`} aria-hidden="true" />
           {health === "checking" ? "Đang kiểm tra kết nối" : health === "ok" ? "Hệ thống đang trực tuyến" : "Chưa kết nối được backend"}
         </p>
       )}
-      {error && <p className="inline-error" role="alert">{error}</p>}
+      {error && <p className="mt-3 rounded-xl border border-danger/20 bg-red-50 px-4 py-3 text-sm text-danger" role="alert">{error}</p>}
     </div>
   );
 }
@@ -94,12 +96,12 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
 export function ProgressStepper({ current }: { current: number }) {
   const steps = ["Trao đổi", "Hồ sơ", "Kiểm tra", "Sẵn sàng"];
   return (
-    <nav className="progress-stepper" aria-label="Tiến độ đăng ký">
-      <ol>
+    <nav className="w-full" aria-label="Tiến độ đăng ký">
+      <ol className="grid grid-cols-4 gap-1">
         {steps.map((step, index) => (
-          <li key={step} className={index < current ? "complete" : index === current ? "current" : ""} aria-current={index === current ? "step" : undefined}>
-            <span>{index + 1}</span>
-            <small>{step}</small>
+          <li key={step} className="relative flex items-center gap-2 after:absolute after:top-4 after:right-0 after:left-[calc(50%+22px)] after:h-px after:bg-line last:after:hidden sm:flex-col sm:justify-center sm:text-center" aria-current={index === current ? "step" : undefined}>
+            <span className={`relative z-10 grid size-8 place-items-center rounded-full text-[11px] font-black transition ${index < current ? "bg-success text-white" : index === current ? "bg-primary text-white shadow-[0_0_0_5px_rgba(11,94,215,0.1)]" : "bg-slate-100 text-muted"}`}>{index < current ? "✓" : index + 1}</span>
+            <small className={`hidden text-[10px] font-bold sm:block ${index === current ? "text-government" : "text-muted"}`}>{step}</small>
           </li>
         ))}
       </ol>
@@ -110,14 +112,14 @@ export function ProgressStepper({ current }: { current: number }) {
 export function CaseBadges({ primaryCase, cases }: { primaryCase: CaseSummary | null; cases: CaseSummary[] }) {
   if (!primaryCase && cases.length === 0) {
     return (
-      <section className="case-empty" aria-live="polite" aria-label="Hệ thống đang xác định trường hợp">
-        <div className="case-empty-visual" aria-hidden="true"><span /><i /><i /></div>
-        <div className="case-empty-copy">
-          <p><i aria-hidden="true" />Đang nhận diện hồ sơ</p>
-          <h2>Chưa đủ dữ kiện để xác định trường hợp</h2>
-          <span>Trả lời thêm vài câu ngắn. Checklist sẽ xuất hiện ngay khi hệ thống nhận diện được tình huống của bạn.</span>
+      <section className="grid min-h-80 place-items-center rounded-[30px] border border-government/10 bg-white p-8 text-center shadow-panel" aria-live="polite" aria-label="Hệ thống đang xác định trường hợp">
+        <div className="relative grid size-20 place-items-center" aria-hidden="true"><span className="size-6 animate-pulse rounded-full bg-primary shadow-[0_0_0_10px_rgba(11,94,215,0.08)]" /><i className="absolute inset-2 rounded-full border border-primary/15" /><i className="absolute inset-0 animate-spin rounded-full border border-dashed border-primary/25 [animation-duration:9s]" /></div>
+        <div>
+          <p className="mb-3 inline-flex items-center gap-2 text-[9px] font-black tracking-[0.1em] text-primary uppercase"><i className="size-1.5 rounded-full bg-warning not-italic shadow-[0_0_0_4px_rgba(217,119,6,0.1)]" aria-hidden="true" />Đang nhận diện hồ sơ</p>
+          <h2 className="mx-auto max-w-80 text-[22px] leading-tight font-semibold tracking-[-0.035em] text-government">Chưa đủ dữ kiện để xác định trường hợp</h2>
+          <span className="mx-auto mt-3 block max-w-80 text-[11px] leading-6 text-muted">Trả lời thêm vài câu ngắn. Checklist sẽ xuất hiện ngay khi hệ thống nhận diện được tình huống của bạn.</span>
         </div>
-        <div className="case-empty-progress" aria-hidden="true"><span /><span /><span /></div>
+        <div className="mt-2 flex w-56 gap-1.5" aria-hidden="true"><span className="h-1 flex-1 rounded-full bg-primary" /><span className="h-1 flex-1 rounded-full bg-slate-200" /><span className="h-1 flex-1 rounded-full bg-slate-200" /></div>
       </section>
     );
   }
@@ -125,56 +127,56 @@ export function CaseBadges({ primaryCase, cases }: { primaryCase: CaseSummary | 
   const relatedCases = cases.filter((item) => item.code !== primary?.code);
   const caseCount = Math.max(cases.length, primary ? 1 : 0);
   return (
-    <section className="case-badges" aria-labelledby="case-result-title" aria-live="polite">
-      <header className="case-badges-heading">
-        <div><i aria-hidden="true" /><span>Trường hợp của bạn</span></div>
-        <strong>{caseCount} {caseCount === 1 ? "trường hợp" : "yếu tố"}</strong>
+    <section className="overflow-hidden rounded-[30px] border border-government/10 bg-white p-1.5 shadow-panel" aria-labelledby="case-result-title" aria-live="polite">
+      <header className="flex items-center justify-between gap-4 px-5 py-4 max-sm:items-start max-sm:flex-col">
+        <div className="flex items-center gap-2.5 text-[9px] font-black tracking-[0.1em] text-government uppercase"><i className="size-2 rounded-full bg-success not-italic shadow-[0_0_0_5px_rgba(21,128,61,0.1)]" aria-hidden="true" /><span>Trường hợp của bạn</span></div>
+        <strong className="rounded-full bg-blue-50 px-3 py-2 text-[9px] font-black text-government">{caseCount} {caseCount === 1 ? "trường hợp" : "yếu tố"}</strong>
       </header>
 
-      <div className="case-primary">
-        <span className="case-primary-marker" aria-hidden="true">01</span>
+      <div className="grid grid-cols-[50px_minmax(0,1fr)] gap-4 rounded-3xl bg-government px-6 py-6 text-white shadow-[0_22px_54px_rgba(6,59,130,0.18),inset_0_0_0_6px_rgba(255,255,255,0.055)] max-sm:grid-cols-[42px_minmax(0,1fr)] max-sm:px-[18px] max-sm:py-5">
+        <span className="grid size-[50px] place-items-center rounded-2xl bg-white text-[11px] font-black text-government shadow-xl max-sm:size-[42px]" aria-hidden="true">01</span>
         <div>
-          <p>Trường hợp chính</p>
-          <h2 id="case-result-title">{primary?.name}</h2>
-          <div className="case-primary-reason">
-            <strong>Vì sao hệ thống xác định như vậy?</strong>
-            <span>{primary?.description || "Hệ thống đang tiếp tục làm rõ trường hợp này từ câu trả lời của bạn."}</span>
+          <p className="mb-2 text-[8px] font-black tracking-[0.13em] text-blue-300 uppercase">Trường hợp chính</p>
+          <h2 className="text-[clamp(22px,2.2vw,30px)] leading-[1.08] font-semibold tracking-[-0.04em] text-white" id="case-result-title">{primary?.name}</h2>
+          <div className="mt-4 border-t border-white/15 pt-3.5">
+            <strong className="mb-1 block text-[10px] text-white">Vì sao hệ thống xác định như vậy?</strong>
+            <span className="block text-[11px] leading-5 text-blue-100">{primary?.description || "Hệ thống đang tiếp tục làm rõ trường hợp này từ câu trả lời của bạn."}</span>
           </div>
         </div>
-        <small className={primary?.requires_officer_confirmation ? "needs-officer" : "auto-guided"}>
+        <small className={`col-start-2 w-fit rounded-lg px-2.5 py-2 text-[8px] font-black max-sm:col-span-2 max-sm:col-start-1 ${primary?.requires_officer_confirmation ? "bg-warning/15 text-amber-100" : "bg-green-400/15 text-green-100"}`}>
           {primary?.requires_officer_confirmation ? "Cần cán bộ xác nhận" : "Có thể tiếp tục tự hướng dẫn"}
         </small>
       </div>
 
       {relatedCases.length ? (
-        <div className="case-related">
-          <div className="case-related-heading"><div><p>Yếu tố đi kèm</p><span>Được cộng thêm vào checklist</span></div><strong>+{relatedCases.length}</strong></div>
-          <ul>
+        <div className="px-5 pt-6 pb-2">
+          <div className="flex items-center justify-between gap-4 px-1 pb-4"><div><p className="mb-1 text-[11px] font-black text-government">Yếu tố đi kèm</p><span className="text-[9px] text-muted">Được cộng thêm vào checklist</span></div><strong className="text-2xl font-medium tracking-tight text-primary">+{relatedCases.length}</strong></div>
+          <ul className="m-0 grid list-none p-0">
             {relatedCases.map((item, index) => (
-              <li key={item.code}>
-                <span aria-hidden="true">{String(index + 2).padStart(2, "0")}</span>
-                <div><small>Yếu tố liên quan</small><strong>{item.name}</strong>{item.description && <p>{item.description}</p>}</div>
-                {item.requires_officer_confirmation && <em>Cần cán bộ</em>}
+              <li className="grid min-h-20 grid-cols-[32px_minmax(0,1fr)_auto] items-center gap-3 border-t border-government/10 px-1 py-3 max-sm:grid-cols-[28px_minmax(0,1fr)]" key={item.code}>
+                <span className="text-[10px] font-black text-slate-400" aria-hidden="true">{String(index + 2).padStart(2, "0")}</span>
+                <div className="grid gap-1"><small className="text-[8px] font-extrabold tracking-widest text-slate-400 uppercase">Yếu tố liên quan</small><strong className="text-xs leading-5 text-government">{item.name}</strong>{item.description && <p className="m-0 text-[9px] leading-4 text-muted">{item.description}</p>}</div>
+                {item.requires_officer_confirmation && <em className="rounded-lg bg-amber-50 px-2 py-1.5 text-[8px] font-black text-amber-700 not-italic max-sm:col-start-2">Cần cán bộ</em>}
               </li>
             ))}
           </ul>
         </div>
       ) : (
-        <div className="case-single"><i aria-hidden="true">✓</i><p><strong>Chưa ghi nhận yếu tố đi kèm</strong><span>Hệ thống vẫn tiếp tục cập nhật theo câu trả lời mới.</span></p></div>
+        <div className="m-4 flex items-center gap-3 rounded-2xl bg-blue-50 p-4"><i className="grid size-8 shrink-0 place-items-center rounded-xl bg-success text-[11px] font-black text-white not-italic" aria-hidden="true">✓</i><p className="m-0 grid gap-1"><strong className="text-[11px] text-government">Chưa ghi nhận yếu tố đi kèm</strong><span className="text-[9px] leading-4 text-muted">Hệ thống vẫn tiếp tục cập nhật theo câu trả lời mới.</span></p></div>
       )}
 
-      <footer className="case-explainer"><span aria-hidden="true">i</span><p>Kết quả dựa trên những gì bạn đã chia sẻ và có thể được cập nhật khi có thêm thông tin.</p></footer>
+      <footer className="mx-5 mb-4 flex items-start gap-2.5 border-t border-government/10 pt-4"><span className="grid size-5 shrink-0 place-items-center rounded-full bg-blue-50 text-[9px] font-black text-primary" aria-hidden="true">i</span><p className="m-0 text-[9px] leading-4 text-muted">Kết quả dựa trên những gì bạn đã chia sẻ và có thể được cập nhật khi có thêm thông tin.</p></footer>
     </section>
   );
 }
 
 export function OfficerConfirmationBanner() {
   return (
-    <aside className="officer-banner" role="status">
-      <span className="banner-symbol" aria-hidden="true">!</span>
+    <aside className="my-4 flex items-start gap-3 rounded-2xl border border-warning/20 bg-amber-50 p-4 text-amber-950" role="status">
+      <span className="grid size-9 shrink-0 place-items-center rounded-full bg-warning text-sm font-black text-white" aria-hidden="true">!</span>
       <div>
-        <strong>Cần cán bộ hộ tịch xác nhận trực tiếp</strong>
-        <p>Trường hợp này có yếu tố cần được cơ quan hộ tịch xem xét thêm.</p>
+        <strong className="text-sm">Cần cán bộ hộ tịch xác nhận trực tiếp</strong>
+        <p className="mt-1 mb-0 text-xs leading-5 text-amber-800">Trường hợp này có yếu tố cần được cơ quan hộ tịch xem xét thêm.</p>
       </div>
     </aside>
   );
@@ -183,12 +185,12 @@ export function OfficerConfirmationBanner() {
 export function LegalBasisAccordion({ basis }: { basis: string | string[] | null }) {
   const items = Array.isArray(basis) ? basis : basis ? [basis] : [];
   return (
-    <details className="legal-basis">
-      <summary>Căn cứ pháp lý</summary>
+    <details className="mt-2 text-[10px] text-muted">
+      <summary className="min-h-8 w-fit cursor-pointer font-extrabold text-primary">Căn cứ pháp lý</summary>
       {items.length ? (
-        <ul>{items.map((item, index) => <li key={`${index}-${item}`}>{item}</li>)}</ul>
+        <ul className="mt-2 grid gap-1.5 pl-5 leading-5">{items.map((item, index) => <li key={`${index}-${item}`}>{item}</li>)}</ul>
       ) : (
-        <p>Chưa có căn cứ được ánh xạ – cần cán bộ xác nhận</p>
+        <p className="mt-2 text-warning">Chưa có căn cứ được ánh xạ – cần cán bộ xác nhận</p>
       )}
     </details>
   );
@@ -196,47 +198,47 @@ export function LegalBasisAccordion({ basis }: { basis: string | string[] | null
 
 export function ChecklistPanel({ checklist }: { checklist: ChecklistResponse | null }) {
   return (
-    <section className="checklist-panel" aria-labelledby="checklist-title">
-      <details className="checklist-disclosure">
-        <summary>
-          <span><strong id="checklist-title">Checklist đang thành hình</strong><small>{checklist ? `${checklist.documents.length} giấy tờ` : "Chờ thêm thông tin"}</small></span>
-          <span aria-hidden="true">Mở</span>
+    <section className="mt-4 overflow-hidden rounded-[30px] border border-government/10 bg-government/5 p-1.5 shadow-panel" aria-labelledby="checklist-title">
+      <details className="checklist-native group overflow-hidden rounded-3xl bg-white max-[880px]:[&[open]>summary]:border-b max-[880px]:[&[open]>summary]:border-government/10">
+        <summary className="hidden min-h-16 cursor-pointer items-center justify-between gap-5 px-5 py-3 text-government marker:hidden max-[880px]:flex">
+          <span className="flex flex-col"><strong id="checklist-title" className="text-[13px]">Checklist đang thành hình</strong><small className="text-[9px] text-muted">{checklist ? `${checklist.documents.length} giấy tờ` : "Chờ thêm thông tin"}</small></span>
+          <span className="text-[9px] text-muted group-open:hidden" aria-hidden="true">Mở</span><span className="hidden text-[9px] text-muted group-open:inline" aria-hidden="true">Thu gọn</span>
         </summary>
-        <div className="checklist-content">
-          <div className="panel-heading desktop-panel-heading">
-            <div><p>Hồ sơ của bạn</p><h2 id="checklist-title-desktop">Checklist đang thành hình</h2></div>
-            {checklist && <span>{checklist.documents.length} giấy tờ</span>}
+        <div>
+          <div className="flex items-start justify-between gap-5 border-b border-government/10 px-6 py-5 max-[880px]:hidden">
+            <div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Hồ sơ của bạn</p><h2 className="text-xl font-semibold tracking-tight text-government" id="checklist-title-desktop">Checklist đang thành hình</h2></div>
+            {checklist && <span className="rounded-full bg-blue-50 px-3 py-2 text-[9px] font-black text-government">{checklist.documents.length} giấy tờ</span>}
           </div>
           {!checklist ? (
-            <div className="checklist-placeholder">
-              <span aria-hidden="true" />
-              <p>Checklist sẽ cập nhật ngay khi hệ thống xác định được trường hợp.</p>
+            <div className="grid min-h-44 place-items-center gap-3 px-6 py-8 text-center">
+              <span className="size-3 animate-pulse rounded-full bg-primary shadow-[0_0_0_8px_rgba(11,94,215,0.08)]" aria-hidden="true" />
+              <p className="m-0 max-w-64 text-[11px] leading-5 text-muted">Checklist sẽ cập nhật ngay khi hệ thống xác định được trường hợp.</p>
             </div>
           ) : (
             <>
-              <div className="document-list">
+              <div className="max-h-[520px] overflow-y-auto px-5">
                 {checklist.documents.map((document) => (
-                  <article key={document.code} className="document-item">
-                    <div className="document-status" aria-hidden="true" />
+                  <article key={document.code} className="grid grid-cols-[10px_minmax(0,1fr)] gap-3 border-b border-government/10 py-4 last:border-b-0">
+                    <div className={`mt-1 size-2.5 rounded-full ${document.required ? "bg-danger" : "bg-slate-300"}`} aria-hidden="true" />
                     <div>
-                      <div className="document-title">
-                        <h3>{document.name}</h3>
-                        <span>{document.required ? "Bắt buộc" : "Nếu có"}</span>
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="m-0 text-xs leading-5 font-bold text-slate-800">{document.name}</h3>
+                        <span className={`shrink-0 text-[8px] font-black uppercase ${document.required ? "text-danger" : "text-muted"}`}>{document.required ? "Bắt buộc" : "Nếu có"}</span>
                       </div>
-                      {document.description && <p>{document.description}</p>}
+                      {document.description && <p className="mt-1.5 mb-0 text-[10px] leading-5 text-slate-500">{document.description}</p>}
                       <LegalBasisAccordion basis={document.legal_basis} />
                     </div>
                   </article>
                 ))}
               </div>
               {checklist.steps.length > 0 && (
-                <details className="procedure-steps">
-                  <summary>Các bước thực hiện ({checklist.steps.length})</summary>
-                  <ol>
+                <details className="border-t border-government/10 px-6 py-5">
+                  <summary className="min-h-8 cursor-pointer text-[11px] font-extrabold text-government">Các bước thực hiện ({checklist.steps.length})</summary>
+                  <ol className="mt-4 grid list-none gap-5 p-0">
                     {checklist.steps.map((step, index) => (
-                      <li key={`${step.order}-${index}`}>
-                        <span>{step.order}</span>
-                        <div><strong>{step.title}</strong><p>{step.description}</p><LegalBasisAccordion basis={step.legal_basis} /></div>
+                      <li className="grid grid-cols-[30px_1fr] gap-3" key={`${step.order}-${index}`}>
+                        <span className="grid size-[30px] place-items-center rounded-full bg-primary text-[9px] font-black text-white">{step.order}</span>
+                        <div><strong className="text-[11px] text-ink">{step.title}</strong><p className="mt-1 mb-0 text-[10px] leading-5 text-muted">{step.description}</p><LegalBasisAccordion basis={step.legal_basis} /></div>
                       </li>
                     ))}
                   </ol>
@@ -437,62 +439,62 @@ export function IntakeChat({ messages, pending, confidence, onSend, onTranscribe
   }
 
   return (
-    <section className="chat-card" aria-labelledby="chat-title">
-      <div className="content-heading">
-        <div><p>Trao đổi với trợ lý</p><h1 id="chat-title">Cho chúng tôi biết tình huống của bạn</h1></div>
+    <section className="overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel" aria-labelledby="chat-title">
+      <div className="flex flex-wrap items-start justify-between gap-5 border-b border-government/10 px-5 py-6 sm:px-7">
+        <div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Trao đổi với trợ lý</p><h1 className="text-[clamp(22px,3vw,32px)] leading-tight font-semibold tracking-[-0.035em] text-government" id="chat-title">Cho chúng tôi biết tình huống của bạn</h1></div>
         {confidence !== null && (
-          <details className="analysis-detail"><summary>Chi tiết phân tích</summary><p>Độ tin cậy gần nhất: {Math.round(confidence * 100)}%</p></details>
+          <details className="text-[10px] text-muted"><summary className="min-h-8 cursor-pointer font-bold text-primary">Chi tiết phân tích</summary><p className="mt-2">Độ tin cậy gần nhất: {Math.round(confidence * 100)}%</p></details>
         )}
       </div>
-      <div className="message-list" aria-live="polite" aria-busy={pending}>
+      <div className="grid max-h-[560px] min-h-[320px] gap-4 overflow-y-auto bg-slate-50/70 px-4 py-6 sm:px-7" aria-live="polite" aria-busy={pending}>
         {messages.length === 0 && (
-          <div className="message message-assistant">
-            <span className="message-role">Trợ lý hướng dẫn</span>
-            <p>Hãy bắt đầu bằng cách cho biết ngày sinh của trẻ, nơi sinh và tình trạng đăng ký kết hôn của cha mẹ.</p>
+          <div className="mr-auto grid max-w-[82%] gap-1.5 rounded-[20px_20px_20px_6px] border border-government/10 bg-white px-4 py-3 shadow-sm">
+            <span className="text-[9px] font-black tracking-wider text-primary uppercase">Trợ lý hướng dẫn</span>
+            <p className="m-0 text-sm leading-6 text-ink">Hãy bắt đầu bằng cách cho biết ngày sinh của trẻ, nơi sinh và tình trạng đăng ký kết hôn của cha mẹ.</p>
           </div>
         )}
         {messages.filter((message) => message.role !== "system").map((message, index) => (
-          <div key={`${message.created_at || index}-${index}`} className={`message message-${message.role}`}>
-            <span className="message-role">{message.role === "user" ? "Bạn" : "Trợ lý hướng dẫn"}</span>
-            <p>{message.content}</p>
+          <div key={`${message.created_at || index}-${index}`} className={`grid max-w-[82%] gap-1.5 px-4 py-3 text-sm leading-6 shadow-sm [animation:message-in_.35s_var(--ease-premium)_both] ${message.role === "user" ? "ml-auto rounded-[20px_20px_6px_20px] bg-government text-white" : "mr-auto rounded-[20px_20px_20px_6px] border border-government/10 bg-white text-ink"}`}>
+            <span className={`text-[9px] font-black tracking-wider uppercase ${message.role === "user" ? "text-blue-200" : "text-primary"}`}>{message.role === "user" ? "Bạn" : "Trợ lý hướng dẫn"}</span>
+            <p className="m-0 whitespace-pre-wrap">{message.content}</p>
           </div>
         ))}
-        {pending && <div className="message message-assistant loading-message"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><p>Đang phân tích trường hợp...</p></div>}
+        {pending && <div className="mr-auto flex max-w-[82%] items-center gap-3 rounded-[20px_20px_20px_6px] border border-government/10 bg-white px-4 py-3 text-xs text-muted shadow-sm"><span className="flex gap-1" aria-hidden="true"><i className="size-1.5 animate-bounce rounded-full bg-primary [animation-delay:-.2s]" /><i className="size-1.5 animate-bounce rounded-full bg-primary [animation-delay:-.1s]" /><i className="size-1.5 animate-bounce rounded-full bg-primary" /></span><p>Đang phân tích trường hợp...</p></div>}
         <div ref={endRef} />
       </div>
-      <div className="composer">
-        <div className={`voice-recorder voice-${voicePhase}`} aria-live="polite">
+      <div className="grid gap-4 border-t border-government/10 bg-white p-4 sm:p-6">
+        <div className="grid gap-3" aria-live="polite">
           {voicePhase === "idle" && (
-            <button className="voice-start" type="button" onClick={() => void startRecording()} disabled={pending}>
-              <span className="voice-start-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 15.5a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v6a3.5 3.5 0 0 0 3.5 3.5Zm-1 2.92V21H8v2h8v-2h-3v-2.58A7 7 0 0 0 19 11.5h-2a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92Z" /></svg></span>
-              <span className="voice-start-copy"><strong>Trả lời bằng giọng nói</strong><small>Bấm bắt đầu, nói tự nhiên bằng tiếng Việt, rồi kiểm tra lại nội dung.</small></span>
-              <span className="voice-start-action">Bắt đầu ghi</span>
+            <button className="group grid min-h-16 grid-cols-[44px_1fr_auto] items-center gap-3 rounded-2xl border border-primary/15 bg-blue-50/70 px-3 py-2.5 text-left transition hover:border-primary/35 hover:bg-blue-50 disabled:opacity-55 max-sm:grid-cols-[44px_1fr]" type="button" onClick={() => void startRecording()} disabled={pending}>
+              <span className="grid size-11 place-items-center rounded-xl bg-primary text-white shadow-lg shadow-primary/20" aria-hidden="true"><svg className="size-5 fill-current" viewBox="0 0 24 24" focusable="false"><path d="M12 15.5a3.5 3.5 0 0 0 3.5-3.5V6a3.5 3.5 0 1 0-7 0v6a3.5 3.5 0 0 0 3.5 3.5Zm-1 2.92V21H8v2h8v-2h-3v-2.58A7 7 0 0 0 19 11.5h-2a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92Z" /></svg></span>
+              <span className="grid gap-1"><strong className="text-xs text-government">Trả lời bằng giọng nói</strong><small className="text-[10px] leading-4 text-muted">Bấm bắt đầu, nói tự nhiên bằng tiếng Việt, rồi kiểm tra lại nội dung.</small></span>
+              <span className="rounded-full bg-white px-3 py-2 text-[10px] font-extrabold text-primary transition group-hover:bg-primary group-hover:text-white max-sm:col-start-2 max-sm:w-fit">Bắt đầu ghi</span>
             </button>
           )}
 
           {voicePhase === "recording" && (
-            <div className="voice-recording-panel">
-              <div className="voice-recording-status"><span aria-hidden="true" /><div><strong>Đang nghe bạn nói</strong><small>Tự dừng sau 90 giây</small></div><time>{String(Math.floor(elapsedSeconds / 60)).padStart(2, "0")}:{String(elapsedSeconds % 60).padStart(2, "0")}</time></div>
-              <button className="voice-stop-button" type="button" onClick={stopRecording}><span aria-hidden="true" />Dừng và chuyển thành chữ</button>
+            <div className="grid gap-3 rounded-2xl border border-danger/20 bg-red-50 p-4">
+              <div className="grid grid-cols-[12px_1fr_auto] items-center gap-3"><span className="size-3 animate-pulse rounded-full bg-danger shadow-[0_0_0_6px_rgba(220,38,38,0.1)]" aria-hidden="true" /><div className="grid"><strong className="text-xs text-danger">Đang nghe bạn nói</strong><small className="text-[10px] text-muted">Tự dừng sau 90 giây</small></div><time className="font-mono text-sm font-black text-danger">{String(Math.floor(elapsedSeconds / 60)).padStart(2, "0")}:{String(elapsedSeconds % 60).padStart(2, "0")}</time></div>
+              <button className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-danger px-4 text-xs font-extrabold text-white hover:bg-red-700" type="button" onClick={stopRecording}><span className="size-2.5 rounded-sm bg-white" aria-hidden="true" />Dừng và chuyển thành chữ</button>
             </div>
           )}
 
           {voicePhase === "transcribing" && (
-            <div className="voice-processing"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><div><strong>Đang chuyển giọng nói thành chữ</strong><small>Lần đầu có thể mất khoảng 1–2 phút. Bạn không cần bấm lại.</small></div></div>
+            <div className="flex items-center gap-4 rounded-2xl border border-primary/15 bg-blue-50 p-4"><span className="flex gap-1" aria-hidden="true"><i className="size-2 animate-bounce rounded-full bg-primary [animation-delay:-.2s]" /><i className="size-2 animate-bounce rounded-full bg-primary [animation-delay:-.1s]" /><i className="size-2 animate-bounce rounded-full bg-primary" /></span><div className="grid gap-1"><strong className="text-xs text-government">Đang chuyển giọng nói thành chữ</strong><small className="text-[10px] leading-4 text-muted">Lần đầu có thể mất khoảng 1–2 phút. Bạn không cần bấm lại.</small></div></div>
           )}
 
           {audioUrl && voicePhase === "review" && (
-            <div className={`voice-review ${transcriptReady ? "voice-review-success" : "voice-review-failed"}`}>
-              <div className="voice-review-heading"><span aria-hidden="true">{transcriptReady ? "✓" : "!"}</span><div><strong>{transcriptReady ? "Đã chuyển thành chữ" : "Chưa chuyển được thành chữ"}</strong><small>{transcriptReady ? "Hãy nghe và kiểm tra phần nội dung bên dưới." : "Ghi âm vẫn được giữ để bạn thử lại."}</small></div><button className="text-button" type="button" onClick={resetVoice}>Thu lại</button></div>
-              <audio controls src={audioUrl}>Trình duyệt không hỗ trợ nghe lại ghi âm.</audio>
-              {!transcriptReady && recordedAudio && <button className="button button-secondary" type="button" onClick={() => void transcribe(recordedAudio)}>Thử chuyển lại thành chữ</button>}
+            <div className={`grid gap-3 rounded-2xl border p-4 ${transcriptReady ? "border-success/20 bg-green-50" : "border-warning/25 bg-amber-50"}`}>
+              <div className="grid grid-cols-[32px_1fr_auto] items-center gap-3"><span className={`grid size-8 place-items-center rounded-full text-xs font-black text-white ${transcriptReady ? "bg-success" : "bg-warning"}`} aria-hidden="true">{transcriptReady ? "✓" : "!"}</span><div className="grid"><strong className="text-xs text-government">{transcriptReady ? "Đã chuyển thành chữ" : "Chưa chuyển được thành chữ"}</strong><small className="text-[10px] leading-4 text-muted">{transcriptReady ? "Hãy nghe và kiểm tra phần nội dung bên dưới." : "Ghi âm vẫn được giữ để bạn thử lại."}</small></div><button className="min-h-10 rounded-full px-3 text-[10px] font-extrabold text-primary hover:bg-white" type="button" onClick={resetVoice}>Thu lại</button></div>
+              <audio className="h-10 w-full" controls src={audioUrl}>Trình duyệt không hỗ trợ nghe lại ghi âm.</audio>
+              {!transcriptReady && recordedAudio && <button className="min-h-11 rounded-xl border border-warning/30 bg-white px-4 text-xs font-extrabold text-warning" type="button" onClick={() => void transcribe(recordedAudio)}>Thử chuyển lại thành chữ</button>}
             </div>
           )}
 
-          {voiceError && <div className="voice-error" role="alert"><span aria-hidden="true">!</span><div><strong>Không thể xử lý ghi âm</strong><p>{voiceError}</p></div></div>}
+          {voiceError && <div className="grid grid-cols-[32px_1fr] gap-3 rounded-2xl border border-danger/20 bg-red-50 p-4" role="alert"><span className="grid size-8 place-items-center rounded-full bg-danger text-xs font-black text-white" aria-hidden="true">!</span><div><strong className="text-xs text-danger">Không thể xử lý ghi âm</strong><p className="mt-1 mb-0 text-[10px] leading-5 text-red-700">{voiceError}</p></div></div>}
         </div>
-        <div className="input-divider"><span>Hoặc nhập bằng bàn phím</span></div>
-        <label htmlFor="intake-message">Nội dung trả lời</label>
+        <div className="flex items-center gap-3 text-[9px] font-bold tracking-wide text-muted uppercase before:h-px before:flex-1 before:bg-line after:h-px after:flex-1 after:bg-line"><span>Hoặc nhập bằng bàn phím</span></div>
+        <label className="text-xs font-bold text-slate-700" htmlFor="intake-message">Nội dung trả lời</label>
         <textarea
           ref={textareaRef}
           id="intake-message"
@@ -503,8 +505,9 @@ export function IntakeChat({ messages, pending, confidence, onSend, onTranscribe
           maxLength={5000}
           disabled={pending || voicePhase === "recording" || voicePhase === "transcribing"}
           placeholder="Ví dụ: Bé sinh ngày 01/07/2026 tại Việt Nam..."
+          className="min-h-28 w-full resize-y rounded-2xl border border-line bg-white px-4 py-3 text-sm leading-6 text-ink outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 disabled:bg-slate-100"
         />
-        <div className="composer-actions"><small>Enter để gửi, Shift + Enter để xuống dòng</small><button className="button button-primary session-action" type="button" onClick={() => void submit()} disabled={pending || voicePhase === "recording" || voicePhase === "transcribing" || !draft.trim()}><span>Gửi câu trả lời</span><i aria-hidden="true">↗</i></button></div>
+        <div className="flex flex-wrap items-center justify-between gap-3"><small className="text-[10px] text-muted">Enter để gửi, Shift + Enter để xuống dòng</small><button className={primaryActionClass} type="button" onClick={() => void submit()} disabled={pending || voicePhase === "recording" || voicePhase === "transcribing" || !draft.trim()}><span>Gửi câu trả lời</span><i className="grid size-9 place-items-center rounded-full bg-white/15 font-normal not-italic" aria-hidden="true">↗</i></button></div>
       </div>
     </section>
   );
@@ -519,7 +522,7 @@ function BooleanSelect({ id, label, value, onChange, required = false, disabled 
   disabled?: boolean;
 }) {
   return (
-    <div className="form-field">
+    <div className={fieldClass}>
       <label htmlFor={`field-${id}`}>{label}{required && <span aria-hidden="true"> *</span>}</label>
       <select id={`field-${id}`} value={value === null ? "" : String(value)} onChange={(event) => onChange(event.target.value === "" ? null : event.target.value === "true")} required={required} disabled={disabled}>
         <option value="">Chọn câu trả lời</option>
@@ -550,10 +553,10 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
 
   if (rareCase) {
     return (
-      <section className="form-card rare-case-card" aria-labelledby="rare-case-title">
-        <div className="content-heading"><div><p>Bước tiếp theo</p><h1 id="rare-case-title">Trao đổi trực tiếp với cán bộ hộ tịch</h1></div></div>
+      <section className="rounded-[30px] border border-warning/20 bg-white p-5 shadow-panel sm:p-7" aria-labelledby="rare-case-title">
+        <div className="border-b border-government/10 pb-5"><p className="mb-1 text-[9px] font-black tracking-widest text-warning uppercase">Bước tiếp theo</p><h1 className="text-[clamp(22px,3vw,32px)] font-semibold tracking-tight text-government" id="rare-case-title">Trao đổi trực tiếp với cán bộ hộ tịch</h1></div>
         <OfficerConfirmationBanner />
-        <p>Hệ thống không mở thêm biểu mẫu tự động cho trường hợp này để tránh hướng dẫn thiếu chính xác.</p>
+        <p className="text-sm leading-6 text-muted">Hệ thống không mở thêm biểu mẫu tự động cho trường hợp này để tránh hướng dẫn thiếu chính xác.</p>
       </section>
     );
   }
@@ -564,39 +567,39 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
   }
 
   return (
-    <form className="form-card" onSubmit={submit} aria-labelledby="form-title">
-      <div className="content-heading"><div><p>Thông tin đăng ký</p><h1 id="form-title">Kiểm tra thông tin trước khi nộp</h1></div></div>
-      <p className="form-intro"><strong>Thông tin bạn đã chia sẻ được điền sẵn.</strong> Hãy kiểm tra lại và chỉ bổ sung những ô còn trống. Các trường có dấu * là bắt buộc.</p>
+    <form className="rounded-[30px] border border-government/10 bg-white p-5 shadow-panel sm:p-7 [&_fieldset]:mt-7 [&_fieldset]:border-0 [&_fieldset]:border-t [&_fieldset]:border-government/10 [&_fieldset]:p-0 [&_fieldset]:pt-6 [&_legend]:px-0 [&_legend]:text-sm [&_legend]:font-extrabold [&_legend]:text-government" onSubmit={submit} aria-labelledby="form-title">
+      <div className="border-b border-government/10 pb-5"><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Thông tin đăng ký</p><h1 className="text-[clamp(22px,3vw,32px)] font-semibold tracking-tight text-government" id="form-title">Kiểm tra thông tin trước khi nộp</h1></div>
+      <p className="mt-5 rounded-2xl border border-primary/10 bg-blue-50/70 p-4 text-xs leading-6 text-muted"><strong className="text-government">Thông tin bạn đã chia sẻ được điền sẵn.</strong> Hãy kiểm tra lại và chỉ bổ sung những ô còn trống. Các trường có dấu * là bắt buộc.</p>
 
       <fieldset>
         <legend>Thông tin của trẻ</legend>
-        <div className="form-grid">
-          <div className="form-field field-wide"><label htmlFor="field-child_full_name">Họ tên trẻ <span aria-hidden="true">*</span></label><input id="field-child_full_name" value={form.child_full_name} onChange={(event) => setField("child_full_name", event.target.value)} required autoComplete="name" /></div>
-          <div className="form-field"><label htmlFor="field-child_birth_date">Ngày sinh <span aria-hidden="true">*</span></label><input id="field-child_birth_date" type="date" value={form.child_birth_date} onChange={(event) => setField("child_birth_date", event.target.value)} required /></div>
-          <div className="form-field"><label htmlFor="field-registration_date">Ngày dự kiến đăng ký <span aria-hidden="true">*</span></label><input id="field-registration_date" type="date" value={form.registration_date} onChange={(event) => setField("registration_date", event.target.value)} required /></div>
-          <div className="form-field field-wide"><label htmlFor="field-child_birth_country">Quốc gia nơi sinh <span aria-hidden="true">*</span></label><input id="field-child_birth_country" value={form.child_birth_country} onChange={(event) => setField("child_birth_country", event.target.value)} required /></div>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <div className={`${fieldClass} sm:col-span-2`}><label htmlFor="field-child_full_name">Họ tên trẻ <span className="text-danger" aria-hidden="true">*</span></label><input id="field-child_full_name" value={form.child_full_name} onChange={(event) => setField("child_full_name", event.target.value)} required autoComplete="name" /></div>
+          <div className={fieldClass}><label htmlFor="field-child_birth_date">Ngày sinh <span className="text-danger" aria-hidden="true">*</span></label><input id="field-child_birth_date" type="date" value={form.child_birth_date} onChange={(event) => setField("child_birth_date", event.target.value)} required /></div>
+          <div className={fieldClass}><label htmlFor="field-registration_date">Ngày dự kiến đăng ký <span className="text-danger" aria-hidden="true">*</span></label><input id="field-registration_date" type="date" value={form.registration_date} onChange={(event) => setField("registration_date", event.target.value)} required /></div>
+          <div className={`${fieldClass} sm:col-span-2`}><label htmlFor="field-child_birth_country">Quốc gia nơi sinh <span className="text-danger" aria-hidden="true">*</span></label><input id="field-child_birth_country" value={form.child_birth_country} onChange={(event) => setField("child_birth_country", event.target.value)} required /></div>
         </div>
       </fieldset>
 
       <fieldset>
         <legend>Thông tin cha mẹ</legend>
-        <div className="form-grid">
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
           <BooleanSelect id="parents_married" label="Cha mẹ đã đăng ký kết hôn chưa?" value={form.parents_married} onChange={(value) => setField("parents_married", value)} required />
-          <div className="form-field"><label htmlFor="field-mother_full_name">Họ tên mẹ <span aria-hidden="true">*</span></label><input id="field-mother_full_name" value={form.mother_full_name} onChange={(event) => setField("mother_full_name", event.target.value)} required autoComplete="name" /></div>
-          {!outOfWedlock && <div className="form-field"><label htmlFor="field-father_full_name">Họ tên cha <span aria-hidden="true">*</span></label><input id="field-father_full_name" value={form.father_full_name} onChange={(event) => setField("father_full_name", event.target.value)} required autoComplete="name" /></div>}
-          <div className="form-field"><label htmlFor="field-mother_nationality">Quốc tịch mẹ <span aria-hidden="true">*</span></label><input id="field-mother_nationality" value={form.mother_nationality} onChange={(event) => setField("mother_nationality", event.target.value)} required /></div>
-          <div className="form-field"><label htmlFor="field-father_nationality">Quốc tịch cha, nếu đã xác định</label><input id="field-father_nationality" value={form.father_nationality} onChange={(event) => setField("father_nationality", event.target.value)} /></div>
+          <div className={fieldClass}><label htmlFor="field-mother_full_name">Họ tên mẹ <span className="text-danger" aria-hidden="true">*</span></label><input id="field-mother_full_name" value={form.mother_full_name} onChange={(event) => setField("mother_full_name", event.target.value)} required autoComplete="name" /></div>
+          {!outOfWedlock && <div className={fieldClass}><label htmlFor="field-father_full_name">Họ tên cha <span className="text-danger" aria-hidden="true">*</span></label><input id="field-father_full_name" value={form.father_full_name} onChange={(event) => setField("father_full_name", event.target.value)} required autoComplete="name" /></div>}
+          <div className={fieldClass}><label htmlFor="field-mother_nationality">Quốc tịch mẹ <span className="text-danger" aria-hidden="true">*</span></label><input id="field-mother_nationality" value={form.mother_nationality} onChange={(event) => setField("mother_nationality", event.target.value)} required /></div>
+          <div className={fieldClass}><label htmlFor="field-father_nationality">Quốc tịch cha, nếu đã xác định</label><input id="field-father_nationality" value={form.father_nationality} onChange={(event) => setField("father_nationality", event.target.value)} /></div>
         </div>
       </fieldset>
 
       {outOfWedlock && (
         <fieldset>
           <legend>Thông tin ghi tên cha</legend>
-          <div className="form-grid">
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
             <BooleanSelect id="wants_father_on_certificate" label="Bạn có muốn ghi tên cha trên giấy khai sinh không?" value={form.wants_father_on_certificate} onChange={(value) => setField("wants_father_on_certificate", value)} required />
             {form.wants_father_on_certificate && (
               <>
-                <div className="form-field"><label htmlFor="field-father_full_name">Họ tên cha <span aria-hidden="true">*</span></label><input id="field-father_full_name" value={form.father_full_name} onChange={(event) => setField("father_full_name", event.target.value)} required autoComplete="name" /></div>
+                <div className={fieldClass}><label htmlFor="field-father_full_name">Họ tên cha <span className="text-danger" aria-hidden="true">*</span></label><input id="field-father_full_name" value={form.father_full_name} onChange={(event) => setField("father_full_name", event.target.value)} required autoComplete="name" /></div>
                 <BooleanSelect id="parentage_evidence" label="Đã có chứng cứ quan hệ cha con chưa?" value={form.parentage_evidence} onChange={(value) => setField("parentage_evidence", value)} required />
               </>
             )}
@@ -607,7 +610,7 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
       {foreignElement && (
         <fieldset>
           <legend>Giấy tờ có yếu tố nước ngoài</legend>
-          <div className="form-grid">
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
             <BooleanSelect id="has_foreign_documents" label="Bạn có giấy tờ do nước ngoài cấp không?" value={form.has_foreign_documents} onChange={(value) => setField("has_foreign_documents", value)} required />
             <BooleanSelect id="foreign_documents_translated" label="Giấy tờ đã được dịch tiếng Việt và chứng thực chưa?" value={form.foreign_documents_translated} onChange={(value) => setField("foreign_documents_translated", value)} required={form.has_foreign_documents === true} disabled={form.has_foreign_documents !== true} />
             <BooleanSelect id="foreign_documents_legalized" label="Đã hợp pháp hóa lãnh sự hoặc được miễn chưa?" value={form.foreign_documents_legalized} onChange={(value) => setField("foreign_documents_legalized", value)} required={form.has_foreign_documents === true} disabled={form.has_foreign_documents !== true} />
@@ -615,7 +618,7 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
         </fieldset>
       )}
 
-      <div className="form-actions"><p>Dữ liệu chỉ được gửi tới backend của hệ thống.</p><button className="button button-primary session-action" type="submit" disabled={pending}><span>{pending ? "Đang kiểm tra..." : "Kiểm tra thông tin"}</span><i aria-hidden="true">↗</i></button></div>
+      <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-government/10 pt-6"><p className="text-[10px] text-muted">Dữ liệu chỉ được gửi tới backend của hệ thống.</p><button className={primaryActionClass} type="submit" disabled={pending}><span>{pending ? "Đang kiểm tra..." : "Kiểm tra thông tin"}</span><i className="grid size-9 place-items-center rounded-full bg-white/15 font-normal not-italic" aria-hidden="true">↗</i></button></div>
     </form>
   );
 }
@@ -623,9 +626,9 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
 export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIssue[]; status: string; onFix: (field: string) => void }) {
   if (status === "ready") {
     return (
-      <section id="precheck-results" className="ready-panel" aria-live="polite">
-        <span aria-hidden="true">OK</span>
-        <div><p>Đã vượt qua kiểm tra tự động</p><h2>Thông tin đã sẵn sàng</h2><p>Không còn lỗi bắt buộc trong kết quả kiểm tra hiện tại.</p></div>
+      <section id="precheck-results" className="mt-6 grid grid-cols-[64px_1fr] gap-5 rounded-[30px] border border-success/20 bg-green-50 p-6 shadow-panel" aria-live="polite">
+        <span className="grid size-16 place-items-center rounded-2xl bg-success text-xs font-black text-white shadow-lg shadow-success/20" aria-hidden="true">OK</span>
+        <div><p className="mb-1 text-[9px] font-black tracking-widest text-success uppercase">Đã vượt qua kiểm tra tự động</p><h2 className="text-2xl font-semibold tracking-tight text-green-900">Thông tin đã sẵn sàng</h2><p className="mt-2 mb-0 text-xs leading-5 text-green-800">Không còn lỗi bắt buộc trong kết quả kiểm tra hiện tại.</p></div>
       </section>
     );
   }
@@ -633,15 +636,15 @@ export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIss
   const errors = issues.filter((issue) => issue.severity === "error").length;
   const warnings = issues.length - errors;
   return (
-    <section id="precheck-results" className="precheck-results" aria-labelledby="precheck-title" aria-live="polite">
-      <div className="result-summary"><div><p>Kết quả kiểm tra</p><h2 id="precheck-title">{errors ? `${errors} lỗi cần sửa` : "Không có lỗi bắt buộc"}</h2></div><span>{warnings} cảnh báo</span></div>
-      <div className="issue-list">
+    <section id="precheck-results" className="mt-6 overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel" aria-labelledby="precheck-title" aria-live="polite">
+      <div className="flex items-center justify-between gap-4 border-b border-government/10 px-5 py-5 sm:px-7"><div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Kết quả kiểm tra</p><h2 className="text-2xl font-semibold tracking-tight text-government" id="precheck-title">{errors ? `${errors} lỗi cần sửa` : "Không có lỗi bắt buộc"}</h2></div><span className="rounded-full bg-amber-50 px-3 py-2 text-[10px] font-black text-warning">{warnings} cảnh báo</span></div>
+      <div className="grid gap-4 p-5 sm:p-7">
         {issues.map((issue, index) => (
-          <article key={issue.id || `${issue.field_name}-${index}`} className={`issue issue-${issue.severity}`}>
-            <div className="issue-heading"><span>{issue.severity === "error" ? "Lỗi cần sửa" : "Cảnh báo"}</span><small>{issue.source === "rule_engine" ? "Kiểm tra tự động theo quy tắc" : "AI phát hiện – cần xác nhận"}</small></div>
-            <h3>{issue.message}</h3>
-            <p><strong>Cách xử lý:</strong> {issue.suggested_fix}</p>
-            <div className="issue-footer"><LegalBasisAccordion basis={issue.legal_basis} />{issue.field_name && <button type="button" className="text-button" onClick={() => onFix(issue.field_name!)}>Sửa trường này</button>}</div>
+          <article key={issue.id || `${issue.field_name}-${index}`} className={`rounded-2xl border-l-4 p-4 ${issue.severity === "error" ? "border-danger bg-red-50" : "border-warning bg-amber-50"}`}>
+            <div className="flex flex-wrap items-center justify-between gap-2"><span className={`text-[9px] font-black tracking-widest uppercase ${issue.severity === "error" ? "text-danger" : "text-warning"}`}>{issue.severity === "error" ? "Lỗi cần sửa" : "Cảnh báo"}</span><small className="text-[9px] font-bold text-muted">{issue.source === "rule_engine" ? "Kiểm tra tự động theo quy tắc" : "AI phát hiện – cần xác nhận"}</small></div>
+            <h3 className="mt-3 text-sm leading-6 font-extrabold text-ink">{issue.message}</h3>
+            <p className="mt-2 text-xs leading-5 text-muted"><strong className="text-ink">Cách xử lý:</strong> {issue.suggested_fix}</p>
+            <div className="mt-3 flex flex-wrap items-end justify-between gap-3 border-t border-current/10 pt-2"><LegalBasisAccordion basis={issue.legal_basis} />{issue.field_name && <button type="button" className="min-h-10 rounded-full bg-white px-4 text-[10px] font-extrabold text-primary shadow-sm transition hover:bg-primary hover:text-white" onClick={() => onFix(issue.field_name!)}>Sửa trường này</button>}</div>
           </article>
         ))}
       </div>
@@ -652,9 +655,9 @@ export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIss
 export function PdfPreview({ sessionId }: { sessionId: string }) {
   const source = `${API_BASE_URL}/sessions/${encodeURIComponent(sessionId)}/birth-registration.pdf`;
   return (
-    <section className="pdf-preview" aria-labelledby="pdf-preview-title">
-      <div className="pdf-preview-heading"><div><p>Bản xem trước</p><h2 id="pdf-preview-title">Tờ khai từ thông tin đã điền</h2><span>Kiểm tra nội dung bên dưới, sau đó tải bản PDF về thiết bị.</span></div><div className="pdf-actions"><a className="button button-secondary session-action" href={source} target="_blank" rel="noreferrer"><span>Mở toàn màn hình</span><i aria-hidden="true">↗</i></a><a className="button button-primary session-action pdf-download" href={`${source}?download=true`}><span><strong>Tải bản PDF</strong><small>Lưu về thiết bị</small></span><i aria-hidden="true">↓</i></a></div></div>
-      <div className="pdf-frame"><iframe src={source} title="Bản xem trước tờ khai đăng ký khai sinh" /></div>
+    <section className="mt-6 overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel" aria-labelledby="pdf-preview-title">
+      <div className="flex flex-wrap items-start justify-between gap-5 border-b border-government/10 p-5 sm:p-7"><div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Bản xem trước</p><h2 className="text-2xl font-semibold tracking-tight text-government" id="pdf-preview-title">Tờ khai từ thông tin đã điền</h2><span className="mt-2 block text-xs leading-5 text-muted">Kiểm tra nội dung bên dưới, sau đó tải bản PDF về thiết bị.</span></div><div className="flex flex-wrap gap-3"><a className="inline-flex min-h-12 items-center gap-3 rounded-full border border-line bg-white py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-government transition hover:border-primary hover:bg-blue-50" href={source} target="_blank" rel="noreferrer"><span>Mở toàn màn hình</span><i className="grid size-9 place-items-center rounded-full bg-blue-50 font-normal not-italic" aria-hidden="true">↗</i></a><a className={primaryActionClass} href={`${source}?download=true`}><span className="grid"><strong>Tải bản PDF</strong><small className="font-normal text-blue-100">Lưu về thiết bị</small></span><i className="grid size-9 place-items-center rounded-full bg-white/15 text-base font-normal not-italic" aria-hidden="true">↓</i></a></div></div>
+      <div className="h-[680px] bg-slate-100 p-2 sm:p-4"><iframe className="h-full w-full rounded-2xl border border-line bg-white" src={source} title="Bản xem trước tờ khai đăng ký khai sinh" /></div>
     </section>
   );
 }
@@ -792,11 +795,11 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
   }
 
   if (restoring) {
-    return <AppShell session><main className="session-loading" aria-live="polite"><span className="loading-dots" aria-hidden="true"><i /><i /><i /></span><p>Đang khôi phục phiên làm việc...</p></main></AppShell>;
+    return <AppShell session><main className="mx-auto grid min-h-[70vh] w-[calc(100%_-_32px)] max-w-6xl place-items-center text-center" aria-live="polite"><div className="grid gap-4"><span className="mx-auto flex gap-1" aria-hidden="true"><i className="size-2 animate-bounce rounded-full bg-primary [animation-delay:-.2s]" /><i className="size-2 animate-bounce rounded-full bg-primary [animation-delay:-.1s]" /><i className="size-2 animate-bounce rounded-full bg-primary" /></span><p className="text-sm text-muted">Đang khôi phục phiên làm việc...</p></div></main></AppShell>;
   }
 
   if (!session) {
-    return <AppShell session><main className="fatal-state" role="alert"><p>Không thể mở phiên làm việc</p><h1>{error || "Phiên không tồn tại."}</h1><Link className="button button-primary" href="/">Về trang bắt đầu</Link></main></AppShell>;
+    return <AppShell session><main className="mx-auto grid min-h-[70vh] w-[calc(100%_-_32px)] max-w-3xl place-items-center text-center" role="alert"><div className="grid gap-5 rounded-[30px] border border-danger/20 bg-white p-8 shadow-panel"><p className="text-[10px] font-black tracking-widest text-danger uppercase">Không thể mở phiên làm việc</p><h1 className="text-3xl font-semibold tracking-tight text-government">{error || "Phiên không tồn tại."}</h1><Link className={`${primaryActionClass} mx-auto`} href="/">Về trang bắt đầu</Link></div></main></AppShell>;
   }
 
   const hasCases = session.cases.length > 0;
@@ -805,26 +808,26 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
 
   return (
     <AppShell session>
-      <main className="session-page">
-        <div className="session-topbar">
-          <div><p>Mã phiên</p><strong>{session.id.slice(0, 8).toUpperCase()}</strong></div>
+      <main className="mx-auto w-[calc(100%_-_24px)] max-w-[1320px] py-6 sm:w-[calc(100%_-_48px)] sm:py-10">
+        <div className="mb-5 grid items-center gap-5 rounded-3xl border border-government/10 bg-white p-4 shadow-sm sm:grid-cols-[150px_1fr] sm:px-6">
+          <div><p className="mb-1 text-[9px] font-black tracking-widest text-muted uppercase">Mã phiên</p><strong className="font-mono text-xs tracking-widest text-government">{session.id.slice(0, 8).toUpperCase()}</strong></div>
           <ProgressStepper current={currentStep} />
         </div>
 
-        {error && <div className="global-error" role="alert"><span>{error}</span><button type="button" onClick={() => setError("")} aria-label="Đóng thông báo">Đóng</button></div>}
+        {error && <div className="mb-5 flex items-center justify-between gap-4 rounded-2xl border border-danger/20 bg-red-50 px-4 py-3 text-xs text-danger" role="alert"><span>{error}</span><button className="min-h-10 rounded-full bg-white px-4 font-extrabold hover:bg-red-100" type="button" onClick={() => setError("")} aria-label="Đóng thông báo">Đóng</button></div>}
         {officerRequired && <OfficerConfirmationBanner />}
 
-        <div className="session-layout">
-          <div className="session-main">
-            <div className="view-tabs" role="tablist" aria-label="Nội dung phiên">
-              <button type="button" role="tab" aria-selected={view === "chat"} className={view === "chat" ? "active" : ""} onClick={() => setView("chat")}>Trao đổi</button>
-              <button type="button" role="tab" aria-selected={view === "form"} className={view === "form" ? "active" : ""} onClick={() => setView("form")} disabled={!hasCases}>Điền thông tin</button>
+        <div className="grid items-start gap-6 min-[1080px]:grid-cols-[minmax(0,3fr)_minmax(320px,2fr)]">
+          <div className="min-w-0">
+            <div className="mb-4 grid grid-cols-2 rounded-full border border-government/10 bg-white p-1 shadow-sm" role="tablist" aria-label="Nội dung phiên">
+              <button type="button" role="tab" aria-selected={view === "chat"} className={`min-h-11 rounded-full px-4 text-xs font-extrabold transition ${view === "chat" ? "bg-government text-white shadow-md" : "text-muted hover:bg-blue-50 hover:text-government"}`} onClick={() => setView("chat")}>Trao đổi</button>
+              <button type="button" role="tab" aria-selected={view === "form"} className={`min-h-11 rounded-full px-4 text-xs font-extrabold transition disabled:cursor-not-allowed disabled:opacity-40 ${view === "form" ? "bg-government text-white shadow-md" : "text-muted hover:bg-blue-50 hover:text-government"}`} onClick={() => setView("form")} disabled={!hasCases}>Điền thông tin</button>
             </div>
 
             {view === "chat" ? (
               <>
                 <IntakeChat messages={messages} pending={sending} confidence={confidence} onSend={sendMessage} onTranscribe={transcribeAudio} />
-                {hasCases && <div className="next-step-callout"><div><strong>Đã có checklist ban đầu</strong><p>Bạn vẫn có thể tiếp tục trao đổi hoặc chuyển sang điền thông tin.</p></div><button className="button button-primary session-action" type="button" onClick={() => setView("form")}><span>Điền thông tin</span><i aria-hidden="true">→</i></button></div>}
+                {hasCases && <div className="mt-5 flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-success/15 bg-green-50 p-5"><div><strong className="text-sm text-green-900">Đã có checklist ban đầu</strong><p className="mt-1 mb-0 text-xs leading-5 text-green-800">Bạn vẫn có thể tiếp tục trao đổi hoặc chuyển sang điền thông tin.</p></div><button className={primaryActionClass} type="button" onClick={() => setView("form")}><span>Điền thông tin</span><i className="grid size-9 place-items-center rounded-full bg-white/15 font-normal not-italic" aria-hidden="true">→</i></button></div>}
               </>
             ) : (
               <>
@@ -836,7 +839,7 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
             )}
           </div>
 
-          <aside className="session-aside">
+          <aside className="min-w-0 min-[1080px]:sticky min-[1080px]:top-28">
             <CaseBadges primaryCase={session.primary_case} cases={session.cases} />
             <ChecklistPanel checklist={checklist} />
           </aside>

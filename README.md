@@ -5,6 +5,7 @@
   <a href="#testing"><img alt="Build passing" src="https://img.shields.io/badge/build-passing-15803D?style=for-the-badge"></a>
   <img alt="Smart Government Hackathon" src="https://img.shields.io/badge/Smart_Government-Hackathon-0B5ED7?style=for-the-badge">
   <a href="https://nextjs.org/"><img alt="Next.js 16" src="https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&amp;logo=nextdotjs&amp;logoColor=white"></a>
+  <a href="https://tailwindcss.com/"><img alt="Tailwind CSS 4" src="https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&amp;logo=tailwindcss&amp;logoColor=white"></a>
   <a href="https://fastapi.tiangolo.com/"><img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white"></a>
   <a href="https://www.postgresql.org/"><img alt="PostgreSQL 16" src="https://img.shields.io/badge/PostgreSQL_16-4169E1?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white"></a>
   <a href="https://openai.com/"><img alt="OpenAI API" src="https://img.shields.io/badge/OpenAI-API-412991?style=for-the-badge&amp;logo=openai&amp;logoColor=white"></a>
@@ -47,7 +48,7 @@ Birth registration is the first procedure implemented deeply in this prototype. 
 
 ```mermaid
 flowchart LR
-    Citizen[Citizen] -->|Text or voice| Web[Next.js Web App]
+    Citizen[Citizen] -->|Text or voice| Web[Next.js + Tailwind CSS Web App]
     Officer[Authorized Officer] -->|Protected dashboard| Web
 
     Web -->|Native fetch / JSON| API[FastAPI API]
@@ -105,7 +106,7 @@ flowchart LR
 | Layer | Technology | Purpose |
 |---|---|---|
 | Frontend | Next.js 16, React 19, TypeScript 5.9 | Responsive citizen flow and officer dashboard |
-| UI | Native HTML, CSS, Web APIs | Accessible forms, recording, and animation without a UI framework |
+| UI | Tailwind CSS 4, local Roboto variable font, native Web APIs | Token-based responsive design, accessible forms, recording, and motion |
 | Backend | FastAPI, Pydantic | Typed REST API and OpenAPI contract |
 | Data | PostgreSQL 16, SQLAlchemy 2, Alembic | Sessions, cases, rules, documents, and migrations |
 | AI | OpenAI Responses API | Structured extraction, guidance, and exception review |
@@ -207,6 +208,8 @@ npm run dev
 
 Citizen application: `http://localhost:3000`<br>
 Officer dashboard: `http://localhost:3000/admin`
+
+The frontend uses Tailwind CSS v4 through the PostCSS plugin. Design tokens live in `frontend/app/globals.css`; component styling is expressed with Tailwind utility classes, with only global accessibility defaults and reusable keyframes kept in CSS.
 
 > Never expose `OPENAI_API_KEY` in the frontend. All AI requests must go through the backend.
 
