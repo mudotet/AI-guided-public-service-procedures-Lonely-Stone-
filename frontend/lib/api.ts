@@ -1,8 +1,12 @@
 const API_BASE_URL = (process.env.VITE_API_BASE_URL || "http://localhost:8000").replace(/\/$/, "");
+export const BACKEND_ONLINE_EVENT = "civicpath:backend-online";
 
 export class ApiError extends Error {
-  constructor(message: string, public status?: number) {
+  public status?: number;
+
+  constructor(message: string, status?: number) {
     super(message);
+    this.status = status;
   }
 }
 
@@ -35,6 +39,7 @@ export async function apiFetch<T>(path: string, init: RequestInit = {}, timeoutM
       const detail = typeof data.detail === "string" ? data.detail : undefined;
       throw new ApiError(detail || statusMessage(response.status) || `Yêu cầu thất bại (${response.status}).`, response.status);
     }
+    if (typeof window !== "undefined") window.dispatchEvent(new Event(BACKEND_ONLINE_EVENT));
     return data as T;
   } catch (error) {
     if (error instanceof ApiError) throw error;

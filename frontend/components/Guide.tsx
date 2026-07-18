@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import type { FormEvent, KeyboardEvent, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
-import { API_BASE_URL, ApiError, apiFetch } from "@/lib/api";
+import { API_BASE_URL, ApiError, apiFetch, BACKEND_ONLINE_EVENT } from "@/lib/api";
 import { emptyRegistrationForm, flowStep, mergeConversationFacts, normaliseForm, RARE_CASE_CODES } from "@/lib/session";
 import type {
   AudioTranscriptionResponse,
@@ -22,18 +22,20 @@ import type {
 } from "@/lib/types";
 
 const STORAGE_KEY = "birth-registration-session-id";
-const fieldClass = "grid gap-2 text-xs font-bold text-slate-700 [&_input]:min-h-12 [&_input]:w-full [&_input]:rounded-xl [&_input]:border [&_input]:border-line [&_input]:bg-white [&_input]:px-3.5 [&_input]:text-sm [&_input]:font-normal [&_input]:text-ink [&_input]:outline-none [&_input]:transition [&_input]:focus:border-primary [&_input]:focus:ring-4 [&_input]:focus:ring-primary/10 [&_select]:min-h-12 [&_select]:w-full [&_select]:rounded-xl [&_select]:border [&_select]:border-line [&_select]:bg-white [&_select]:px-3.5 [&_select]:text-sm [&_select]:font-normal [&_select]:text-ink [&_select]:outline-none [&_select]:transition [&_select]:focus:border-primary [&_select]:focus:ring-4 [&_select]:focus:ring-primary/10 [&_select]:disabled:cursor-not-allowed [&_select]:disabled:bg-slate-100";
-const primaryActionClass = "group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-white shadow-[0_14px_34px_rgba(11,94,215,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-government disabled:cursor-not-allowed disabled:opacity-55";
+const fieldClass = "grid gap-2 text-xs font-bold text-slate-700 [&_input]:min-h-12 [&_input]:w-full [&_input]:rounded-2xl [&_input]:border [&_input]:border-government/10 [&_input]:bg-white [&_input]:px-4 [&_input]:text-sm [&_input]:font-normal [&_input]:text-ink [&_input]:shadow-[inset_0_1px_2px_rgba(6,59,130,.03)] [&_input]:outline-none [&_input]:transition [&_input]:duration-500 [&_input]:focus:border-primary [&_input]:focus:ring-4 [&_input]:focus:ring-primary/10 [&_select]:min-h-12 [&_select]:w-full [&_select]:rounded-2xl [&_select]:border [&_select]:border-government/10 [&_select]:bg-white [&_select]:px-4 [&_select]:text-sm [&_select]:font-normal [&_select]:text-ink [&_select]:outline-none [&_select]:transition [&_select]:duration-500 [&_select]:focus:border-primary [&_select]:focus:ring-4 [&_select]:focus:ring-primary/10 [&_select]:disabled:cursor-not-allowed [&_select]:disabled:bg-slate-100";
+const primaryActionClass = "group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-white shadow-[0_14px_34px_rgba(11,94,215,0.2)] transition duration-500 ease-[var(--ease-premium)] hover:-translate-y-0.5 hover:bg-government active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-55";
 
 export function AppShell({ children, home = false, session = false }: { children: ReactNode; home?: boolean; session?: boolean }) {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-canvas font-sans text-ink" data-page={home ? "home" : session ? "session" : undefined}>
-      <header className="sticky top-3 z-50 mx-auto flex min-h-18 w-[calc(100%_-_24px)] max-w-[1240px] items-center justify-between rounded-full border border-government/10 bg-white/92 px-4 shadow-[0_18px_55px_rgba(6,59,130,0.09)] backdrop-blur-xl sm:w-[calc(100%_-_48px)] sm:px-6">
-        <Link href="/" className="inline-flex items-center gap-3" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
-          <span className="relative size-11 overflow-hidden rounded-xl border border-government/10 bg-white shadow-lg shadow-government/15"><Image className="h-full w-full object-cover" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={44} height={44} priority /></span>
-          <span className="flex flex-col leading-tight"><strong className="text-sm font-extrabold text-government">Dịch vụ công</strong><small className="text-[10px] text-muted sm:text-xs">Hướng dẫn đăng ký khai sinh</small></span>
-        </Link>
-        <div className="flex items-center gap-4"><Link className="inline-flex min-h-10 items-center rounded-full border border-line bg-white px-4 text-xs font-extrabold text-government transition hover:-translate-y-0.5 hover:border-primary hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/admin">Cổng cán bộ</Link></div>
+    <div className="relative isolate min-h-screen overflow-x-hidden bg-transparent font-sans text-ink" data-page={home ? "home" : session ? "session" : undefined}>
+      <header className="sticky top-3 z-30 mx-auto w-[calc(100%_-_24px)] max-w-[1240px] rounded-full bg-government/5 p-1.5 shadow-[0_18px_55px_rgba(6,59,130,0.09)] ring-1 ring-government/8 backdrop-blur-xl sm:w-[calc(100%_-_48px)]">
+        <div className="flex min-h-15 items-center justify-between rounded-full bg-white/95 px-3 sm:px-5">
+          <Link href="/" className="inline-flex items-center gap-3" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
+            <span className="relative size-11 overflow-hidden rounded-xl bg-white shadow-lg shadow-government/15 ring-1 ring-government/10"><Image className="h-full w-full object-cover" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={44} height={44} priority /></span>
+            <span className="flex flex-col leading-tight"><strong className="text-sm font-extrabold text-government">Dịch vụ công</strong><small className="text-[10px] text-muted sm:text-xs">Hướng dẫn đăng ký khai sinh</small></span>
+          </Link>
+          <div className="flex items-center gap-4"><Link className="inline-flex min-h-10 items-center rounded-full bg-blue-50 px-4 text-xs font-extrabold text-government ring-1 ring-primary/10 transition duration-500 hover:-translate-y-0.5 hover:bg-primary hover:text-white active:scale-[.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/admin">Cổng cán bộ</Link></div>
+        </div>
       </header>
       {children}
       <footer className="mx-auto flex w-[calc(100%_-_32px)] max-w-[1240px] justify-center border-t border-government/10 py-8 text-center text-xs leading-6 text-muted">
@@ -51,10 +53,13 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const markBackendOnline = () => setHealth("ok");
+    window.addEventListener(BACKEND_ONLINE_EVENT, markBackendOnline);
     setSavedId(localStorage.getItem(STORAGE_KEY));
     apiFetch<{ status: string }>("/health", {}, 70_000)
-      .then(() => setHealth("ok"))
-      .catch(() => setHealth("error"));
+      .then(markBackendOnline)
+      .catch(() => setHealth((current) => current === "ok" ? current : "error"));
+    return () => window.removeEventListener(BACKEND_ONLINE_EVENT, markBackendOnline);
   }, []);
 
   async function start() {
@@ -62,7 +67,6 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
     setError("");
     try {
       const session = await apiFetch<SessionResponse>("/sessions", { method: "POST", body: "{}" });
-      setHealth("ok");
       localStorage.setItem(STORAGE_KEY, session.id);
       router.push(`/session/${session.id}`);
     } catch (cause) {
@@ -75,11 +79,11 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
   return (
     <div className={compact ? "w-full lg:w-auto" : "w-full"}>
       <div className={`flex flex-wrap gap-3 ${compact ? "lg:justify-end" : ""}`}>
-        <button className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-sm font-extrabold text-white shadow-[0_16px_40px_rgba(11,94,215,0.22)] transition duration-500 hover:-translate-y-0.5 hover:bg-government disabled:cursor-not-allowed disabled:opacity-60" type="button" onClick={start} disabled={pending}>
+        <button className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-sm font-extrabold text-white shadow-[0_16px_40px_rgba(11,94,215,0.22)] transition duration-500 hover:-translate-y-0.5 hover:bg-government active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-60" type="button" onClick={start} disabled={pending}>
           <span>{pending ? "Đang tạo phiên..." : "Bắt đầu hướng dẫn"}</span><i className="grid size-10 place-items-center rounded-full bg-white/16 font-normal not-italic transition duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">↗</i>
         </button>
         {savedId && (
-          <Link className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-line bg-white py-1.5 pr-1.5 pl-5 text-sm font-extrabold text-government transition duration-500 hover:-translate-y-0.5 hover:border-primary hover:bg-blue-50" href={`/session/${savedId}`}>
+          <Link className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-white py-1.5 pr-1.5 pl-5 text-sm font-extrabold text-government ring-1 ring-government/12 transition duration-500 hover:-translate-y-0.5 hover:bg-blue-50 hover:ring-primary/25 active:scale-[.98]" href={`/session/${savedId}`}>
             <span>Tiếp tục phiên trước</span><i className="grid size-10 place-items-center rounded-full bg-blue-50 font-normal not-italic transition duration-500 group-hover:translate-x-1" aria-hidden="true">→</i>
           </Link>
         )}
@@ -441,14 +445,14 @@ export function IntakeChat({ messages, pending, confidence, onSend, onTranscribe
   }
 
   return (
-    <section className="overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel" aria-labelledby="chat-title">
+    <section className="overflow-hidden rounded-[34px] bg-white shadow-panel ring-1 ring-government/8" aria-labelledby="chat-title">
       <div className="flex flex-wrap items-start justify-between gap-5 border-b border-government/10 px-5 py-6 sm:px-7">
         <div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Trao đổi với trợ lý</p><h1 className="text-[clamp(22px,3vw,32px)] leading-tight font-semibold tracking-[-0.035em] text-government" id="chat-title">Cho chúng tôi biết tình huống của bạn</h1></div>
         {confidence !== null && (
           <details className="text-[10px] text-muted"><summary className="min-h-8 cursor-pointer font-bold text-primary">Chi tiết phân tích</summary><p className="mt-2">Độ tin cậy gần nhất: {Math.round(confidence * 100)}%</p></details>
         )}
       </div>
-      <div className="grid max-h-[560px] min-h-[320px] gap-4 overflow-y-auto bg-slate-50/70 px-4 py-6 sm:px-7" aria-live="polite" aria-busy={pending}>
+      <div className="grid max-h-[560px] min-h-[320px] gap-4 overflow-y-auto bg-[radial-gradient(circle_at_top_left,rgba(11,94,215,.06),transparent_22rem)] px-4 py-6 sm:px-7" aria-live="polite" aria-busy={pending}>
         {messages.length === 0 && (
           <div className="mr-auto grid max-w-[82%] gap-1.5 rounded-[20px_20px_20px_6px] border border-government/10 bg-white px-4 py-3 shadow-sm">
             <span className="text-[9px] font-black tracking-wider text-primary uppercase">Trợ lý hướng dẫn</span>
@@ -507,7 +511,7 @@ export function IntakeChat({ messages, pending, confidence, onSend, onTranscribe
           maxLength={5000}
           disabled={pending || voicePhase === "recording" || voicePhase === "transcribing"}
           placeholder="Ví dụ: Bé sinh ngày 01/07/2026 tại Việt Nam..."
-          className="min-h-28 w-full resize-y rounded-2xl border border-line bg-white px-4 py-3 text-sm leading-6 text-ink outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 disabled:bg-slate-100"
+          className="min-h-28 w-full resize-y rounded-2xl border border-government/10 bg-white px-4 py-3 text-sm leading-6 text-ink shadow-[inset_0_1px_2px_rgba(6,59,130,.03)] outline-none transition duration-500 placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 disabled:bg-slate-100"
         />
         <div className="flex flex-wrap items-center justify-between gap-3"><small className="text-[10px] text-muted">Enter để gửi, Shift + Enter để xuống dòng</small><button className={primaryActionClass} type="button" onClick={() => void submit()} disabled={pending || voicePhase === "recording" || voicePhase === "transcribing" || !draft.trim()}><span>Gửi câu trả lời</span><i className="grid size-9 place-items-center rounded-full bg-white/15 font-normal not-italic" aria-hidden="true">↗</i></button></div>
       </div>
@@ -828,10 +832,12 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
 
   return (
     <AppShell session>
-      <main className="mx-auto w-[calc(100%_-_24px)] max-w-[1320px] py-6 sm:w-[calc(100%_-_48px)] sm:py-10">
-        <div className="mb-5 grid items-center gap-5 rounded-3xl border border-government/10 bg-white p-4 shadow-sm sm:grid-cols-[150px_1fr] sm:px-6">
+      <main className="mx-auto w-[calc(100%_-_24px)] max-w-[1320px] py-8 sm:w-[calc(100%_-_48px)] sm:py-12">
+        <div className="mb-6 rounded-[30px] bg-government/5 p-1.5 ring-1 ring-government/8">
+        <div className="grid items-center gap-5 rounded-[24px] bg-white p-4 shadow-[inset_0_1px_0_rgba(255,255,255,.8)] sm:grid-cols-[150px_1fr] sm:px-6">
           <div><p className="mb-1 text-[9px] font-black tracking-widest text-muted uppercase">Mã phiên</p><strong className="font-mono text-xs tracking-widest text-government">{session.id.slice(0, 8).toUpperCase()}</strong></div>
           <ProgressStepper current={currentStep} />
+        </div>
         </div>
 
         {error && <div className="mb-5 flex items-center justify-between gap-4 rounded-2xl border border-danger/20 bg-red-50 px-4 py-3 text-xs text-danger" role="alert"><span>{error}</span><button className="min-h-10 rounded-full bg-white px-4 font-extrabold hover:bg-red-100" type="button" onClick={() => setError("")} aria-label="Đóng thông báo">Đóng</button></div>}
@@ -839,9 +845,9 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
 
         <div className="grid items-start gap-6 min-[1080px]:grid-cols-[minmax(0,3fr)_minmax(320px,2fr)]">
           <div className="min-w-0">
-            <div className="mb-4 grid grid-cols-2 rounded-full border border-government/10 bg-white p-1 shadow-sm" role="tablist" aria-label="Nội dung phiên">
-              <button type="button" role="tab" aria-selected={view === "chat"} className={`min-h-11 rounded-full px-4 text-xs font-extrabold transition ${view === "chat" ? "bg-government text-white shadow-md" : "text-muted hover:bg-blue-50 hover:text-government"}`} onClick={() => setView("chat")}>Trao đổi</button>
-              <button type="button" role="tab" aria-selected={view === "form"} className={`min-h-11 rounded-full px-4 text-xs font-extrabold transition disabled:cursor-not-allowed disabled:opacity-40 ${view === "form" ? "bg-government text-white shadow-md" : "text-muted hover:bg-blue-50 hover:text-government"}`} onClick={() => setView("form")} disabled={!hasCases}>Điền thông tin</button>
+            <div className="mb-4 grid grid-cols-2 rounded-full bg-government/5 p-1.5 ring-1 ring-government/8" role="tablist" aria-label="Nội dung phiên">
+              <button type="button" role="tab" aria-selected={view === "chat"} className={`min-h-11 rounded-full px-4 text-xs font-extrabold transition duration-500 ${view === "chat" ? "bg-government text-white shadow-[0_10px_24px_rgba(6,59,130,.18)]" : "bg-white text-muted hover:bg-blue-50 hover:text-government"}`} onClick={() => setView("chat")}>Trao đổi</button>
+              <button type="button" role="tab" aria-selected={view === "form"} className={`min-h-11 rounded-full px-4 text-xs font-extrabold transition duration-500 disabled:cursor-not-allowed disabled:opacity-40 ${view === "form" ? "bg-government text-white shadow-[0_10px_24px_rgba(6,59,130,.18)]" : "bg-white text-muted hover:bg-blue-50 hover:text-government"}`} onClick={() => setView("form")} disabled={!hasCases}>Điền thông tin</button>
             </div>
 
             {view === "chat" ? (

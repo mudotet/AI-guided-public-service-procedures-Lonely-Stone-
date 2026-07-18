@@ -9,8 +9,8 @@ import { ApiError, API_BASE_URL, apiFetch } from "@/lib/api";
 import type { AdminDashboardResponse, AdminSessionSummary, SessionDetail, SessionStatus } from "@/lib/types";
 
 const ADMIN_TOKEN_KEY = "birth-registration-admin-token";
-const adminActionClass = "inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-white shadow-[0_14px_34px_rgba(11,94,215,.2)] transition hover:-translate-y-0.5 hover:bg-government disabled:cursor-not-allowed disabled:opacity-55";
-const adminFieldClass = "min-h-12 w-full rounded-xl border border-line bg-white px-3.5 text-sm text-ink outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10";
+const adminActionClass = "group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-primary py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-white shadow-[0_14px_34px_rgba(11,94,215,.2)] transition duration-500 hover:-translate-y-0.5 hover:bg-government active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-55";
+const adminFieldClass = "min-h-12 w-full rounded-2xl border border-government/10 bg-white px-4 text-sm text-ink shadow-[inset_0_1px_2px_rgba(6,59,130,.03)] outline-none transition duration-500 focus:border-primary focus:ring-4 focus:ring-primary/10";
 const STATUS_LABELS: Record<SessionStatus, string> = {
   intake: "Đang thu thập",
   checklist: "Đã có checklist",
@@ -63,7 +63,7 @@ function AdminBrand() {
   return (
     <Link href="/admin" className="inline-flex items-center gap-3">
       <span className="relative size-11 overflow-hidden rounded-xl border border-white/20 bg-white shadow-lg"><Image className="h-full w-full object-cover" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={44} height={44} priority /></span>
-      <div className="grid leading-tight"><strong className="text-sm text-white">Cổng quản lý hộ tịch</strong><small className="mt-1 text-[9px] text-blue-200">Trung tâm điều phối hồ sơ khai sinh</small></div>
+      <div className="hidden leading-tight sm:grid"><strong className="text-sm text-white">Cổng quản lý hộ tịch</strong><small className="mt-1 text-[9px] text-blue-200">Trung tâm điều phối hồ sơ khai sinh</small></div>
     </Link>
   );
 }
@@ -188,7 +188,7 @@ export function AdminDashboard() {
     return (
       <div className="relative min-h-screen overflow-hidden bg-government font-sans text-white">
         <div className="pointer-events-none absolute -top-60 -left-60 size-[640px] rounded-full bg-primary/25 blur-3xl" aria-hidden="true" />
-        <header className="relative z-10 mx-auto flex min-h-24 w-[calc(100%_-_32px)] max-w-[1320px] items-center justify-between border-b border-white/10"><AdminBrand /><Link className="inline-flex min-h-11 items-center gap-3 rounded-full border border-white/15 px-4 text-xs font-extrabold text-white transition hover:bg-white hover:text-government" href="/"><span>Về trang công khai</span><i className="not-italic" aria-hidden="true">↗</i></Link></header>
+        <header className="relative z-10 mx-auto mt-4 flex min-h-18 w-[calc(100%_-_32px)] max-w-[1320px] items-center justify-between rounded-full bg-white/8 px-4 ring-1 ring-white/15 sm:px-6"><AdminBrand /><Link className="group inline-flex min-h-11 items-center gap-3 rounded-full bg-white/8 py-1 pr-1 pl-4 text-xs font-extrabold text-white ring-1 ring-white/15 transition duration-500 hover:bg-white hover:text-government active:scale-[.98]" href="/"><span>Về trang công khai</span><i className="grid size-9 place-items-center rounded-full bg-white/10 not-italic transition duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5" aria-hidden="true">↗</i></Link></header>
         <main className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] w-[calc(100%_-_32px)] max-w-[1320px] items-center gap-16 py-16 lg:grid-cols-[1.1fr_.9fr]">
           <section className="max-w-3xl">
             <p className="mb-7 inline-flex items-center gap-2 text-[10px] font-black tracking-[0.16em] text-blue-200 uppercase before:size-2 before:rounded-full before:bg-green-400">Khu vực nghiệp vụ được bảo vệ</p>
@@ -196,7 +196,7 @@ export function AdminDashboard() {
             <p className="mt-7 max-w-xl text-sm leading-7 text-blue-100">Theo dõi tình trạng phiên, xem bản PDF và cập nhật thông tin hỗ trợ trước khi cán bộ xử lý.</p>
             <ul className="mt-12 grid list-none gap-0 p-0 text-xs text-blue-100">{[["01", "Dữ liệu cập nhật trực tiếp từ backend"], ["02", "Thao tác thay đổi yêu cầu xác nhận rõ ràng"], ["03", "Mã truy cập chỉ lưu trong phiên trình duyệt"]].map(([number, text]) => <li className="grid min-h-14 grid-cols-[42px_1fr] items-center border-t border-white/10" key={number}><span className="font-black text-blue-300">{number}</span>{text}</li>)}</ul>
           </section>
-          <div className="rounded-[36px] border border-white/15 bg-white/10 p-2 shadow-[0_40px_100px_rgba(0,0,0,.3)] backdrop-blur-xl">
+          <div className="rounded-[38px] bg-white/10 p-2 shadow-[0_40px_100px_rgba(0,0,0,.24)] ring-1 ring-white/15">
             <section className="rounded-[30px] bg-white p-6 text-ink sm:p-9" aria-labelledby="admin-login-title">
               <Image className="size-16 rounded-2xl border border-government/10 object-cover shadow-xl" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={64} height={64} priority />
               <p className="mt-9 text-[9px] font-black tracking-widest text-primary uppercase">Xác thực cán bộ</p>
@@ -225,10 +225,10 @@ export function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-canvas font-sans text-ink">
-      <header className="sticky top-0 z-40 flex min-h-22 items-center gap-6 bg-government px-4 text-white shadow-[0_18px_55px_rgba(6,59,130,.16)] sm:px-8">
+      <header className="sticky top-3 z-30 mx-auto flex min-h-18 w-[calc(100%_-_24px)] max-w-[1400px] items-center gap-6 rounded-full bg-government px-4 text-white shadow-[0_18px_55px_rgba(6,59,130,.16)] ring-1 ring-white/10 sm:w-[calc(100%_-_48px)] sm:px-6">
         <AdminBrand />
         <div className="ml-auto hidden items-center gap-2 text-[10px] font-bold text-blue-200 md:flex"><span className="size-2 animate-pulse rounded-full bg-green-400" />Hệ thống đang hoạt động</div>
-        <nav className="flex items-center gap-2 text-xs font-extrabold"><Link className="min-h-10 rounded-full px-4 py-3 transition hover:bg-white/10" href="/">Trang công khai</Link><button className="min-h-10 rounded-full border border-white/15 px-4 transition hover:bg-white hover:text-government" type="button" onClick={logout}>Đăng xuất</button></nav>
+        <nav className="flex items-center gap-2 text-xs font-extrabold"><Link className="hidden min-h-10 rounded-full px-4 py-3 transition duration-500 hover:bg-white/10 sm:inline-flex" href="/">Trang công khai</Link><button className="min-h-10 rounded-full border border-white/15 px-4 transition duration-500 hover:bg-white hover:text-government active:scale-[.98]" type="button" onClick={logout}>Đăng xuất</button></nav>
       </header>
 
       <main className="mx-auto w-[calc(100%_-_24px)] max-w-[1400px] py-10 sm:w-[calc(100%_-_48px)] sm:py-16">
@@ -241,10 +241,10 @@ export function AdminDashboard() {
 
         {error && <div className="mt-6 rounded-2xl border border-danger/20 bg-red-50 p-4 text-xs text-danger" role="alert">{error}</div>}
 
-        <section className="mt-12 grid overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel sm:grid-cols-2 lg:grid-cols-5" aria-label="Thống kê phiên">
+        <section className="mt-12 grid gap-px overflow-hidden rounded-[32px] bg-government/8 p-1.5 shadow-panel sm:grid-cols-2 lg:grid-cols-6" aria-label="Thống kê phiên">
           {stats.map(([label, value, tone], index) => (
-            <article key={label} className="min-h-48 border-government/10 p-5 not-last:border-b sm:odd:border-r lg:not-last:border-r lg:not-last:border-b" style={{ animationDelay: `${120 + index * 70}ms` }}>
-              <div className="grid h-full content-between"><span className="text-[10px] font-extrabold text-muted">{label}</span><strong className={`text-5xl font-semibold tracking-tight ${tone === "attention" || tone === "officer" ? "text-warning" : tone === "ready" ? "text-success" : "text-government"}`}>{value.toLocaleString("vi-VN")}</strong><small className="text-[9px] leading-4 text-muted">{tone === "total" ? "Toàn bộ dữ liệu ghi nhận" : "Phiên trong trạng thái này"}</small></div>
+            <article key={label} className={`min-h-48 rounded-[25px] p-5 ${index === 0 ? "bg-government text-white sm:col-span-2 lg:col-span-2" : "bg-white lg:col-span-1"}`} style={{ animationDelay: `${120 + index * 70}ms` }}>
+              <div className="grid h-full content-between"><span className={`text-[10px] font-extrabold ${index === 0 ? "text-blue-200" : "text-muted"}`}>{label}</span><strong className={`text-5xl font-semibold tracking-tight ${index === 0 ? "text-white" : tone === "attention" || tone === "officer" ? "text-warning" : tone === "ready" ? "text-success" : "text-government"}`}>{value.toLocaleString("vi-VN")}</strong><small className={`text-[9px] leading-4 ${index === 0 ? "text-blue-200" : "text-muted"}`}>{tone === "total" ? "Toàn bộ dữ liệu ghi nhận" : "Phiên trong trạng thái này"}</small></div>
             </article>
           ))}
         </section>
