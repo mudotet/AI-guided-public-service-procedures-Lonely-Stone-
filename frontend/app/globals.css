@@ -3,7 +3,7 @@
 @theme {
   --font-sans: "Roboto Variable", "Segoe UI", system-ui, sans-serif;
   --font-display: "Roboto Variable", "Segoe UI", system-ui, sans-serif;
-  --font-editorial: Georgia, "Times New Roman", serif;
+  --font-editorial: "Roboto Variable", "Segoe UI", system-ui, sans-serif;
   --color-primary: #0b5ed7;
   --color-government: #063b82;
   --color-canvas: #f5f7fa;
