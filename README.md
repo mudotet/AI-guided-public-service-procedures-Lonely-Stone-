@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/logo.jpg" alt="CivicPath AI logo" width="132"></p>
+<p align="center"><a href="https://ai-guided-public-service-procedures.vercel.app/"><img src="docs/assets/logo.jpg" alt="CivicPath AI logo" width="132"></a></p>
 
 <h1 align="center">CivicPath AI</h1>
 <p align="center"><strong>AI-guided public service procedures — starting with birth registration</strong><br>Understand the procedure. Prepare the right documents. Check before you submit.</p>
@@ -16,7 +16,7 @@
 
 <p align="center"><a href="https://git.io/typing-svg"><img alt="Animated product summary" src="https://readme-typing-svg.demolab.com?font=Roboto&amp;weight=600&amp;size=20&amp;duration=3000&amp;pause=900&amp;color=0B5ED7&amp;center=true&amp;vCenter=true&amp;width=760&amp;lines=Ask+in+plain+language.;Get+a+case-aware+document+checklist.;Fix+errors+before+visiting+the+public+office."></a></p>
 
-<h2 align="center">🚀 <a href="[LINK DEMO]">LIVE DEMO</a> &nbsp;|&nbsp; 🎥 <a href="[VIDEO]">VIDEO DEMO</a></h2>
+<h2 align="center">🚀 <a href="https://ai-guided-public-service-procedures.vercel.app/">LIVE DEMO</a> &nbsp;|&nbsp; 🎥 <a href="[VIDEO]">VIDEO DEMO</a></h2>
 
 <!-- SCREENSHOT HERE -->
 
