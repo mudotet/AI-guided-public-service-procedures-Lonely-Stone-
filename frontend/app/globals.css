@@ -13,8 +13,9 @@
   --color-warning: #d97706;
   --color-danger: #dc2626;
   --color-line: #d0d5dd;
-  --shadow-panel: 0 24px 70px rgba(6, 59, 130, 0.1);
+  --shadow-panel: 0 1px 2px rgba(6, 59, 130, 0.04), 0 24px 70px rgba(6, 59, 130, 0.1), 0 50px 120px rgba(6, 59, 130, 0.05);
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --default-transition-timing-function: var(--ease-premium);
 }
 
 @layer base {
@@ -25,7 +26,10 @@
   html {
     min-width: 320px;
     scroll-behavior: smooth;
-    background: var(--color-canvas);
+    background:
+      radial-gradient(circle at 8% -10%, rgba(11, 94, 215, 0.08), transparent 34rem),
+      radial-gradient(circle at 96% 18%, rgba(6, 59, 130, 0.05), transparent 30rem),
+      var(--color-canvas);
   }
 
   body {
@@ -75,7 +79,7 @@
   }
 }
 
-@media (min-width: 881px) {
+@media (min-width: 1080px) {
   .checklist-native:not([open]) > :not(summary) {
     display: block;
   }
@@ -83,10 +87,10 @@
 
 .motion-ready [data-reveal] {
   opacity: 0;
-  transform: translateY(32px);
+  transform: translateY(48px);
   transition:
-    opacity 0.8s var(--ease-premium),
-    transform 0.8s var(--ease-premium);
+    opacity 1s var(--ease-premium),
+    transform 1s var(--ease-premium);
 }
 
 .motion-ready [data-reveal].is-visible {
@@ -114,6 +118,11 @@
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+@keyframes ambient-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(24px, -18px, 0) scale(1.04); }
 }
 
 @media (prefers-reduced-motion: reduce) {
