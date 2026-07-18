@@ -16,11 +16,27 @@
 
 <p align="center"><a href="https://git.io/typing-svg"><img alt="Animated product summary" src="https://readme-typing-svg.demolab.com?font=Roboto&amp;weight=600&amp;size=20&amp;duration=3000&amp;pause=900&amp;color=0B5ED7&amp;center=true&amp;vCenter=true&amp;width=760&amp;lines=Ask+in+plain+language.;Get+a+case-aware+document+checklist.;Fix+errors+before+visiting+the+public+office."></a></p>
 
-<h2 align="center">🚀 <a href="https://ai-guided-public-service-procedures.vercel.app/">LIVE DEMO</a> &nbsp;|&nbsp; 🎥 <a href="[VIDEO]">VIDEO DEMO</a></h2>
+<h2 align="center">🚀 <a href="https://ai-guided-public-service-procedures.vercel.app/">LIVE DEMO</a> &nbsp;|&nbsp; ✨ <a href="#product-tour">PRODUCT TOUR</a></h2>
 
-<!-- SCREENSHOT HERE -->
+<a id="product-tour"></a>
+## ✨ Product Tour
 
-> 🖼️ Replace **[SCREENSHOT]** with a product screenshot or an optimized GIF showing: conversation → checklist → pre-check → PDF.
+### Citizen-facing introduction
+
+<p align="center">
+  <img src="docs/assets/mainPage.gif" alt="CivicPath AI public landing page and product introduction" width="100%">
+</p>
+
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Guided conversation</strong></td>
+    <td width="50%" align="center"><strong>Officer management portal</strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/assets/exchangePage.gif" alt="AI-guided birth-registration conversation, dynamic cases, and checklist" width="100%"></td>
+    <td width="50%"><img src="docs/assets/ManagePage.gif" alt="Officer dashboard for monitoring and managing birth-registration sessions" width="100%"></td>
+  </tr>
+</table>
 
 ---
 
