@@ -6,8 +6,8 @@
 <p align="center"><strong>AI-guided public service procedures — starting with birth registration</strong><br>Understand the procedure. Prepare the right documents. Check before you submit.</p>
 
 <div align="center">
-  <h3>🏛️ Hackathon AI INNOVATION CHALLENGE</h3>
-  <p><strong>Chủ đề:</strong> Chính phủ thông minh<br><strong>Đề bài:</strong> AI-guided public service procedures</p>
+  <h3>🏛️ AI INNOVATION CHALLENGE</h3>
+  <p><strong>Topic:</strong> Chính phủ thông minh<br><strong>Problem:</strong> AI-guided public service procedures</p>
 </div>
 
 <p align="center">
@@ -26,6 +26,7 @@
 <h2 align="center">🚀 <a href="https://ai-guided-public-service-procedures.vercel.app/">LIVE DEMO</a> &nbsp;|&nbsp; ✨ <a href="#product-tour">PRODUCT TOUR</a></h2>
 
 <a id="product-tour"></a>
+
 ## ✨ Product Tour
 
 ### Citizen-facing introduction
@@ -235,7 +236,7 @@ Copy the connection string from the Neon **Connect** dialog. Keep its TLS parame
 | `ADMIN_API_KEY` | Private access code for the officer dashboard |
 | `CORS_ORIGINS` | Exact Vercel origin, such as `https://your-project.vercel.app` |
 
-3. Deploy and verify:
+1. Deploy and verify:
 
 ```text
 https://YOUR_RENDER_SERVICE.onrender.com/health
@@ -255,7 +256,7 @@ The free single-instance service runs `alembic upgrade head` before Uvicorn star
 VITE_API_BASE_URL=https://YOUR_RENDER_SERVICE.onrender.com
 ```
 
-5. Deploy. If the final Vercel domain differs from the origin configured on Render, update `CORS_ORIGINS` with the exact origin and redeploy the backend. Multiple origins are comma-separated; do not include a trailing slash.
+1. Deploy. If the final Vercel domain differs from the origin configured on Render, update `CORS_ORIGINS` with the exact origin and redeploy the backend. Multiple origins are comma-separated; do not include a trailing slash.
 
 `VITE_API_BASE_URL` is a public backend URL. Database credentials, `OPENAI_API_KEY`, and `ADMIN_API_KEY` belong only on Render and must never be added to Vercel.
 
