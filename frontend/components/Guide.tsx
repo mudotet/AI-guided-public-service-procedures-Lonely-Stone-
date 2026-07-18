@@ -32,7 +32,7 @@ export function AppShell({ children, home = false, session = false }: { children
         <div className="flex min-h-15 items-center justify-between rounded-full bg-white/95 px-3 sm:px-5">
           <Link href="/" className="inline-flex items-center gap-3" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
             <span className="relative size-11 overflow-hidden rounded-xl bg-white shadow-lg shadow-government/15 ring-1 ring-government/10"><Image className="h-full w-full object-cover" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={44} height={44} priority /></span>
-            <span className="flex flex-col leading-tight"><strong className="text-sm font-extrabold text-government">Dịch vụ công</strong><small className="text-[10px] text-muted sm:text-xs">Hướng dẫn đăng ký khai sinh</small></span>
+            <span className="flex flex-col leading-tight"><strong className="text-sm font-extrabold text-government">Dịch vụ công</strong><small className="hidden text-[10px] text-muted sm:block sm:text-xs">Hướng dẫn đăng ký khai sinh</small></span>
           </Link>
           <div className="flex items-center gap-4"><Link className="inline-flex min-h-10 items-center rounded-full bg-blue-50 px-4 text-xs font-extrabold text-government ring-1 ring-primary/10 transition duration-500 hover:-translate-y-0.5 hover:bg-primary hover:text-white active:scale-[.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/admin">Cổng cán bộ</Link></div>
         </div>

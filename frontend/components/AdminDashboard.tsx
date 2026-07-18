@@ -192,7 +192,7 @@ export function AdminDashboard() {
         <main className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] w-[calc(100%_-_32px)] max-w-[1320px] items-center gap-16 py-16 lg:grid-cols-[1.1fr_.9fr]">
           <section className="max-w-3xl">
             <p className="mb-7 inline-flex items-center gap-2 text-[10px] font-black tracking-[0.16em] text-blue-200 uppercase before:size-2 before:rounded-full before:bg-green-400">Khu vực nghiệp vụ được bảo vệ</p>
-            <h1 className="text-[clamp(50px,7vw,92px)] leading-[.93] font-semibold tracking-[-0.065em]">Điều phối rõ ràng.<br />Ra quyết định <em className="font-editorial font-normal text-blue-200">có căn cứ.</em></h1>
+            <h1 className="text-balance text-[clamp(46px,7vw,92px)] leading-[1.04] font-semibold tracking-[-0.045em]">Điều phối rõ ràng.<br />Ra quyết định <em className="font-editorial font-normal text-blue-200">có căn cứ.</em></h1>
             <p className="mt-7 max-w-xl text-sm leading-7 text-blue-100">Theo dõi tình trạng phiên, xem bản PDF và cập nhật thông tin hỗ trợ trước khi cán bộ xử lý.</p>
             <ul className="mt-12 grid list-none gap-0 p-0 text-xs text-blue-100">{[["01", "Dữ liệu cập nhật trực tiếp từ backend"], ["02", "Thao tác thay đổi yêu cầu xác nhận rõ ràng"], ["03", "Mã truy cập chỉ lưu trong phiên trình duyệt"]].map(([number, text]) => <li className="grid min-h-14 grid-cols-[42px_1fr] items-center border-t border-white/10" key={number}><span className="font-black text-blue-300">{number}</span>{text}</li>)}</ul>
           </section>
@@ -233,7 +233,7 @@ export function AdminDashboard() {
 
       <main className="mx-auto w-[calc(100%_-_24px)] max-w-[1400px] py-10 sm:w-[calc(100%_-_48px)] sm:py-16">
         <section className="flex flex-wrap items-end justify-between gap-7">
-          <div><p className="mb-5 inline-flex items-center gap-2 text-[10px] font-black tracking-[0.16em] text-primary uppercase before:size-2 before:rounded-full before:bg-primary">Trung tâm điều phối</p><h1 className="text-[clamp(40px,5vw,70px)] leading-none font-semibold tracking-[-0.055em] text-government">Toàn cảnh các phiên<br />hướng dẫn khai sinh</h1><span className="mt-5 block text-xs text-muted">Danh sách phân trang · Mỗi trang 10 phiên</span></div>
+          <div><p className="mb-5 inline-flex items-center gap-2 text-[10px] font-black tracking-[0.16em] text-primary uppercase before:size-2 before:rounded-full before:bg-primary">Trung tâm điều phối</p><h1 className="text-balance text-[clamp(40px,5vw,70px)] leading-[1.06] font-semibold tracking-[-0.045em] text-government">Toàn cảnh các phiên<br />hướng dẫn khai sinh</h1><span className="mt-5 block text-xs text-muted">Danh sách phân trang · Mỗi trang 10 phiên</span></div>
           <div>
             <button className="inline-flex min-h-12 items-center gap-3 rounded-full border border-line bg-white py-1.5 pr-1.5 pl-5 text-xs font-extrabold text-government shadow-sm transition hover:border-primary hover:bg-blue-50 disabled:opacity-55" type="button" onClick={() => void loadDashboard()} disabled={loading}><span>{loading ? "Đang cập nhật..." : "Cập nhật dữ liệu"}</span><i className="grid size-9 place-items-center rounded-full bg-blue-50 not-italic" aria-hidden="true">↻</i></button>
           </div>

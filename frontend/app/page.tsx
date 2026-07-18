@@ -15,7 +15,7 @@ const journey = [
 
 const sectionShell = "mx-auto w-[calc(100%_-_32px)] max-w-[1240px] py-24 sm:w-[calc(100%_-_48px)] sm:py-32";
 const eyebrow = "mb-6 inline-flex items-center gap-2.5 rounded-full bg-blue-50 px-3.5 py-2 text-[9px] font-black tracking-[0.18em] text-primary uppercase before:size-1.5 before:rounded-full before:bg-primary";
-const sectionTitle = "text-balance text-[clamp(38px,5.2vw,70px)] leading-[.98] font-semibold tracking-[-0.06em] text-government";
+const sectionTitle = "text-balance text-[clamp(38px,5.2vw,70px)] leading-[1.06] font-semibold tracking-[-0.045em] text-government";
 
 export default function HomePage() {
   const pageRef = useRef<HTMLElement>(null);
@@ -66,7 +66,7 @@ export default function HomePage() {
 
           <div className="relative max-w-3xl [animation:hero-rise_.9s_var(--ease-premium)_both]">
             <p className="mb-7 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2.5 text-[9px] font-black tracking-[0.18em] text-blue-100 uppercase ring-1 ring-white/15 before:size-2 before:animate-pulse before:rounded-full before:bg-green-400">Trợ lý AI · Đăng ký khai sinh</p>
-            <h1 id="hero-title" className="text-balance text-[clamp(56px,7.7vw,108px)] leading-[.88] font-semibold tracking-[-0.075em]">AI hỗ trợ làm <em className="font-editorial font-normal text-blue-200">giấy khai sinh.</em></h1>
+            <h1 id="hero-title" className="text-balance text-[clamp(52px,7.2vw,100px)] leading-[1.02] font-semibold tracking-[-0.045em]">AI hỗ trợ làm <em className="font-editorial font-normal text-blue-200">giấy khai sinh.</em></h1>
             <p className="mt-8 max-w-[62ch] text-base leading-7 text-blue-100 sm:text-lg">Một hướng dẫn số dễ hiểu cho mọi phụ huynh: hỏi ngắn, chuẩn bị đúng giấy tờ, biết vì sao cần và kiểm tra trước khi nộp.</p>
             <div className="mt-9 max-w-xl [&_button]:bg-white [&_button]:text-government [&_button:hover]:bg-blue-100"><StartSessionActions /></div>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-[10px] font-bold text-blue-200" aria-label="Cam kết của hệ thống"><span className="inline-flex items-center gap-2 before:size-1.5 before:rounded-full before:bg-green-400">Không cần am hiểu công nghệ</span><span className="inline-flex items-center gap-2 before:size-1.5 before:rounded-full before:bg-green-400">Không tự bổ sung nội dung pháp lý</span></div>
@@ -173,7 +173,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto my-8 grid w-[calc(100%_-_24px)] max-w-[1400px] gap-12 overflow-hidden rounded-[42px] bg-government p-8 text-white shadow-[0_36px_100px_rgba(6,59,130,.22)] sm:w-[calc(100%_-_48px)] sm:p-14 lg:grid-cols-[1fr_auto] lg:items-center" data-reveal><div><p className="mb-6 inline-flex rounded-full bg-white/10 px-3.5 py-2 text-[9px] font-black tracking-widest text-blue-200 uppercase">Bắt đầu khi bạn sẵn sàng</p><h2 className="text-balance text-[clamp(40px,5vw,68px)] leading-[.96] font-semibold tracking-[-0.06em]">Một câu trả lời hôm nay.<br /><em className="font-editorial font-normal text-blue-200">Một bộ hồ sơ rõ ràng hơn.</em></h2></div><div className="min-w-72 [&_button]:bg-white [&_button]:text-government [&_button:hover]:bg-blue-100"><StartSessionActions compact /></div></section>
+        <section className="mx-auto my-8 grid w-[calc(100%_-_24px)] max-w-[1400px] gap-12 overflow-hidden rounded-[42px] bg-government p-8 text-white shadow-[0_36px_100px_rgba(6,59,130,.22)] sm:w-[calc(100%_-_48px)] sm:p-14 lg:grid-cols-[1fr_auto] lg:items-center" data-reveal><div><p className="mb-6 inline-flex rounded-full bg-white/10 px-3.5 py-2 text-[9px] font-black tracking-widest text-blue-200 uppercase">Bắt đầu khi bạn sẵn sàng</p><h2 className="text-balance text-[clamp(40px,5vw,68px)] leading-[1.05] font-semibold tracking-[-0.045em]">Một câu trả lời hôm nay.<br /><em className="font-editorial font-normal text-blue-200">Một bộ hồ sơ rõ ràng hơn.</em></h2></div><div className="w-full lg:w-auto lg:min-w-72 [&_button]:bg-white [&_button]:text-government [&_button:hover]:bg-blue-100"><StartSessionActions compact /></div></section>
       </main>
     </AppShell>
   );
