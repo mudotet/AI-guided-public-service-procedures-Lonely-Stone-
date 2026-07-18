@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { FormEvent, KeyboardEvent, ReactNode } from "react";
@@ -29,7 +30,7 @@ export function AppShell({ children, home = false, session = false }: { children
     <div className="min-h-screen overflow-x-hidden bg-canvas font-sans text-ink" data-page={home ? "home" : session ? "session" : undefined}>
       <header className="sticky top-3 z-50 mx-auto flex min-h-18 w-[calc(100%_-_24px)] max-w-[1240px] items-center justify-between rounded-full border border-government/10 bg-white/92 px-4 shadow-[0_18px_55px_rgba(6,59,130,0.09)] backdrop-blur-xl sm:w-[calc(100%_-_48px)] sm:px-6">
         <Link href="/" className="inline-flex items-center gap-3" aria-label="Trang chủ hướng dẫn đăng ký khai sinh">
-          <span className="grid size-10 place-items-center rounded-xl bg-government text-xs font-black tracking-widest text-white shadow-lg shadow-government/15" aria-hidden="true">KS</span>
+          <span className="relative size-11 overflow-hidden rounded-xl border border-government/10 bg-white shadow-lg shadow-government/15"><Image className="h-full w-full object-cover" src="/logo.jpg" alt="Biểu trưng CivicPath AI" width={44} height={44} priority /></span>
           <span className="flex flex-col leading-tight"><strong className="text-sm font-extrabold text-government">Dịch vụ công</strong><small className="text-[10px] text-muted sm:text-xs">Hướng dẫn đăng ký khai sinh</small></span>
         </Link>
         <div className="flex items-center gap-4"><Link className="inline-flex min-h-10 items-center rounded-full border border-line bg-white px-4 text-xs font-extrabold text-government transition hover:-translate-y-0.5 hover:border-primary hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/admin">Cổng cán bộ</Link></div>
@@ -200,13 +201,13 @@ export function LegalBasisAccordion({ basis }: { basis: string | string[] | null
 export function ChecklistPanel({ checklist }: { checklist: ChecklistResponse | null }) {
   return (
     <section className="mt-4 overflow-hidden rounded-[30px] border border-government/10 bg-government/5 p-1.5 shadow-panel" aria-labelledby="checklist-title">
-      <details className="checklist-native group overflow-hidden rounded-3xl bg-white max-[880px]:[&[open]>summary]:border-b max-[880px]:[&[open]>summary]:border-government/10">
-        <summary className="hidden min-h-16 cursor-pointer items-center justify-between gap-5 px-5 py-3 text-government marker:hidden max-[880px]:flex">
+      <details className="checklist-native group overflow-hidden rounded-3xl bg-white max-[1079px]:[&[open]>summary]:border-b max-[1079px]:[&[open]>summary]:border-government/10">
+        <summary className="hidden min-h-16 cursor-pointer items-center justify-between gap-5 px-5 py-3 text-government marker:hidden max-[1079px]:flex">
           <span className="flex flex-col"><strong id="checklist-title" className="text-[13px]">Checklist đang thành hình</strong><small className="text-[9px] text-muted">{checklist ? `${checklist.documents.length} giấy tờ` : "Chờ thêm thông tin"}</small></span>
           <span className="text-[9px] text-muted group-open:hidden" aria-hidden="true">Mở</span><span className="hidden text-[9px] text-muted group-open:inline" aria-hidden="true">Thu gọn</span>
         </summary>
         <div>
-          <div className="flex items-start justify-between gap-5 border-b border-government/10 px-6 py-5 max-[880px]:hidden">
+          <div className="flex items-start justify-between gap-5 border-b border-government/10 px-6 py-5 max-[1079px]:hidden">
             <div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Hồ sơ của bạn</p><h2 className="text-xl font-semibold tracking-tight text-government" id="checklist-title-desktop">Checklist đang thành hình</h2></div>
             {checklist && <span className="rounded-full bg-blue-50 px-3 py-2 text-[9px] font-black text-government">{checklist.documents.length} giấy tờ</span>}
           </div>
@@ -625,30 +626,48 @@ export function BirthRegistrationForm({ cases, form, pending, onChange, onSubmit
 }
 
 export function PrecheckResults({ issues, status, onFix }: { issues: PrecheckIssue[]; status: string; onFix: (field: string) => void }) {
-  if (status === "ready") {
+  if (status === "ready" && !issues.length) {
     return (
-      <section id="precheck-results" className="mt-6 grid grid-cols-[64px_1fr] gap-5 rounded-[30px] border border-success/20 bg-green-50 p-6 shadow-panel" aria-live="polite">
-        <span className="grid size-16 place-items-center rounded-2xl bg-success text-xs font-black text-white shadow-lg shadow-success/20" aria-hidden="true">OK</span>
-        <div><p className="mb-1 text-[9px] font-black tracking-widest text-success uppercase">Đã vượt qua kiểm tra tự động</p><h2 className="text-2xl font-semibold tracking-tight text-green-900">Thông tin đã sẵn sàng</h2><p className="mt-2 mb-0 text-xs leading-5 text-green-800">Không còn lỗi bắt buộc trong kết quả kiểm tra hiện tại.</p></div>
+      <section id="precheck-results" className="grid grid-cols-[52px_1fr] gap-4 rounded-[30px] border border-success/20 bg-green-50 p-5 shadow-panel" aria-live="polite">
+        <span className="grid size-[52px] place-items-center rounded-2xl bg-success text-[10px] font-black text-white shadow-lg shadow-success/20" aria-hidden="true">OK</span>
+        <div><p className="mb-1 text-[8px] font-black tracking-widest text-success uppercase">Đã kiểm tra tự động</p><h2 className="text-xl font-semibold tracking-tight text-green-900">Thông tin đã sẵn sàng</h2><p className="mt-2 mb-0 text-[11px] leading-5 text-green-800">Không còn lỗi bắt buộc trong kết quả hiện tại.</p></div>
       </section>
     );
   }
-  if (!issues.length) return null;
+  if (!issues.length) {
+    return (
+      <section id="precheck-results" className="overflow-hidden rounded-[30px] border border-primary/15 bg-white shadow-panel" aria-labelledby="precheck-title">
+        <header className="border-b border-government/10 px-5 py-5"><p className="mb-1 text-[8px] font-black tracking-widest text-primary uppercase">Kiểm tra trước khi nộp</p><h2 className="text-xl font-semibold tracking-tight text-government" id="precheck-title">Kết quả sẽ hiện tại đây</h2></header>
+        <div className="grid min-h-44 place-items-center px-6 py-8 text-center"><span className="grid size-11 place-items-center rounded-2xl bg-blue-50 text-sm font-black text-primary" aria-hidden="true">✓</span><p className="m-0 max-w-64 text-[11px] leading-5 text-muted">Điền đủ thông tin rồi chọn <strong className="text-government">Kiểm tra thông tin</strong>. Bạn có thể sửa từng ô ngay từ bảng này.</p></div>
+      </section>
+    );
+  }
   const errors = issues.filter((issue) => issue.severity === "error").length;
   const warnings = issues.length - errors;
   return (
-    <section id="precheck-results" className="mt-6 overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel" aria-labelledby="precheck-title" aria-live="polite">
-      <div className="flex items-center justify-between gap-4 border-b border-government/10 px-5 py-5 sm:px-7"><div><p className="mb-1 text-[9px] font-black tracking-widest text-primary uppercase">Kết quả kiểm tra</p><h2 className="text-2xl font-semibold tracking-tight text-government" id="precheck-title">{errors ? `${errors} lỗi cần sửa` : "Không có lỗi bắt buộc"}</h2></div><span className="rounded-full bg-amber-50 px-3 py-2 text-[10px] font-black text-warning">{warnings} cảnh báo</span></div>
-      <div className="grid gap-4 p-5 sm:p-7">
+    <section id="precheck-results" className="overflow-hidden rounded-[30px] border border-government/10 bg-white shadow-panel" aria-labelledby="precheck-title" aria-live="polite">
+      <header className="border-b border-government/10 px-5 py-5">
+        <p className="mb-1 text-[8px] font-black tracking-widest text-primary uppercase">Kết quả kiểm tra</p>
+        <div className="flex items-end justify-between gap-4"><h2 className="text-xl font-semibold tracking-tight text-government" id="precheck-title">{errors ? `${errors} lỗi cần sửa` : "Không có lỗi bắt buộc"}</h2><div className="flex shrink-0 gap-1.5"><span className="rounded-lg bg-red-50 px-2 py-1.5 text-[9px] font-black text-danger">{errors} lỗi</span><span className="rounded-lg bg-amber-50 px-2 py-1.5 text-[9px] font-black text-warning">{warnings} cảnh báo</span></div></div>
+      </header>
+      <div className="grid max-h-[min(52dvh,520px)] gap-3 overflow-y-auto overscroll-contain p-4 [scrollbar-gutter:stable]">
         {issues.map((issue, index) => (
-          <article key={issue.id || `${issue.field_name}-${index}`} className={`rounded-2xl border-l-4 p-4 ${issue.severity === "error" ? "border-danger bg-red-50" : "border-warning bg-amber-50"}`}>
-            <div className="flex flex-wrap items-center justify-between gap-2"><span className={`text-[9px] font-black tracking-widest uppercase ${issue.severity === "error" ? "text-danger" : "text-warning"}`}>{issue.severity === "error" ? "Lỗi cần sửa" : "Cảnh báo"}</span><small className="text-[9px] font-bold text-muted">{issue.source === "rule_engine" ? "Kiểm tra tự động theo quy tắc" : "AI phát hiện – cần xác nhận"}</small></div>
-            <h3 className="mt-3 text-sm leading-6 font-extrabold text-ink">{issue.message}</h3>
-            <p className="mt-2 text-xs leading-5 text-muted"><strong className="text-ink">Cách xử lý:</strong> {issue.suggested_fix}</p>
-            <div className="mt-3 flex flex-wrap items-end justify-between gap-3 border-t border-current/10 pt-2"><LegalBasisAccordion basis={issue.legal_basis} />{issue.field_name && <button type="button" className="min-h-10 rounded-full bg-white px-4 text-[10px] font-extrabold text-primary shadow-sm transition hover:bg-primary hover:text-white" onClick={() => onFix(issue.field_name!)}>Sửa trường này</button>}</div>
-          </article>
+          <details key={issue.id || `${issue.field_name}-${index}`} className={`group rounded-2xl border-l-[3px] ${issue.severity === "error" ? "border-danger bg-red-50" : "border-warning bg-amber-50"}`}>
+            <summary className="grid min-h-20 cursor-pointer list-none grid-cols-[28px_1fr_20px] items-start gap-3 p-4 marker:hidden">
+              <span className={`grid size-7 place-items-center rounded-lg text-[10px] font-black text-white ${issue.severity === "error" ? "bg-danger" : "bg-warning"}`} aria-hidden="true">{issue.severity === "error" ? "!" : "i"}</span>
+              <span><small className={`mb-1 block text-[8px] font-black tracking-widest uppercase ${issue.severity === "error" ? "text-danger" : "text-warning"}`}>{issue.severity === "error" ? "Lỗi cần sửa" : "Cảnh báo"}</small><strong className="block text-[11px] leading-5 text-ink">{issue.message}</strong></span>
+              <span className="mt-1 text-center text-xs font-black text-muted transition group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <div className="mx-4 border-t border-current/10 pt-3 pb-4">
+              <small className="text-[9px] font-bold text-muted">{issue.source === "rule_engine" ? "Kiểm tra tự động theo quy tắc" : "AI phát hiện – cần xác nhận"}</small>
+              <p className="mt-2 text-[11px] leading-5 text-muted"><strong className="text-ink">Cách xử lý:</strong> {issue.suggested_fix}</p>
+              <LegalBasisAccordion basis={issue.legal_basis} />
+              {issue.field_name && <button type="button" className="mt-3 min-h-10 w-full rounded-xl bg-white px-4 text-[10px] font-extrabold text-primary shadow-sm transition hover:bg-primary hover:text-white" onClick={() => onFix(issue.field_name!)}>Sửa trường này →</button>}
+            </div>
+          </details>
         ))}
       </div>
+      <footer className="border-t border-government/10 px-5 py-3 text-[9px] leading-4 text-muted">Chọn từng mục để xem cách sửa và căn cứ pháp lý.</footer>
     </section>
   );
 }
@@ -833,18 +852,19 @@ export function SessionGuide({ sessionId }: { sessionId: string }) {
             ) : (
               <>
                 <BirthRegistrationForm cases={session.cases} form={form} pending={checking} onChange={updateForm} onSubmit={runPrecheck} />
-                <PrecheckResults issues={issues} status={session.status} onFix={focusField} />
-                {officerRequired && session.status !== "ready" && issues.some((issue) => issue.source === "llm") && <OfficerConfirmationBanner />}
-                {(session.status === "precheck" || session.status === "ready") && <PdfPreview sessionId={session.id} />}
               </>
             )}
           </div>
 
           <aside className="min-w-0 min-[1080px]:sticky min-[1080px]:top-28">
-            <CaseBadges primaryCase={session.primary_case} cases={session.cases} />
+            {view === "form" && <PrecheckResults issues={issues} status={session.status} onFix={focusField} />}
+            <div className={view === "form" ? "mt-4" : ""}>
+              <CaseBadges primaryCase={session.primary_case} cases={session.cases} />
+            </div>
             <ChecklistPanel checklist={checklist} />
           </aside>
         </div>
+        {view === "form" && (session.status === "precheck" || session.status === "ready") && <PdfPreview sessionId={session.id} />}
       </main>
     </AppShell>
   );

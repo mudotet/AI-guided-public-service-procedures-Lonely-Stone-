@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/logo.jpg" alt="CivicPath AI logo" width="132"></p>
+
 <h1 align="center">CivicPath AI</h1>
 <p align="center"><strong>AI-guided public service procedures — starting with birth registration</strong><br>Understand the procedure. Prepare the right documents. Check before you submit.</p>
 
