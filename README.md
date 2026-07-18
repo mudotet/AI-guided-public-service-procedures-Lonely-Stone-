@@ -71,30 +71,7 @@ Birth registration is the first procedure implemented deeply in this prototype. 
 
 ## 🏗️ Architecture
 
-<p align="center"><img src="docs/assets/guide_structure.jpg" alt="CivicPath AI system architecture covering the citizen app, officer portal, FastAPI backend, PostgreSQL, OpenAI, rule engine, PDF generation, and trusted public-service sources" width="100%"></p>
-
-```mermaid
-flowchart LR
-    Citizen[Citizen] -->|Text or voice| Web[Next.js + Tailwind CSS Web App]
-    Officer[Authorized Officer] -->|Protected dashboard| Web
-
-    Web -->|Native fetch / JSON| API[FastAPI API]
-    Web -->|Audio upload| API
-
-    API --> Intake[Intake and Session Service]
-    API --> Rules[Deterministic Rule Engine]
-    API --> Checklist[Checklist Builder]
-    API --> PDF[PDF Generator]
-
-    Intake -->|Structured extraction and response| OpenAI[OpenAI Models]
-    Rules --> DB[(Neon Postgres)]
-    Checklist --> DB
-    Intake --> DB
-    PDF --> DB
-
-    Sources[Official public-service references] -->|Curated runtime context| DB
-    API -->|Cases, checklist, issues, PDF| Web
-```
+<p align="center"><img src="docs/assets/system-architecture.png" alt="CivicPath AI system architecture covering the citizen app, officer portal, FastAPI backend, PostgreSQL, OpenAI, rule engine, PDF generation, and trusted public-service sources" width="100%"></p>
 
 ### AI Pipeline
 
