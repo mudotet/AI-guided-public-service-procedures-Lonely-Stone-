@@ -1,7 +1,14 @@
+<p align="center"><a href="https://ai-guided-public-service-procedures.vercel.app/"><img src="docs/assets/banner.jpg" alt="CivicPath AI — AI support for birth registration, document guidance, information checking, and pre-submission support" width="100%"></a></p>
+
 <p align="center"><a href="https://ai-guided-public-service-procedures.vercel.app/"><img src="docs/assets/logo.jpg" alt="CivicPath AI logo" width="132"></a></p>
 
 <h1 align="center">CivicPath AI</h1>
 <p align="center"><strong>AI-guided public service procedures — starting with birth registration</strong><br>Understand the procedure. Prepare the right documents. Check before you submit.</p>
+
+<div align="center">
+  <h3>🏛️ Hackathon AI INNOVATION CHALLENGE</h3>
+  <p><strong>Chủ đề:</strong> Chính phủ thông minh<br><strong>Đề bài:</strong> AI-guided public service procedures</p>
+</div>
 
 <p align="center">
   <a href="#testing"><img alt="Build passing" src="https://img.shields.io/badge/build-passing-15803D?style=for-the-badge"></a>
@@ -11,7 +18,7 @@
   <a href="https://fastapi.tiangolo.com/"><img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white"></a>
   <a href="https://neon.com/"><img alt="Neon Postgres" src="https://img.shields.io/badge/Neon-Postgres-00E599?style=for-the-badge&amp;logo=neon&amp;logoColor=black"></a>
   <a href="https://openai.com/"><img alt="OpenAI API" src="https://img.shields.io/badge/OpenAI-API-412991?style=for-the-badge&amp;logo=openai&amp;logoColor=white"></a>
-  <a href="#license"><img alt="License pending" src="https://img.shields.io/badge/license-pending-667085?style=for-the-badge"></a>
+  <a href="#license"><img alt="License by LonelyStone" src="https://img.shields.io/badge/license-LonelyStone-063B82?style=for-the-badge"></a>
 </p>
 
 <p align="center"><a href="https://git.io/typing-svg"><img alt="Animated product summary" src="https://readme-typing-svg.demolab.com?font=Roboto&amp;weight=600&amp;size=20&amp;duration=3000&amp;pause=900&amp;color=0B5ED7&amp;center=true&amp;vCenter=true&amp;width=760&amp;lines=Ask+in+plain+language.;Get+a+case-aware+document+checklist.;Fix+errors+before+visiting+the+public+office."></a></p>
@@ -63,6 +70,8 @@ Birth registration is the first procedure implemented deeply in this prototype. 
 > **Scope:** this prototype helps citizens prepare information. It does not issue an official birth certificate or replace the decision of a civil-status authority.
 
 ## 🏗️ Architecture
+
+<p align="center"><img src="docs/assets/guide_structure.jpg" alt="CivicPath AI system architecture covering the citizen app, officer portal, FastAPI backend, PostgreSQL, OpenAI, rule engine, PDF generation, and trusted public-service sources" width="100%"></p>
 
 ```mermaid
 flowchart LR
@@ -295,21 +304,19 @@ npm run build
 - **Phase 2 — Portal integration:** embed the experience through the REST API or a lightweight widget and collect structured officer feedback.
 - **Phase 3 — Procedure expansion:** reuse the architecture for additional civil-status services, then evaluate household registration and building permits.
 
-## 👥 Team — Lonely Stone
+## 👥 Team — LonelyStone
 
 | Member | Role | Profile |
 |---|---|---|
-| `[TEAM MEMBER 1]` | `[ROLE]` | `[GITHUB / LINKEDIN]` |
-| `[TEAM MEMBER 2]` | `[ROLE]` | `[GITHUB / LINKEDIN]` |
-| `[TEAM MEMBER 3]` | `[ROLE]` | `[GITHUB / LINKEDIN]` |
+| **Phan Thanh Tú** | Team Leader · Full-stack Developer | [LinkedIn](https://www.linkedin.com/in/t%C3%BA-phan-203970327/) · [GitHub](https://github.com/mudotet) |
+| **Đồng Ngọc Phúc** | Database · Backend Developer | [LinkedIn](https://www.linkedin.com/in/phuc-dong) |
+| **Vũ Đình Khải** | Frontend Developer · Data & Document Preparation | [LinkedIn](https://www.linkedin.com/in/v%C5%A9-%C4%91%C3%ACnh-kh%E1%BA%A3i-7a60033a2/) |
 
 <a id="license"></a>
 
 ## 📄 License
 
-`[LICENSE]`
-
-No license file is currently included. Choose and add the final license before publishing or redistributing the project.
+Copyright © 2026 **LonelyStone**. All rights reserved.
 
 ---
 
