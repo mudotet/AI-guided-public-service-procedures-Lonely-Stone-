@@ -22,7 +22,7 @@ from app.schemas import (
     SessionResponse,
 )
 from app.services.case_classifier import classify_case, merged_case_codes, replace_session_cases
-from app.services.openai_client import OpenAIClient
+from app.services.openai_client import get_openai_client
 from app.services.pdf_generator import build_birth_registration_pdf
 from app.services.session_service import case_summaries, session_detail, session_response, trusted_context
 
@@ -101,7 +101,7 @@ def intake_message(payload: IntakeMessageRequest, db: Session = Depends(get_db))
             f"Dữ kiện đã trích: {classification.facts.model_dump_json(exclude_none=True)}\n"
             f"Trường còn thiếu: {', '.join(classification.missing_fields) or 'không có'}."
         )
-        reply = OpenAIClient().converse(history, context)
+        reply = get_openai_client().converse(history, context)
     except Exception as exc:
         db.rollback()
         raise HTTPException(status_code=502, detail="Không thể xử lý yêu cầu AI lúc này") from exc
@@ -141,7 +141,7 @@ def transcribe_audio(
     content_type, extension = validate_audio(audio.content_type, audio_bytes)
 
     try:
-        transcript = OpenAIClient().transcribe(
+        transcript = get_openai_client().transcribe(
             filename=f"recording.{extension}",
             audio=audio_bytes,
             content_type=content_type,

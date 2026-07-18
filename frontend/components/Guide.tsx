@@ -51,7 +51,7 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
 
   useEffect(() => {
     setSavedId(localStorage.getItem(STORAGE_KEY));
-    apiFetch<{ status: string }>("/health", {}, 5_000)
+    apiFetch<{ status: string }>("/health", {}, 70_000)
       .then(() => setHealth("ok"))
       .catch(() => setHealth("error"));
   }, []);
@@ -61,6 +61,7 @@ export function StartSessionActions({ compact = false }: { compact?: boolean }) 
     setError("");
     try {
       const session = await apiFetch<SessionResponse>("/sessions", { method: "POST", body: "{}" });
+      setHealth("ok");
       localStorage.setItem(STORAGE_KEY, session.id);
       router.push(`/session/${session.id}`);
     } catch (cause) {

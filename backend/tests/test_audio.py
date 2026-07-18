@@ -39,3 +39,18 @@ def test_transcription_is_guided_to_vietnamese() -> None:
     assert client.transcribe("audio.webm", b"audio", "audio/webm") == "Tiếng Việt"
     assert request["language"] == "vi"
     assert "không dịch sang ngôn ngữ khác" in str(request["prompt"])
+
+
+def test_conversation_response_is_length_limited() -> None:
+    request: dict[str, object] = {}
+    client = OpenAIClient.__new__(OpenAIClient)
+    client.client = SimpleNamespace(
+        responses=SimpleNamespace(
+            create=lambda **kwargs: (request.update(kwargs) or SimpleNamespace(output_text="Câu trả lời"))
+        )
+    )
+
+    result = client.converse([{"role": "user", "content": "Xin hướng dẫn"}], "Thông tin")
+
+    assert result == "Câu trả lời"
+    assert request["max_output_tokens"] == 180

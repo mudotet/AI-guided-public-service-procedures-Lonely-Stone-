@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.models import ProcedureCase, SessionCase, UserSession
 from app.schemas import CaseClassification
-from app.services.openai_client import OpenAIClient
+from app.services.openai_client import get_openai_client
 from app.services.rule_engine import detect_case_codes
 
 
@@ -25,7 +25,7 @@ surrogacy, reregistration, correction. Các case có thể đồng thời xảy 
 
 
 def classify_case(history: Sequence[dict[str, str]]) -> CaseClassification:
-    return OpenAIClient().classify([{"role": "system", "content": CLASSIFIER_PROMPT}, *history])
+    return get_openai_client().classify([{"role": "system", "content": CLASSIFIER_PROMPT}, *history])
 
 
 def merged_case_codes(classification: CaseClassification, form_data: dict[str, Any]) -> tuple[str, ...]:
