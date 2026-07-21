@@ -1,0 +1,1610 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/8no777",
+    "id": "8no777",
+    "slide": 5,
+    "layoutId": "86c02a10-bc63-4674-b011-a4ec81fbc231",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "07b61e31-fa07-44c4-b991-f4bd30479530",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "86c02a10-bc63-4674-b011-a4ec81fbc231",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "07b61e31-fa07-44c4-b991-f4bd30479530",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "07b61e31-fa07-44c4-b991-f4bd30479530",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4rax0vqx",
+      "id": "1",
+      "name": "eyebrow-72",
+      "bbox": [
+        58,
+        40,
+        700,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "CAPABILITY 2",
+      "textPreview": "CAPABILITY 2",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CAPABILITY 2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CAPABILITY 2",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CAPABILITY 2",
+              "anchor": 1,
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jq1w7qpc",
+      "id": "2",
+      "name": "title-73",
+      "bbox": [
+        58,
+        72,
+        1130,
+        74
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "Pre-check catches what citizens and portals miss.",
+      "textPreview": "Pre-check catches what citizens and portals miss.",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 44,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pre-check catches what citizens and portals miss."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pre-check catches what citizens and portals miss.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 44,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pre-check catches what citizens and portals miss.",
+              "anchor": 1,
+              "fontSize": 44,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ipsfyl8r",
+      "id": "3",
+      "name": "footer-74",
+      "bbox": [
+        58,
+        679,
+        520,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "CivicPath AI · Smart Government",
+      "textPreview": "CivicPath AI · Smart Government",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CivicPath AI · Smart Government"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CivicPath AI · Smart Government",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CivicPath AI · Smart Government",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tw3yd07e",
+      "id": "4",
+      "name": "page-75",
+      "bbox": [
+        1164,
+        679,
+        58,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "05",
+      "textPreview": "05",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "05"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "05",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "right",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "05",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "right",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svax4vqt",
+      "id": "5",
+      "name": "live-number-76",
+      "bbox": [
+        58,
+        176,
+        150,
+        100
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "2",
+      "textPreview": "2",
+      "resolvedFontSize": 92,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 92,
+        "typeface": "Arial",
+        "color": "#DC2626",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 92,
+            "typeface": "Arial",
+            "color": "#DC2626",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2",
+              "anchor": 1,
+              "fontSize": 92,
+              "typeface": "Arial",
+              "color": "#DC2626",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ru1gbqp8",
+      "id": "6",
+      "name": "live-label-77",
+      "bbox": [
+        58,
+        277,
+        320,
+        72
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "errors caught in the live demo",
+      "textPreview": "errors caught in the live demo",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "errors caught in the live"
+          },
+          {
+            "index": 2,
+            "text": "demo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "errors caught in the live demo",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 28,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "errors caught in the live demo",
+              "anchor": 1,
+              "fontSize": 28,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6tsf2l8n",
+      "id": "7",
+      "name": "explanation-78",
+      "bbox": [
+        58,
+        380,
+        326,
+        96
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "text": "Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.",
+      "textPreview": "Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mandatory errors come from"
+          },
+          {
+            "index": 2,
+            "text": "deterministic rules. AI only adds clearly"
+          },
+          {
+            "index": 3,
+            "text": "separated warnings for uncertain"
+          },
+          {
+            "index": 4,
+            "text": "exceptions."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 18,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.",
+              "anchor": 1,
+              "fontSize": 18,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1k3yhk7a",
+      "id": "8",
+      "name": "rule-79",
+      "bbox": [
+        58,
+        512,
+        324,
+        2
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.7"
+      },
+      "geometry": "rect",
+      "fillColor": "#CFD8E5",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gjux8f6p",
+      "id": "9",
+      "name": "rule-types-80",
+      "bbox": [
+        58,
+        541,
+        335,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.8"
+      },
+      "geometry": "rect",
+      "text": "REQUIRED · CONDITIONAL · CROSS-FIELD",
+      "textPreview": "REQUIRED · CONDITIONAL · CROSS-FIELD",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "REQUIRED · CONDITIONAL · CROSS-FIELD"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "REQUIRED · CONDITIONAL · CROSS-FIELD",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "REQUIRED · CONDITIONAL · CROSS-FIELD",
+              "anchor": 1,
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/21sf6p87",
+      "id": "10",
+      "name": "rule-copy-81",
+      "bbox": [
+        58,
+        573,
+        320,
+        55
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "text": "Each issue includes a suggested fix and traceable legal basis.",
+      "textPreview": "Each issue includes a suggested fix and traceable legal basis.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Arial",
+        "color": "#063B82",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Each issue includes a suggested fix"
+          },
+          {
+            "index": 2,
+            "text": "and traceable legal basis."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Each issue includes a suggested fix and traceable legal basis.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 17,
+            "typeface": "Arial",
+            "color": "#063B82",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Each issue includes a suggested fix and traceable legal basis.",
+              "anchor": 1,
+              "fontSize": 17,
+              "typeface": "Arial",
+              "color": "#063B82",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/321wzups",
+      "id": "11",
+      "name": "screenshot-frame-82",
+      "bbox": [
+        429,
+        188,
+        793,
+        446
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFF0F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/n2l072tw",
+      "id": "12",
+      "bbox": [
+        435,
+        194,
+        781,
+        434
+      ],
+      "geometry": "roundRect",
+      "alt": "Live pre-submission error detection",
+      "contentType": "image/jpeg",
+      "imageFit": "contain",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 2765"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "38638315-5f05-4f72-8e47-9de31a05dd45",
+        "contentType": "image/jpeg",
+        "byteLength": 69315
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "baseUnit": 1,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "slide-layer-83",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 1222,
+          "height": 697
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "name": "eyebrow-72",
+            "position": {
+              "left": 58,
+              "top": 40
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 700
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 22
+              }
+            },
+            "intrinsicSize": {
+              "width": 700,
+              "height": 22
+            },
+            "frame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            },
+            "children": [],
+            "text": "CAPABILITY 2",
+            "transform": "none",
+            "element": {
+              "aid": "sh/4rax0vqx",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "name": "title-73",
+            "position": {
+              "left": 58,
+              "top": 72
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1130
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 74
+              }
+            },
+            "intrinsicSize": {
+              "width": 1130,
+              "height": 74
+            },
+            "frame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            },
+            "children": [],
+            "text": "Pre-check catches what citizens and portals miss.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/jq1w7qpc",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "name": "footer-74",
+            "position": {
+              "left": 58,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 18
+            },
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "children": [],
+            "text": "CivicPath AI · Smart Government",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ipsfyl8r",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "name": "page-75",
+            "position": {
+              "left": 1164,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 58
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 58,
+              "height": 18
+            },
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "children": [],
+            "text": "05",
+            "transform": "none",
+            "element": {
+              "aid": "sh/tw3yd07e",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "name": "live-number-76",
+            "position": {
+              "left": 58,
+              "top": 176
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 150
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 100
+              }
+            },
+            "intrinsicSize": {
+              "width": 150,
+              "height": 100
+            },
+            "frame": {
+              "left": 58,
+              "top": 176,
+              "width": 150,
+              "height": 100
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 176,
+              "width": 150,
+              "height": 100
+            },
+            "children": [],
+            "text": "2",
+            "transform": "none",
+            "element": {
+              "aid": "sh/svax4vqt",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "name": "live-label-77",
+            "position": {
+              "left": 58,
+              "top": 277
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 320
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 72
+              }
+            },
+            "intrinsicSize": {
+              "width": 320,
+              "height": 72
+            },
+            "frame": {
+              "left": 58,
+              "top": 277,
+              "width": 320,
+              "height": 72
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 277,
+              "width": 320,
+              "height": 72
+            },
+            "children": [],
+            "text": "errors caught in the live demo",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ru1gbqp8",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "text",
+            "name": "explanation-78",
+            "position": {
+              "left": 58,
+              "top": 380
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 326
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 96
+              }
+            },
+            "intrinsicSize": {
+              "width": 326,
+              "height": 96
+            },
+            "frame": {
+              "left": 58,
+              "top": 380,
+              "width": 326,
+              "height": 96
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 380,
+              "width": 326,
+              "height": 96
+            },
+            "children": [],
+            "text": "Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/6tsf2l8n",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "shape",
+            "name": "rule-79",
+            "position": {
+              "left": 58,
+              "top": 512
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 324
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 2
+              }
+            },
+            "intrinsicSize": {
+              "width": 324,
+              "height": 2
+            },
+            "frame": {
+              "left": 58,
+              "top": 512,
+              "width": 324,
+              "height": 2
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 512,
+              "width": 324,
+              "height": 2
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/1k3yhk7a",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "text",
+            "name": "rule-types-80",
+            "position": {
+              "left": 58,
+              "top": 541
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 335
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 335,
+              "height": 20
+            },
+            "frame": {
+              "left": 58,
+              "top": 541,
+              "width": 335,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 541,
+              "width": 335,
+              "height": 20
+            },
+            "children": [],
+            "text": "REQUIRED · CONDITIONAL · CROSS-FIELD",
+            "transform": "none",
+            "element": {
+              "aid": "sh/gjux8f6p",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "text",
+            "name": "rule-copy-81",
+            "position": {
+              "left": 58,
+              "top": 573
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 320
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 55
+              }
+            },
+            "intrinsicSize": {
+              "width": 320,
+              "height": 55
+            },
+            "frame": {
+              "left": 58,
+              "top": 573,
+              "width": 320,
+              "height": 55
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 573,
+              "width": 320,
+              "height": 55
+            },
+            "children": [],
+            "text": "Each issue includes a suggested fix and traceable legal basis.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/21sf6p87",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "shape",
+            "name": "screenshot-frame-82",
+            "position": {
+              "left": 429,
+              "top": 188
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 793
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 446
+              }
+            },
+            "intrinsicSize": {
+              "width": 793,
+              "height": 446
+            },
+            "frame": {
+              "left": 429,
+              "top": 188,
+              "width": 793,
+              "height": 446
+            },
+            "snappedFrame": {
+              "left": 429,
+              "top": 188,
+              "width": 793,
+              "height": 446
+            },
+            "children": [],
+            "geometry": "roundRect",
+            "element": {
+              "aid": "sh/321wzups",
+              "id": "11",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 58,
+              "top": 176,
+              "width": 150,
+              "height": 100
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 58,
+              "top": 277,
+              "width": 320,
+              "height": 72
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 58,
+              "top": 380,
+              "width": 326,
+              "height": 96
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 58,
+              "top": 512,
+              "width": 324,
+              "height": 2
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 58,
+              "top": 541,
+              "width": 335,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 58,
+              "top": 573,
+              "width": 320,
+              "height": 55
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 429,
+              "top": 188,
+              "width": 793,
+              "height": 446
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1752 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/59j10s",
+    "id": "59j10s",
+    "slide": 4,
+    "layoutId": "ac4842fc-ce61-40d8-9218-084279eb5e4a",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "32a3e6de-5213-4865-8a1a-9d12aa8d5f5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ac4842fc-ce61-40d8-9218-084279eb5e4a",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "32a3e6de-5213-4865-8a1a-9d12aa8d5f5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "32a3e6de-5213-4865-8a1a-9d12aa8d5f5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83mdsz2d",
+      "id": "1",
+      "name": "eyebrow-58",
+      "bbox": [
+        58,
+        40,
+        700,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "CAPABILITY 1",
+      "textPreview": "CAPABILITY 1",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CAPABILITY 1"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CAPABILITY 1",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CAPABILITY 1",
+              "anchor": 1,
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72dcjuls",
+      "id": "2",
+      "name": "title-59",
+      "bbox": [
+        58,
+        72,
+        1130,
+        74
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "Guided intake makes the right procedure obvious.",
+      "textPreview": "Guided intake makes the right procedure obvious.",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 44,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Guided intake makes the right procedure obvious."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Guided intake makes the right procedure obvious.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 44,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Guided intake makes the right procedure obvious.",
+              "anchor": 1,
+              "fontSize": 44,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/614vqpk7",
+      "id": "3",
+      "name": "footer-60",
+      "bbox": [
+        58,
+        679,
+        520,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "CivicPath AI · Smart Government",
+      "textPreview": "CivicPath AI · Smart Government",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CivicPath AI · Smart Government"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CivicPath AI · Smart Government",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CivicPath AI · Smart Government",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h8fep43u",
+      "id": "4",
+      "name": "page-61",
+      "bbox": [
+        1164,
+        679,
+        58,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "04",
+      "textPreview": "04",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "04"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "04",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "right",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "04",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "right",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g76dwz29",
+      "id": "5",
+      "name": "screenshot-frame-62",
+      "bbox": [
+        58,
+        163,
+        735,
+        470
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#063B82",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6dwnulo",
+      "id": "6",
+      "name": "claim-63",
+      "bbox": [
+        842,
+        174,
+        360,
+        96
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "Plain-language in.\nCase-aware guidance out.",
+      "textPreview": "Plain-language in. | Case-aware guidance out.",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 32,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Plain-language in."
+          },
+          {
+            "index": 2,
+            "text": "Case-aware guidance"
+          },
+          {
+            "index": 3,
+            "text": "out."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Plain-language in.\nCase-aware guidance out.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 32,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Plain-language in.\nCase-aware guidance out.",
+              "anchor": 1,
+              "fontSize": 32,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u54vupkj",
+      "id": "7",
+      "name": "rule-64",
+      "bbox": [
+        842,
+        296,
+        322,
+        2
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "fillColor": "#0A1628",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wfeto36",
+      "id": "8",
+      "name": "feature-label-65",
+      "bbox": [
+        842,
+        328,
+        310,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.7"
+      },
+      "geometry": "rect",
+      "text": "VIETNAMESE VOICE + TEXT",
+      "textPreview": "VIETNAMESE VOICE + TEXT",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "VIETNAMESE VOICE + TEXT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "VIETNAMESE VOICE + TEXT",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "VIETNAMESE VOICE + TEXT",
+              "anchor": 1,
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4v6d0j2l",
+      "id": "9",
+      "name": "feature-copy-66",
+      "bbox": [
+        842,
+        358,
+        338,
+        66
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.8"
+      },
+      "geometry": "rect",
+      "text": "Citizens speak naturally, review the transcript, and edit before sending.",
+      "textPreview": "Citizens speak naturally, review the transcript, and edit before sending.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Citizens speak naturally, review the"
+          },
+          {
+            "index": 2,
+            "text": "transcript, and edit before sending."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Citizens speak naturally, review the transcript, and edit before sending.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 18,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Citizens speak naturally, review the transcript, and edit before sending.",
+              "anchor": 1,
+              "fontSize": 18,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ydsvixwz",
+      "id": "10",
+      "name": "feature-label-67",
+      "bbox": [
+        842,
+        451,
+        310,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "text": "MULTI-CASE CLASSIFICATION",
+      "textPreview": "MULTI-CASE CLASSIFICATION",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MULTI-CASE CLASSIFICATION"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MULTI-CASE CLASSIFICATION",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MULTI-CASE CLASSIFICATION",
+              "anchor": 1,
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ze1cb2xk",
+      "id": "11",
+      "name": "feature-copy-68",
+      "bbox": [
+        842,
+        481,
+        338,
+        78
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "rect",
+      "text": "One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.",
+      "textPreview": "One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "One session can combine out-of-wedlock,"
+          },
+          {
+            "index": 2,
+            "text": "overdue, foreign-element, and exceptional"
+          },
+          {
+            "index": 3,
+            "text": "cases."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 18,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.",
+              "anchor": 1,
+              "fontSize": 18,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kfadk7e5",
+      "id": "12",
+      "name": "evidence-69",
+      "bbox": [
+        842,
+        595,
+        310,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "rect",
+      "text": "LIVE DEMO · 19 JUL 2026",
+      "textPreview": "LIVE DEMO · 19 JUL 2026",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#15803D",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LIVE DEMO · 19 JUL 2026"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LIVE DEMO · 19 JUL 2026",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#15803D",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LIVE DEMO · 19 JUL 2026",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#15803D",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/294fmx8f",
+      "id": "13",
+      "bbox": [
+        63,
+        168,
+        725,
+        460
+      ],
+      "geometry": "roundRect",
+      "alt": "Live AI case classification and guidance",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 2609"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "d5961c1b-ff1a-47f9-825b-dd8c2e586da3",
+        "contentType": "image/jpeg",
+        "byteLength": 84596
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "baseUnit": 1,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "slide-layer-70",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 1222,
+          "height": 697
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "name": "eyebrow-58",
+            "position": {
+              "left": 58,
+              "top": 40
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 700
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 22
+              }
+            },
+            "intrinsicSize": {
+              "width": 700,
+              "height": 22
+            },
+            "frame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            },
+            "children": [],
+            "text": "CAPABILITY 1",
+            "transform": "none",
+            "element": {
+              "aid": "sh/83mdsz2d",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "name": "title-59",
+            "position": {
+              "left": 58,
+              "top": 72
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1130
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 74
+              }
+            },
+            "intrinsicSize": {
+              "width": 1130,
+              "height": 74
+            },
+            "frame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            },
+            "children": [],
+            "text": "Guided intake makes the right procedure obvious.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/72dcjuls",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "name": "footer-60",
+            "position": {
+              "left": 58,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 18
+            },
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "children": [],
+            "text": "CivicPath AI · Smart Government",
+            "transform": "none",
+            "element": {
+              "aid": "sh/614vqpk7",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "name": "page-61",
+            "position": {
+              "left": 1164,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 58
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 58,
+              "height": 18
+            },
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "children": [],
+            "text": "04",
+            "transform": "none",
+            "element": {
+              "aid": "sh/h8fep43u",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "shape",
+            "name": "screenshot-frame-62",
+            "position": {
+              "left": 58,
+              "top": 163
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 735
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 470
+              }
+            },
+            "intrinsicSize": {
+              "width": 735,
+              "height": 470
+            },
+            "frame": {
+              "left": 58,
+              "top": 163,
+              "width": 735,
+              "height": 470
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 163,
+              "width": 735,
+              "height": 470
+            },
+            "children": [],
+            "geometry": "roundRect",
+            "element": {
+              "aid": "sh/g76dwz29",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "name": "claim-63",
+            "position": {
+              "left": 842,
+              "top": 174
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 360
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 96
+              }
+            },
+            "intrinsicSize": {
+              "width": 360,
+              "height": 96
+            },
+            "frame": {
+              "left": 842,
+              "top": 174,
+              "width": 360,
+              "height": 96
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 174,
+              "width": 360,
+              "height": 96
+            },
+            "children": [],
+            "text": "Plain-language in.\nCase-aware guidance out.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/v6dwnulo",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "shape",
+            "name": "rule-64",
+            "position": {
+              "left": 842,
+              "top": 296
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 322
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 2
+              }
+            },
+            "intrinsicSize": {
+              "width": 322,
+              "height": 2
+            },
+            "frame": {
+              "left": 842,
+              "top": 296,
+              "width": 322,
+              "height": 2
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 296,
+              "width": 322,
+              "height": 2
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/u54vupkj",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "text",
+            "name": "feature-label-65",
+            "position": {
+              "left": 842,
+              "top": 328
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 310
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 310,
+              "height": 20
+            },
+            "frame": {
+              "left": 842,
+              "top": 328,
+              "width": 310,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 328,
+              "width": 310,
+              "height": 20
+            },
+            "children": [],
+            "text": "VIETNAMESE VOICE + TEXT",
+            "transform": "none",
+            "element": {
+              "aid": "sh/5wfeto36",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "text",
+            "name": "feature-copy-66",
+            "position": {
+              "left": 842,
+              "top": 358
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 338
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 66
+              }
+            },
+            "intrinsicSize": {
+              "width": 338,
+              "height": 66
+            },
+            "frame": {
+              "left": 842,
+              "top": 358,
+              "width": 338,
+              "height": 66
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 358,
+              "width": 338,
+              "height": 66
+            },
+            "children": [],
+            "text": "Citizens speak naturally, review the transcript, and edit before sending.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/4v6d0j2l",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "text",
+            "name": "feature-label-67",
+            "position": {
+              "left": 842,
+              "top": 451
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 310
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 310,
+              "height": 20
+            },
+            "frame": {
+              "left": 842,
+              "top": 451,
+              "width": 310,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 451,
+              "width": 310,
+              "height": 20
+            },
+            "children": [],
+            "text": "MULTI-CASE CLASSIFICATION",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ydsvixwz",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "text",
+            "name": "feature-copy-68",
+            "position": {
+              "left": 842,
+              "top": 481
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 338
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 78
+              }
+            },
+            "intrinsicSize": {
+              "width": 338,
+              "height": 78
+            },
+            "frame": {
+              "left": 842,
+              "top": 481,
+              "width": 338,
+              "height": 78
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 481,
+              "width": 338,
+              "height": 78
+            },
+            "children": [],
+            "text": "One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ze1cb2xk",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "text",
+            "name": "evidence-69",
+            "position": {
+              "left": 842,
+              "top": 595
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 310
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 310,
+              "height": 18
+            },
+            "frame": {
+              "left": 842,
+              "top": 595,
+              "width": 310,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 595,
+              "width": 310,
+              "height": 18
+            },
+            "children": [],
+            "text": "LIVE DEMO · 19 JUL 2026",
+            "transform": "none",
+            "element": {
+              "aid": "sh/kfadk7e5",
+              "id": "12",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 58,
+              "top": 163,
+              "width": 735,
+              "height": 470
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 842,
+              "top": 174,
+              "width": 360,
+              "height": 96
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 842,
+              "top": 296,
+              "width": 322,
+              "height": 2
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 842,
+              "top": 328,
+              "width": 310,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 842,
+              "top": 358,
+              "width": 338,
+              "height": 66
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 842,
+              "top": 451,
+              "width": 310,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 842,
+              "top": 481,
+              "width": 338,
+              "height": 78
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 842,
+              "top": 595,
+              "width": 310,
+              "height": 18
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

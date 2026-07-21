@@ -1,0 +1,3240 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/c9j44g",
+    "id": "c9j44g",
+    "slide": 10,
+    "layoutId": "7285fd64-3c80-4e50-b44e-17b876995f7b",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "db53a205-d368-4c5b-bfef-dd3460e9004e",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "7285fd64-3c80-4e50-b44e-17b876995f7b",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "db53a205-d368-4c5b-bfef-dd3460e9004e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "db53a205-d368-4c5b-bfef-dd3460e9004e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ru18fatk",
+      "id": "1",
+      "name": "eyebrow-156",
+      "bbox": [
+        58,
+        40,
+        700,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "PILOT ROADMAP",
+      "textPreview": "PILOT ROADMAP",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PILOT ROADMAP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PILOT ROADMAP",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PILOT ROADMAP",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfap8fa5",
+      "id": "2",
+      "name": "title-157",
+      "bbox": [
+        58,
+        72,
+        1130,
+        74
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "A 90-day pilot can prove value safely.",
+      "textPreview": "A 90-day pilot can prove value safely.",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 44,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A 90-day pilot can prove value safely."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A 90-day pilot can prove value safely.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 44,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A 90-day pilot can prove value safely.",
+              "anchor": 1,
+              "fontSize": 44,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tg3qhkba",
+      "id": "3",
+      "name": "footer-158",
+      "bbox": [
+        58,
+        679,
+        520,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "CivicPath AI · Smart Government",
+      "textPreview": "CivicPath AI · Smart Government",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CivicPath AI · Smart Government"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CivicPath AI · Smart Government",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CivicPath AI · Smart Government",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ips7ilcn",
+      "id": "4",
+      "name": "page-159",
+      "bbox": [
+        1164,
+        679,
+        58,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "10",
+      "textPreview": "10",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "10",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "right",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "right",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jq18bqt8",
+      "id": "5",
+      "name": "lede-160",
+      "bbox": [
+        58,
+        151,
+        1050,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.",
+      "textPreview": "Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 24,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.",
+              "anchor": 1,
+              "fontSize": 24,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4rapkvut",
+      "id": "6",
+      "name": "rule-161",
+      "bbox": [
+        102,
+        362,
+        1060,
+        3
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "fillColor": "#CFD8E5",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sjqd0be",
+      "id": "7",
+      "name": "milestone-162",
+      "bbox": [
+        104,
+        341,
+        44,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#063B82",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ul87elcr",
+      "id": "8",
+      "name": "milestone-163",
+      "bbox": [
+        509,
+        341,
+        44,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.7"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#0B5ED7",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmho7qtc",
+      "id": "9",
+      "name": "milestone-164",
+      "bbox": [
+        914,
+        341,
+        44,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.8"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#15803D",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u1kze5o",
+      "id": "10",
+      "name": "milestone-number-165",
+      "bbox": [
+        104,
+        353,
+        44,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "text": "01",
+      "textPreview": "01",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "01"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69sjq943",
+      "id": "11",
+      "name": "milestone-number-166",
+      "bbox": [
+        509,
+        353,
+        44,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/twj21onu",
+      "id": "12",
+      "name": "milestone-number-167",
+      "bbox": [
+        914,
+        353,
+        44,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sva1sjm9",
+      "id": "13",
+      "name": "phase-label-168",
+      "bbox": [
+        58,
+        239,
+        250,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.12"
+      },
+      "geometry": "rect",
+      "text": "WEEKS 0–2",
+      "textPreview": "WEEKS 0–2",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "WEEKS 0–2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "WEEKS 0–2",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WEEKS 0–2",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fy1k3e50",
+      "id": "14",
+      "name": "phase-title-169",
+      "bbox": [
+        58,
+        274,
+        250,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.13"
+      },
+      "geometry": "rect",
+      "text": "Align",
+      "textPreview": "Align",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Align"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Align",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 27,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Align",
+              "anchor": 1,
+              "fontSize": 27,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uxsju94f",
+      "id": "15",
+      "name": "phase-copy-170",
+      "bbox": [
+        58,
+        410,
+        300,
+        86
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.14"
+      },
+      "geometry": "rect",
+      "text": "Confirm local rules, source ownership, audit process, and pilot baseline.",
+      "textPreview": "Confirm local rules, source ownership, audit process, and pilot baseline.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Confirm local rules, source"
+          },
+          {
+            "index": 2,
+            "text": "ownership, audit process, and"
+          },
+          {
+            "index": 3,
+            "text": "pilot baseline."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Confirm local rules, source ownership, audit process, and pilot baseline.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 20,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Confirm local rules, source ownership, audit process, and pilot baseline.",
+              "anchor": 1,
+              "fontSize": 20,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h0325onq",
+      "id": "16",
+      "name": "phase-label-171",
+      "bbox": [
+        463,
+        239,
+        250,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.15"
+      },
+      "geometry": "rect",
+      "text": "WEEKS 3–6",
+      "textPreview": "WEEKS 3–6",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "WEEKS 3–6"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "WEEKS 3–6",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WEEKS 3–6",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gza1wjm5",
+      "id": "17",
+      "name": "phase-title-172",
+      "bbox": [
+        463,
+        274,
+        250,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.16"
+      },
+      "geometry": "rect",
+      "text": "Integrate",
+      "textPreview": "Integrate",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Integrate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Integrate",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 27,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Integrate",
+              "anchor": 1,
+              "fontSize": 27,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v2h0ru5g",
+      "id": "18",
+      "name": "phase-copy-173",
+      "bbox": [
+        463,
+        410,
+        300,
+        86
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.17"
+      },
+      "geometry": "rect",
+      "text": "Embed in one portal, onboard two pilot offices, and validate end-to-end operations.",
+      "textPreview": "Embed in one portal, onboard two pilot offices, and validate end-to-end operations.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Embed in one portal, onboard"
+          },
+          {
+            "index": 2,
+            "text": "two pilot offices, and validate"
+          },
+          {
+            "index": 3,
+            "text": "end-to-end operations."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Embed in one portal, onboard two pilot offices, and validate end-to-end operations.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 20,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Embed in one portal, onboard two pilot offices, and validate end-to-end operations.",
+              "anchor": 1,
+              "fontSize": 20,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a18jyp4v",
+      "id": "19",
+      "name": "phase-label-174",
+      "bbox": [
+        868,
+        239,
+        250,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.18"
+      },
+      "geometry": "rect",
+      "text": "WEEKS 7–12",
+      "textPreview": "WEEKS 7–12",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "WEEKS 7–12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "WEEKS 7–12",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WEEKS 7–12",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yxwn6xoj",
+      "id": "20",
+      "name": "phase-title-175",
+      "bbox": [
+        868,
+        274,
+        250,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.19"
+      },
+      "geometry": "rect",
+      "text": "Measure",
+      "textPreview": "Measure",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Measure"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Measure",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 27,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Measure",
+              "anchor": 1,
+              "fontSize": 27,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zy54z2p4",
+      "id": "21",
+      "name": "phase-copy-176",
+      "bbox": [
+        868,
+        410,
+        300,
+        86
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.20"
+      },
+      "geometry": "rect",
+      "text": "Audit accuracy, citizen completion, preventable corrections, and officer workload.",
+      "textPreview": "Audit accuracy, citizen completion, preventable corrections, and officer workload.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Audit accuracy, citizen"
+          },
+          {
+            "index": 2,
+            "text": "completion, preventable"
+          },
+          {
+            "index": 3,
+            "text": "corrections, and officer workload."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Audit accuracy, citizen completion, preventable corrections, and officer workload.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 20,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Audit accuracy, citizen completion, preventable corrections, and officer workload.",
+              "anchor": 1,
+              "fontSize": 20,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0zy5876p",
+      "id": "22",
+      "name": "partners-177",
+      "bbox": [
+        58,
+        554,
+        1164,
+        84
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.21"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#E9F2FF",
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lk7m1c7a",
+      "id": "23",
+      "name": "partners-label-178",
+      "bbox": [
+        82,
+        577,
+        200,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.22"
+      },
+      "geometry": "rect",
+      "text": "PILOT PARTNERS",
+      "textPreview": "PILOT PARTNERS",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PILOT PARTNERS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PILOT PARTNERS",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 15,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PILOT PARTNERS",
+              "anchor": 1,
+              "fontSize": 15,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qtw32don",
+      "id": "24",
+      "name": "partners-copy-179",
+      "bbox": [
+        82,
+        605,
+        1080,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.23"
+      },
+      "geometry": "rect",
+      "text": "1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison",
+      "textPreview": "1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#063B82",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#063B82",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison",
+              "anchor": 1,
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#063B82",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "baseUnit": 1,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "slide-layer-180",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 1222,
+          "height": 697
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "name": "eyebrow-156",
+            "position": {
+              "left": 58,
+              "top": 40
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 700
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 22
+              }
+            },
+            "intrinsicSize": {
+              "width": 700,
+              "height": 22
+            },
+            "frame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            },
+            "children": [],
+            "text": "PILOT ROADMAP",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ru18fatk",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "name": "title-157",
+            "position": {
+              "left": 58,
+              "top": 72
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1130
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 74
+              }
+            },
+            "intrinsicSize": {
+              "width": 1130,
+              "height": 74
+            },
+            "frame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            },
+            "children": [],
+            "text": "A 90-day pilot can prove value safely.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/sfap8fa5",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "name": "footer-158",
+            "position": {
+              "left": 58,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 18
+            },
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "children": [],
+            "text": "CivicPath AI · Smart Government",
+            "transform": "none",
+            "element": {
+              "aid": "sh/tg3qhkba",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "name": "page-159",
+            "position": {
+              "left": 1164,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 58
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 58,
+              "height": 18
+            },
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "children": [],
+            "text": "10",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ips7ilcn",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "name": "lede-160",
+            "position": {
+              "left": 58,
+              "top": 151
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1050
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 48
+              }
+            },
+            "intrinsicSize": {
+              "width": 1050,
+              "height": 48
+            },
+            "frame": {
+              "left": 58,
+              "top": 151,
+              "width": 1050,
+              "height": 48
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 151,
+              "width": 1050,
+              "height": 48
+            },
+            "children": [],
+            "text": "Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/jq18bqt8",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "shape",
+            "name": "rule-161",
+            "position": {
+              "left": 102,
+              "top": 362
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1060
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 3
+              }
+            },
+            "intrinsicSize": {
+              "width": 1060,
+              "height": 3
+            },
+            "frame": {
+              "left": 102,
+              "top": 362,
+              "width": 1060,
+              "height": 3
+            },
+            "snappedFrame": {
+              "left": 102,
+              "top": 362,
+              "width": 1060,
+              "height": 3
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/4rapkvut",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "shape",
+            "name": "milestone-162",
+            "position": {
+              "left": 104,
+              "top": 341
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 44
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 44
+              }
+            },
+            "intrinsicSize": {
+              "width": 44,
+              "height": 44
+            },
+            "frame": {
+              "left": 104,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            },
+            "snappedFrame": {
+              "left": 104,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            },
+            "children": [],
+            "geometry": "ellipse",
+            "element": {
+              "aid": "sh/5sjqd0be",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "shape",
+            "name": "milestone-163",
+            "position": {
+              "left": 509,
+              "top": 341
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 44
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 44
+              }
+            },
+            "intrinsicSize": {
+              "width": 44,
+              "height": 44
+            },
+            "frame": {
+              "left": 509,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            },
+            "snappedFrame": {
+              "left": 509,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            },
+            "children": [],
+            "geometry": "ellipse",
+            "element": {
+              "aid": "sh/ul87elcr",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "shape",
+            "name": "milestone-164",
+            "position": {
+              "left": 914,
+              "top": 341
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 44
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 44
+              }
+            },
+            "intrinsicSize": {
+              "width": 44,
+              "height": 44
+            },
+            "frame": {
+              "left": 914,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            },
+            "snappedFrame": {
+              "left": 914,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            },
+            "children": [],
+            "geometry": "ellipse",
+            "element": {
+              "aid": "sh/vmho7qtc",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "text",
+            "name": "milestone-number-165",
+            "position": {
+              "left": 104,
+              "top": 353
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 44
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 44,
+              "height": 18
+            },
+            "frame": {
+              "left": 104,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 104,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            },
+            "children": [],
+            "text": "01",
+            "transform": "none",
+            "element": {
+              "aid": "sh/7u1kze5o",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "text",
+            "name": "milestone-number-166",
+            "position": {
+              "left": 509,
+              "top": 353
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 44
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 44,
+              "height": 18
+            },
+            "frame": {
+              "left": 509,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 509,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            },
+            "children": [],
+            "text": "02",
+            "transform": "none",
+            "element": {
+              "aid": "sh/69sjq943",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "text",
+            "name": "milestone-number-167",
+            "position": {
+              "left": 914,
+              "top": 353
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 44
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 44,
+              "height": 18
+            },
+            "frame": {
+              "left": 914,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 914,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            },
+            "children": [],
+            "text": "03",
+            "transform": "none",
+            "element": {
+              "aid": "sh/twj21onu",
+              "id": "12",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.12",
+            "kind": "text",
+            "name": "phase-label-168",
+            "position": {
+              "left": 58,
+              "top": 239
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 20
+            },
+            "frame": {
+              "left": 58,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            },
+            "children": [],
+            "text": "WEEKS 0–2",
+            "transform": "none",
+            "element": {
+              "aid": "sh/sva1sjm9",
+              "id": "13",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.13",
+            "kind": "text",
+            "name": "phase-title-169",
+            "position": {
+              "left": 58,
+              "top": 274
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 34
+            },
+            "frame": {
+              "left": 58,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            },
+            "children": [],
+            "text": "Align",
+            "transform": "none",
+            "element": {
+              "aid": "sh/fy1k3e50",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.14",
+            "kind": "text",
+            "name": "phase-copy-170",
+            "position": {
+              "left": 58,
+              "top": 410
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 86
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 86
+            },
+            "frame": {
+              "left": 58,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            },
+            "children": [],
+            "text": "Confirm local rules, source ownership, audit process, and pilot baseline.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/uxsju94f",
+              "id": "15",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.15",
+            "kind": "text",
+            "name": "phase-label-171",
+            "position": {
+              "left": 463,
+              "top": 239
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 20
+            },
+            "frame": {
+              "left": 463,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 463,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            },
+            "children": [],
+            "text": "WEEKS 3–6",
+            "transform": "none",
+            "element": {
+              "aid": "sh/h0325onq",
+              "id": "16",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.16",
+            "kind": "text",
+            "name": "phase-title-172",
+            "position": {
+              "left": 463,
+              "top": 274
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 34
+            },
+            "frame": {
+              "left": 463,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            },
+            "snappedFrame": {
+              "left": 463,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            },
+            "children": [],
+            "text": "Integrate",
+            "transform": "none",
+            "element": {
+              "aid": "sh/gza1wjm5",
+              "id": "17",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.17",
+            "kind": "text",
+            "name": "phase-copy-173",
+            "position": {
+              "left": 463,
+              "top": 410
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 86
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 86
+            },
+            "frame": {
+              "left": 463,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            },
+            "snappedFrame": {
+              "left": 463,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            },
+            "children": [],
+            "text": "Embed in one portal, onboard two pilot offices, and validate end-to-end operations.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/v2h0ru5g",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.18",
+            "kind": "text",
+            "name": "phase-label-174",
+            "position": {
+              "left": 868,
+              "top": 239
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 20
+            },
+            "frame": {
+              "left": 868,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 868,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            },
+            "children": [],
+            "text": "WEEKS 7–12",
+            "transform": "none",
+            "element": {
+              "aid": "sh/a18jyp4v",
+              "id": "19",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.19",
+            "kind": "text",
+            "name": "phase-title-175",
+            "position": {
+              "left": 868,
+              "top": 274
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 34
+            },
+            "frame": {
+              "left": 868,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            },
+            "snappedFrame": {
+              "left": 868,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            },
+            "children": [],
+            "text": "Measure",
+            "transform": "none",
+            "element": {
+              "aid": "sh/yxwn6xoj",
+              "id": "20",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.20",
+            "kind": "text",
+            "name": "phase-copy-176",
+            "position": {
+              "left": 868,
+              "top": 410
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 86
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 86
+            },
+            "frame": {
+              "left": 868,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            },
+            "snappedFrame": {
+              "left": 868,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            },
+            "children": [],
+            "text": "Audit accuracy, citizen completion, preventable corrections, and officer workload.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/zy54z2p4",
+              "id": "21",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.21",
+            "kind": "shape",
+            "name": "partners-177",
+            "position": {
+              "left": 58,
+              "top": 554
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1164
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 84
+              }
+            },
+            "intrinsicSize": {
+              "width": 1164,
+              "height": 84
+            },
+            "frame": {
+              "left": 58,
+              "top": 554,
+              "width": 1164,
+              "height": 84
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 554,
+              "width": 1164,
+              "height": 84
+            },
+            "children": [],
+            "geometry": "roundRect",
+            "element": {
+              "aid": "sh/0zy5876p",
+              "id": "22",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.22",
+            "kind": "text",
+            "name": "partners-label-178",
+            "position": {
+              "left": 82,
+              "top": 577
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 200
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 200,
+              "height": 18
+            },
+            "frame": {
+              "left": 82,
+              "top": 577,
+              "width": 200,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 82,
+              "top": 577,
+              "width": 200,
+              "height": 18
+            },
+            "children": [],
+            "text": "PILOT PARTNERS",
+            "transform": "none",
+            "element": {
+              "aid": "sh/lk7m1c7a",
+              "id": "23",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.23",
+            "kind": "text",
+            "name": "partners-copy-179",
+            "position": {
+              "left": 82,
+              "top": 605
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1080
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 1080,
+              "height": 24
+            },
+            "frame": {
+              "left": 82,
+              "top": 605,
+              "width": 1080,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 82,
+              "top": 605,
+              "width": 1080,
+              "height": 24
+            },
+            "children": [],
+            "text": "1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison",
+            "transform": "none",
+            "element": {
+              "aid": "sh/qtw32don",
+              "id": "24",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 58,
+              "top": 40,
+              "width": 700,
+              "height": 22
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 58,
+              "top": 72,
+              "width": 1130,
+              "height": 74
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 58,
+              "top": 151,
+              "width": 1050,
+              "height": 48
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 102,
+              "top": 362,
+              "width": 1060,
+              "height": 3
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 104,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 509,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 914,
+              "top": 341,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 104,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 509,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 914,
+              "top": 353,
+              "width": 44,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.12",
+            "frame": {
+              "left": 58,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.13",
+            "frame": {
+              "left": 58,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.14",
+            "frame": {
+              "left": 58,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            }
+          },
+          {
+            "path": "0.15",
+            "frame": {
+              "left": 463,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.16",
+            "frame": {
+              "left": 463,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.17",
+            "frame": {
+              "left": 463,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            }
+          },
+          {
+            "path": "0.18",
+            "frame": {
+              "left": 868,
+              "top": 239,
+              "width": 250,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.19",
+            "frame": {
+              "left": 868,
+              "top": 274,
+              "width": 250,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.20",
+            "frame": {
+              "left": 868,
+              "top": 410,
+              "width": 300,
+              "height": 86
+            }
+          },
+          {
+            "path": "0.21",
+            "frame": {
+              "left": 58,
+              "top": 554,
+              "width": 1164,
+              "height": 84
+            }
+          },
+          {
+            "path": "0.22",
+            "frame": {
+              "left": 82,
+              "top": 577,
+              "width": 200,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.23",
+            "frame": {
+              "left": 82,
+              "top": 605,
+              "width": 1080,
+              "height": 24
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

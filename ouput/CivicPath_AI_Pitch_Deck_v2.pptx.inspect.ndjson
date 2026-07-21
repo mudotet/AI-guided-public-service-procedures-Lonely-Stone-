@@ -1,0 +1,246 @@
+{"kind":"deck","id":"pr/sd01ex","name":"Deck"}
+{"kind":"layout","layoutId":"89d6f92c-e672-4c2c-9c70-fe9034735b78","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"1d3c5113-46f8-4272-87eb-15c26c5219e8","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6sd47z","slide":1,"title":"SMART GOVERNMENT · NIDit · LONELY STONE","textShapes":11}
+{"kind":"shape","id":"sh/kna14be5","slide":1,"name":"box-1","bbox":[0,0,12,720]}
+{"kind":"textbox","id":"sh/zm1kb6xk","slide":1,"name":"eyebrow-2","text":"SMART GOVERNMENT · NIDit · LONELY STONE","textPreview":"SMART GOVERNMENT · NIDit · LONELY STONE","textChars":39,"textLines":1,"bbox":[58,48,570,22]}
+{"kind":"textbox","id":"sh/yl8j21wf","slide":1,"name":"brand-3","text":"CIVICPATH AI","textPreview":"CIVICPATH AI","textChars":12,"textLines":1,"bbox":[58,104,490,42]}
+{"kind":"textbox","id":"sh/xkzi9wfu","slide":1,"name":"cover-title-4","text":"AI-guided public\nservice procedures","textPreview":"AI-guided public | service procedures","textChars":35,"textLines":2,"bbox":[58,168,540,136]}
+{"kind":"textbox","id":"sh/cjq10be9","slide":1,"name":"cover-subtitle-5","text":"Guidance citizens trust. Applications officers can process.","textPreview":"Guidance citizens trust. Applications officers can process.","textChars":59,"textLines":1,"bbox":[58,342,500,70]}
+{"kind":"shape","id":"sh/bih076xo","slide":1,"name":"scope-pill-6","bbox":[58,466,244,38]}
+{"kind":"textbox","id":"sh/ah8jy1w3","slide":1,"name":"scope-7","text":"STARTING WITH BIRTH REGISTRATION","textPreview":"STARTING WITH BIRTH REGISTRATION","textChars":32,"textLines":1,"bbox":[75,478,216,16]}
+{"kind":"textbox","id":"sh/pwzi5wfi","slide":1,"name":"live-label-8","text":"Live demo","textPreview":"Live demo","textChars":9,"textLines":1,"bbox":[58,567,120,20]}
+{"kind":"textbox","id":"sh/ovq1wrex","slide":1,"name":"url-9","text":"ai-guided-public-service-procedures.vercel.app","textPreview":"ai-guided-public-service-procedures.vercel.app","textChars":46,"textLines":1,"bbox":[58,593,475,28]}
+{"kind":"shape","id":"sh/2l4vu903","slide":1,"name":"cover-media-frame-10","bbox":[632,143,590,338]}
+{"kind":"shape","id":"sh/3mdw3eho","slide":1,"name":"cover-media-inner-11","bbox":[648,159,558,306]}
+{"kind":"textbox","id":"sh/4nmdwji9","slide":1,"name":"cover-proof-12","text":"GUIDED INTAKE · PRE-CHECK · PDF","textPreview":"GUIDED INTAKE · PRE-CHECK · PDF","textChars":31,"textLines":1,"bbox":[664,523,526,20]}
+{"kind":"textbox","id":"sh/p8ve5ozu","slide":1,"name":"cover-proof-copy-13","text":"Working live demo · captured 19 Jul 2026","textPreview":"Working live demo · captured 19 Jul 2026","textChars":40,"textLines":1,"bbox":[664,557,526,24]}
+{"kind":"textbox","id":"sh/uhkvq907","slide":1,"name":"footer-14","text":"National Institute for Digital Technologies and Digital Transformation","textPreview":"National Institute for Digital Technologies and Digital Transformation","textChars":70,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/fidwzehs","slide":1,"name":"page-15","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"image","id":"im/bels3yds","slide":1,"name":"","geometry":"roundRect","alt":"CivicPath AI live home page","bbox":[654,165,546,294]}
+{"kind":"notes","id":"nt/6sd47z","slide":1,"text":""}
+{"kind":"slide","id":"sl/p39nkx","slide":2,"title":"THE PROBLEM","textShapes":14}
+{"kind":"textbox","id":"sh/5ovil8bq","slide":2,"name":"eyebrow-17","text":"THE PROBLEM","textPreview":"THE PROBLEM","textChars":11,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/i1kjqtsz","slide":2,"name":"title-18","text":"The failure happens before submission.","textPreview":"The failure happens before submission.","textChars":38,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/j2d0jytk","slide":2,"name":"footer-19","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/wz21o3a9","slide":2,"name":"page-20","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/h0bihobe","slide":2,"name":"lede-21","text":"Citizens enter the process without certainty—and discover mistakes only after an official reviews the file.","textPreview":"Citizens enter the process without certainty—and discover mistakes only after an official reviews the file.","textChars":107,"textLines":1,"bbox":[58,151,1050,56]}
+{"kind":"shape","id":"sh/uxkjmts3","slide":2,"name":"rule-22","bbox":[58,238,1164,2]}
+{"kind":"shape","id":"sh/vyt0fyto","slide":2,"name":"rule-23","bbox":[439,269,1,329]}
+{"kind":"shape","id":"sh/8v21kjax","slide":2,"name":"rule-24","bbox":[829,269,1,329]}
+{"kind":"textbox","id":"sh/9wbidobi","slide":2,"name":"number-25","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[58,274,80,38]}
+{"kind":"textbox","id":"sh/d87u9sny","slide":2,"name":"problem-26","text":"What do I\nprepare?","textPreview":"What do I | prepare?","textChars":18,"textLines":2,"bbox":[58,331,300,100]}
+{"kind":"textbox","id":"sh/c7yd0n6d","slide":2,"name":"problem-copy-27","text":"Documents, forms, office, order of steps—information is fragmented and hard to interpret.","textPreview":"Documents, forms, office, order of steps—information is fragmented and hard to interpret.","textChars":89,"textLines":1,"bbox":[58,478,314,96]}
+{"kind":"textbox","id":"sh/b6pc7i5s","slide":2,"name":"number-28","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[472,274,80,38]}
+{"kind":"textbox","id":"sh/qlgvydo7","slide":2,"name":"problem-29","text":"Did I fill it\nin correctly?","textPreview":"Did I fill it | in correctly?","textChars":27,"textLines":2,"bbox":[472,331,304,100]}
+{"kind":"textbox","id":"sh/pk7u58nm","slide":2,"name":"problem-copy-30","text":"Missing fields and conflicts surface late—after time has already been spent submitting or traveling.","textPreview":"Missing fields and conflicts surface late—after time has already been spent submitting or traveling.","textChars":100,"textLines":1,"bbox":[472,478,314,96]}
+{"kind":"textbox","id":"sh/ojetw361","slide":2,"name":"number-31","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[862,274,80,38]}
+{"kind":"textbox","id":"sh/3i5c3y5w","slide":2,"name":"problem-32","text":"Who can\nanswer now?","textPreview":"Who can | answer now?","textChars":19,"textLines":2,"bbox":[862,331,308,100]}
+{"kind":"textbox","id":"sh/2hwbudob","slide":2,"name":"problem-copy-33","text":"Too many repeat questions, too few officers—and citizens make avoidable in-person trips.","textPreview":"Too many repeat questions, too few officers—and citizens make avoidable in-person trips.","textChars":88,"textLines":1,"bbox":[862,478,314,96]}
+{"kind":"notes","id":"nt/p39nkx","slide":2,"text":""}
+{"kind":"slide","id":"sl/a3s2mh","slide":3,"title":"THE SOLUTION","textShapes":18}
+{"kind":"textbox","id":"sh/2xczadkr","slide":3,"name":"eyebrow-35","text":"THE SOLUTION","textPreview":"THE SOLUTION","textChars":12,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/pk3ils3i","slide":3,"name":"title-36","text":"One guided flow turns uncertainty into action.","textPreview":"One guided flow turns uncertainty into action.","textChars":46,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/ojuhcn2x","slide":3,"name":"footer-37","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/fu10filg","slide":3,"name":"page-38","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/etsz6dkv","slide":3,"name":"lede-39","text":"A citizen describes the need once. CivicPath AI clarifies, prepares, and checks—inside the portal they already use.","textPreview":"A citizen describes the need once. CivicPath AI clarifies, prepares, and checks—inside the portal they already use.","textChars":115,"textLines":1,"bbox":[58,151,1060,54]}
+{"kind":"shape","id":"sh/1w3ihs3m","slide":3,"name":"rule-40","bbox":[110,330,1010,3]}
+{"kind":"shape","id":"sh/gvuh8n21","slide":3,"name":"step-node-41","bbox":[111,310,42,42]}
+{"kind":"shape","id":"sh/rq10byl4","slide":3,"name":"step-node-42","bbox":[410,310,42,42]}
+{"kind":"shape","id":"sh/6psz2tkz","slide":3,"name":"step-node-43","bbox":[710,310,42,42]}
+{"kind":"shape","id":"sh/wfilwrqx","slide":3,"name":"step-node-44","bbox":[1010,310,42,42]}
+{"kind":"textbox","id":"sh/xgrmpwri","slide":3,"name":"step-number-45","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[111,319,42,20]}
+{"kind":"textbox","id":"sh/ad03uh8r","slide":3,"name":"step-number-46","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[410,319,42,20]}
+{"kind":"textbox","id":"sh/ve94nm9c","slide":3,"name":"step-number-47","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[710,319,42,20]}
+{"kind":"textbox","id":"sh/8rilsrql","slide":3,"name":"step-number-48","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1010,319,42,20]}
+{"kind":"textbox","id":"sh/9crmlcr6","slide":3,"name":"step-title-49","text":"Speak or type","textPreview":"Speak or type","textChars":13,"textLines":1,"bbox":[72,378,230,34]}
+{"kind":"textbox","id":"sh/mp03qh8v","slide":3,"name":"step-copy-50","text":"Describe the situation in everyday language.","textPreview":"Describe the situation in everyday language.","textChars":44,"textLines":1,"bbox":[72,427,240,55]}
+{"kind":"textbox","id":"sh/nq94jm90","slide":3,"name":"step-title-51","text":"Clarify","textPreview":"Clarify","textChars":7,"textLines":1,"bbox":[371,378,230,34]}
+{"kind":"textbox","id":"sh/sn25obq5","slide":3,"name":"step-copy-52","text":"AI asks the next best question and detects applicable cases.","textPreview":"AI asks the next best question and detects applicable cases.","textChars":60,"textLines":1,"bbox":[371,427,240,74]}
+{"kind":"textbox","id":"sh/t8vmxgra","slide":3,"name":"step-title-53","text":"Prepare","textPreview":"Prepare","textChars":7,"textLines":1,"bbox":[671,378,230,34]}
+{"kind":"textbox","id":"sh/14rmhgju","slide":3,"name":"step-copy-54","text":"Receive a case-aware checklist, steps, examples, and legal basis.","textPreview":"Receive a case-aware checklist, steps, examples, and legal basis.","textChars":65,"textLines":1,"bbox":[671,427,240,74]}
+{"kind":"textbox","id":"sh/g3il8bi9","slide":3,"name":"step-title-55","text":"Check","textPreview":"Check","textChars":5,"textLines":1,"bbox":[971,378,230,34]}
+{"kind":"textbox","id":"sh/f2p4f61o","slide":3,"name":"step-copy-56","text":"Catch missing fields and conflicts before submission.","textPreview":"Catch missing fields and conflicts before submission.","textChars":53,"textLines":1,"bbox":[971,427,240,74]}
+{"kind":"shape","id":"sh/e1g36103","slide":3,"name":"takeaway-57","bbox":[58,568,1164,70]}
+{"kind":"textbox","id":"sh/t07mdwji","slide":3,"name":"takeaway-copy-58","text":"No new app. No new portal. Embedded where citizens already are.","textPreview":"No new app. No new portal. Embedded where citizens already are.","textChars":63,"textLines":1,"bbox":[87,588,1105,28]}
+{"kind":"notes","id":"nt/a3s2mh","slide":3,"text":""}
+{"kind":"slide","id":"sl/znau8g","slide":4,"title":"CAPABILITY 1","textShapes":10}
+{"kind":"textbox","id":"sh/jehcr218","slide":4,"name":"eyebrow-60","text":"CAPABILITY 1","textPreview":"CAPABILITY 1","textChars":12,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/4fqt072t","slide":4,"name":"title-61","text":"Guided intake makes the right procedure obvious.","textPreview":"Guided intake makes the right procedure obvious.","textChars":48,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/5gjutcje","slide":4,"name":"footer-62","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/u98buxkr","slide":4,"name":"page-63","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"shape","id":"sh/vahcn21c","slide":4,"name":"screenshot-frame-64","bbox":[58,184,735,414]}
+{"kind":"textbox","id":"sh/wbqtw72h","slide":4,"name":"claim-65","text":"Plain-language in.\nCase-aware guidance out.","textPreview":"Plain-language in. | Case-aware guidance out.","textChars":43,"textLines":2,"bbox":[842,174,360,96]}
+{"kind":"shape","id":"sh/hczupsj2","slide":4,"name":"rule-66","bbox":[842,296,322,2]}
+{"kind":"textbox","id":"sh/mlobqdkf","slide":4,"name":"feature-label-67","text":"VIETNAMESE VOICE + TEXT","textPreview":"VIETNAMESE VOICE + TEXT","textChars":23,"textLines":1,"bbox":[842,328,310,20]}
+{"kind":"textbox","id":"sh/7mxsji10","slide":4,"name":"feature-copy-68","text":"Citizens speak naturally, review the transcript, and edit before sending.","textPreview":"Citizens speak naturally, review the transcript, and edit before sending.","textChars":73,"textLines":1,"bbox":[842,358,338,66]}
+{"kind":"textbox","id":"sh/za947uhs","slide":4,"name":"feature-label-69","text":"MULTI-CASE CLASSIFICATION","textPreview":"MULTI-CASE CLASSIFICATION","textChars":25,"textLines":1,"bbox":[842,451,310,20]}
+{"kind":"textbox","id":"sh/y90nep07","slide":4,"name":"feature-copy-70","text":"One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.","textPreview":"One session can combine out-of-wedlock, overdue, foreign-element, and exceptional cases.","textChars":88,"textLines":1,"bbox":[842,481,338,78]}
+{"kind":"textbox","id":"sh/lcb69kzy","slide":4,"name":"evidence-71","text":"LIVE DEMO · 19 JUL 2026","textPreview":"LIVE DEMO · 19 JUL 2026","textChars":23,"textLines":1,"bbox":[842,595,310,18]}
+{"kind":"image","id":"im/rmt8rexw","slide":4,"name":"","geometry":"roundRect","alt":"Live AI case classification and guidance","bbox":[64,190,723,402]}
+{"kind":"notes","id":"nt/znau8g","slide":4,"text":""}
+{"kind":"slide","id":"sl/m7scrq","slide":5,"title":"CAPABILITY 2","textShapes":9}
+{"kind":"textbox","id":"sh/zmh0byp8","slide":5,"name":"eyebrow-73","text":"CAPABILITY 2","textPreview":"CAPABILITY 2","textChars":12,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/knqh43qt","slide":5,"name":"title-74","text":"Pre-check catches what citizens and portals miss.","textPreview":"Pre-check catches what citizens and portals miss.","textChars":49,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/lozid87e","slide":5,"name":"footer-75","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/mp8j6d8z","slide":5,"name":"page-76","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/7qh0fipk","slide":5,"name":"live-number-77","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[58,176,150,100]}
+{"kind":"textbox","id":"sh/8rq183q5","slide":5,"name":"live-label-78","text":"errors caught in the live demo","textPreview":"errors caught in the live demo","textChars":30,"textLines":1,"bbox":[58,277,320,72]}
+{"kind":"textbox","id":"sh/9szih87q","slide":5,"name":"explanation-79","text":"Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.","textPreview":"Mandatory errors come from deterministic rules. AI only adds clearly separated warnings for uncertain exceptions.","textChars":113,"textLines":1,"bbox":[58,380,326,96]}
+{"kind":"shape","id":"sh/utsjad8v","slide":5,"name":"rule-80","bbox":[58,512,324,2]}
+{"kind":"textbox","id":"sh/ve10jipg","slide":5,"name":"rule-types-81","text":"REQUIRED · CONDITIONAL · CROSS-FIELD","textPreview":"REQUIRED · CONDITIONAL · CROSS-FIELD","textChars":36,"textLines":1,"bbox":[58,541,335,20]}
+{"kind":"textbox","id":"sh/ra5gza10","slide":5,"name":"rule-copy-82","text":"Each issue includes a suggested fix and traceable legal basis.","textPreview":"Each issue includes a suggested fix and traceable legal basis.","textChars":62,"textLines":1,"bbox":[58,573,320,55]}
+{"kind":"shape","id":"sh/q9wz65kv","slide":5,"name":"screenshot-frame-83","bbox":[429,188,793,446]}
+{"kind":"image","id":"im/6103md4j","slide":5,"name":"","geometry":"roundRect","alt":"Live pre-submission error detection","bbox":[435,194,781,434]}
+{"kind":"notes","id":"nt/m7scrq","slide":5,"text":""}
+{"kind":"slide","id":"sl/g99l7z","slide":6,"title":"ACCURACY + SAFETY","textShapes":17}
+{"kind":"textbox","id":"sh/y103y54j","slide":6,"name":"eyebrow-85","text":"ACCURACY + SAFETY","textPreview":"ACCURACY + SAFETY","textChars":17,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/l4bmtkna","slide":6,"name":"title-86","text":"Trust is engineered into the decision path.","textPreview":"Trust is engineered into the decision path.","textChars":43,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/k32l0fmp","slide":6,"name":"footer-87","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/76t4vu5g","slide":6,"name":"page-88","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/65k32p4v","slide":6,"name":"lede-89","text":"AI interprets. Rules validate. Officers decide exceptions.","textPreview":"AI interprets. Rules validate. Officers decide exceptions.","textChars":58,"textLines":1,"bbox":[58,151,1050,46]}
+{"kind":"shape","id":"sh/t8bmxkn6","slide":6,"name":"rule-90","bbox":[252,352,778,3]}
+{"kind":"shape","id":"sh/872l4fml","slide":6,"name":"trust-panel-91","bbox":[58,225,338,320]}
+{"kind":"shape","id":"sh/napkjq5w","slide":6,"name":"trust-panel-92","bbox":[471,225,338,320]}
+{"kind":"shape","id":"sh/m9g3ql4b","slide":6,"name":"trust-panel-93","bbox":[884,225,338,320]}
+{"kind":"shape","id":"sh/gbi5krmt","slide":6,"name":"arrow-node-94","bbox":[376,333,40,40]}
+{"kind":"shape","id":"sh/hcrmdwne","slide":6,"name":"arrow-node-95","bbox":[789,333,40,40]}
+{"kind":"textbox","id":"sh/u90nih4n","slide":6,"name":"arrow-96","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[376,338,40,24]}
+{"kind":"textbox","id":"sh/fa94bm58","slide":6,"name":"arrow-97","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[789,338,40,24]}
+{"kind":"textbox","id":"sh/4z25orm5","slide":6,"name":"layer-label-98","text":"01 · AI LAYER","textPreview":"01 · AI LAYER","textChars":13,"textLines":1,"bbox":[84,255,276,20]}
+{"kind":"textbox","id":"sh/p0b6hw3a","slide":6,"name":"layer-title-99","text":"Understand\nthe situation","textPreview":"Understand | the situation","textChars":24,"textLines":2,"bbox":[84,304,270,84]}
+{"kind":"textbox","id":"sh/2d0nmh4z","slide":6,"name":"layer-copy-100","text":"Extract facts, classify cases, and explain the next step in plain Vietnamese.","textPreview":"Extract facts, classify cases, and explain the next step in plain Vietnamese.","textChars":77,"textLines":1,"bbox":[84,420,270,84]}
+{"kind":"textbox","id":"sh/3yt4fmlk","slide":6,"name":"layer-label-101","text":"02 · RULE LAYER","textPreview":"02 · RULE LAYER","textChars":15,"textLines":1,"bbox":[497,255,276,20]}
+{"kind":"textbox","id":"sh/k3y5c7ml","slide":6,"name":"layer-title-102","text":"Validate\nwhat matters","textPreview":"Validate | what matters","textChars":21,"textLines":2,"bbox":[497,304,270,84]}
+{"kind":"textbox","id":"sh/547m5cn6","slide":6,"name":"layer-copy-103","text":"Versioned checklists, validation rules, documents, and legal references live in the backend.","textPreview":"Versioned checklists, validation rules, documents, and legal references live in the backend.","textChars":92,"textLines":1,"bbox":[497,420,270,84]}
+{"kind":"textbox","id":"sh/lofut4by","slide":6,"name":"layer-label-104","text":"03 · HUMAN LAYER","textPreview":"03 · HUMAN LAYER","textChars":16,"textLines":1,"bbox":[910,255,276,20]}
+{"kind":"textbox","id":"sh/0n6tkzad","slide":6,"name":"layer-title-105","text":"Handle\nexceptions","textPreview":"Handle | exceptions","textChars":17,"textLines":2,"bbox":[910,304,270,84]}
+{"kind":"textbox","id":"sh/zmxcruts","slide":6,"name":"layer-copy-106","text":"Rare, conflicting, or uncertain cases are escalated for civil-status officer confirmation.","textPreview":"Rare, conflicting, or uncertain cases are escalated for civil-status officer confirmation.","textChars":90,"textLines":1,"bbox":[910,420,270,84]}
+{"kind":"shape","id":"sh/ylobips7","slide":6,"name":"source-band-107","bbox":[58,574,1164,64]}
+{"kind":"textbox","id":"sh/9szux4bu","slide":6,"name":"source-copy-108","text":"06 official National Public Service Portal links are exposed by the live /trust endpoint for direct verification.","textPreview":"06 official National Public Service Portal links are exposed by the live /trust endpoint for direct verification.","textChars":113,"textLines":1,"bbox":[82,594,1118,26]}
+{"kind":"notes","id":"nt/g99l7z","slide":6,"text":""}
+{"kind":"slide","id":"sl/nyjeqq","slide":7,"title":"SYSTEM DESIGN","textShapes":12}
+{"kind":"textbox","id":"sh/03exwz61","slide":7,"name":"eyebrow-110","text":"SYSTEM DESIGN","textPreview":"SYSTEM DESIGN","textChars":13,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/z25w3u5g","slide":7,"name":"title-111","text":"A production-shaped architecture, not a mockup.","textPreview":"A production-shaped architecture, not a mockup.","textChars":47,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/e1cfupov","slide":7,"name":"footer-112","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/dg3e1kna","slide":7,"name":"page-113","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"shape","id":"sh/cfuxsf6p","slide":7,"name":"architecture-frame-114","bbox":[58,164,760,472]}
+{"kind":"textbox","id":"sh/relwzu54","slide":7,"name":"stack-label-115","text":"CITIZEN + OFFICER UX","textPreview":"CITIZEN + OFFICER UX","textChars":20,"textLines":1,"bbox":[864,177,330,18]}
+{"kind":"textbox","id":"sh/qdcfqpoz","slide":7,"name":"stack-value-116","text":"Next.js 16 · Tailwind CSS 4","textPreview":"Next.js 16 · Tailwind CSS 4","textChars":27,"textLines":1,"bbox":[864,205,340,28]}
+{"kind":"shape","id":"sh/xc7ydone","slide":7,"name":"rule-117","bbox":[864,252,338,1]}
+{"kind":"textbox","id":"sh/wbyx4j69","slide":7,"name":"stack-label-118","text":"TRUSTED SERVICE LAYER","textPreview":"TRUSTED SERVICE LAYER","textChars":21,"textLines":1,"bbox":[864,278,330,18]}
+{"kind":"textbox","id":"sh/25wb690n","slide":7,"name":"stack-value-119","text":"FastAPI · SQLAlchemy · rule engine · PDF","textPreview":"FastAPI · SQLAlchemy · rule engine · PDF","textChars":40,"textLines":1,"bbox":[864,306,340,52]}
+{"kind":"shape","id":"sh/n65czeh8","slide":7,"name":"rule-120","bbox":[864,379,338,1]}
+{"kind":"textbox","id":"sh/o7et8jit","slide":7,"name":"stack-label-121","text":"EVIDENCE + AI","textPreview":"EVIDENCE + AI","textChars":13,"textLines":1,"bbox":[864,405,330,18]}
+{"kind":"textbox","id":"sh/psnu1oze","slide":7,"name":"stack-value-122","text":"Neon Postgres · official sources · OpenAI API","textPreview":"Neon Postgres · official sources · OpenAI API","textChars":45,"textLines":1,"bbox":[864,433,340,52]}
+{"kind":"shape","id":"sh/e1cb2p0r","slide":7,"name":"models-123","bbox":[864,492,338,144]}
+{"kind":"textbox","id":"sh/f2lcvuhw","slide":7,"name":"models-label-124","text":"MODELS","textPreview":"MODELS","textChars":6,"textLines":1,"bbox":[888,514,290,18]}
+{"kind":"textbox","id":"sh/03et4zih","slide":7,"name":"models-copy-125","text":"gpt-4.1-mini · classification + conversation\ngpt-4o-transcribe · Vietnamese speech","textPreview":"gpt-4.1-mini · classification + conversation | gpt-4o-transcribe · Vietnamese speech","textChars":82,"textLines":2,"bbox":[888,542,290,78]}
+{"kind":"image","id":"im/mpkjaxcr","slide":7,"name":"","geometry":"roundRect","alt":"CivicPath AI system architecture","bbox":[68,174,740,452]}
+{"kind":"notes","id":"nt/nyjeqq","slide":7,"text":""}
+{"kind":"slide","id":"sl/n1c0wj","slide":8,"title":"CAPABILITY 3","textShapes":23}
+{"kind":"textbox","id":"sh/3alcbm5g","slide":8,"name":"eyebrow-127","text":"CAPABILITY 3","textPreview":"CAPABILITY 3","textChars":12,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/4butkr61","slide":8,"name":"title-128","text":"Built for current portals—not another app.","textPreview":"Built for current portals—not another app.","textChars":42,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/5w3udwnm","slide":8,"name":"footer-129","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/qxwbmho7","slide":8,"name":"page-130","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/ry5cfm5s","slide":8,"name":"lede-131","text":"Embed the same trusted workflow through an API, widget, or chatbot while keeping data and AI keys server-side.","textPreview":"Embed the same trusted workflow through an API, widget, or chatbot while keeping data and AI keys server-side.","textChars":110,"textLines":1,"bbox":[58,151,1060,54]}
+{"kind":"textbox","id":"sh/szetor6d","slide":8,"name":"integration-claim-132","text":"Drop-in\nintegration","textPreview":"Drop-in | integration","textChars":19,"textLines":2,"bbox":[58,245,390,96]}
+{"kind":"textbox","id":"sh/d0nuhwny","slide":8,"name":"mode-133","text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[58,391,108,38]}
+{"kind":"textbox","id":"sh/e1wbq143","slide":8,"name":"mode-134","text":"Portal widget","textPreview":"Portal widget","textChars":13,"textLines":1,"bbox":[58,451,218,38]}
+{"kind":"textbox","id":"sh/f25cj65o","slide":8,"name":"mode-135","text":"Chatbot","textPreview":"Chatbot","textChars":7,"textLines":1,"bbox":[58,511,140,38]}
+{"kind":"textbox","id":"sh/76p4vipw","slide":8,"name":"integration-note-136","text":"One backend contract. Multiple citizen touchpoints.","textPreview":"One backend contract. Multiple citizen touchpoints.","textChars":51,"textLines":1,"bbox":[58,594,390,28]}
+{"kind":"shape","id":"sh/6lw3md8b","slide":8,"name":"api-panel-137","bbox":[511,221,711,417]}
+{"kind":"textbox","id":"sh/t87mxs72","slide":8,"name":"api-label-138","text":"CORE API","textPreview":"CORE API","textChars":8,"textLines":1,"bbox":[548,253,620,20]}
+{"kind":"shape","id":"sh/87ylonqh","slide":8,"name":"rule-139","bbox":[548,290,637,1]}
+{"kind":"textbox","id":"sh/ji5kripk","slide":8,"name":"verb-140","text":"POST","textPreview":"POST","textChars":4,"textLines":1,"bbox":[548,318,80,24]}
+{"kind":"textbox","id":"sh/yhw3yd8f","slide":8,"name":"endpoint-141","text":"/sessions","textPreview":"/sessions","textChars":9,"textLines":1,"bbox":[644,318,500,24]}
+{"kind":"textbox","id":"sh/lkn2ts7q","slide":8,"name":"verb-142","text":"POST","textPreview":"POST","textChars":4,"textLines":1,"bbox":[548,367,80,24]}
+{"kind":"textbox","id":"sh/kjel0nq5","slide":8,"name":"endpoint-143","text":"/intake/message","textPreview":"/intake/message","textChars":15,"textLines":1,"bbox":[644,367,500,24]}
+{"kind":"textbox","id":"sh/3e9432p4","slide":8,"name":"verb-144","text":"GET","textPreview":"GET","textChars":3,"textLines":1,"bbox":[548,416,80,24]}
+{"kind":"textbox","id":"sh/id03ux8j","slide":8,"name":"endpoint-145","text":"/checklist/{session_id}","textPreview":"/checklist/{session_id}","textChars":23,"textLines":1,"bbox":[644,416,500,24]}
+{"kind":"textbox","id":"sh/e9k721sr","slide":8,"name":"verb-146","text":"POST","textPreview":"POST","textChars":4,"textLines":1,"bbox":[548,465,80,24]}
+{"kind":"textbox","id":"sh/zatov69c","slide":8,"name":"endpoint-147","text":"/precheck","textPreview":"/precheck","textChars":9,"textLines":1,"bbox":[644,465,500,24]}
+{"kind":"textbox","id":"sh/0b2p4bax","slide":8,"name":"verb-148","text":"GET","textPreview":"GET","textChars":3,"textLines":1,"bbox":[548,514,80,24]}
+{"kind":"textbox","id":"sh/1wb6xgr2","slide":8,"name":"endpoint-149","text":"/sessions/{id}/birth-registration.pdf","textPreview":"/sessions/{id}/birth-registration.pdf","textChars":37,"textLines":1,"bbox":[644,514,500,24]}
+{"kind":"textbox","id":"sh/mx476lsn","slide":8,"name":"verb-150","text":"GET","textPreview":"GET","textChars":3,"textLines":1,"bbox":[548,563,80,24]}
+{"kind":"textbox","id":"sh/nydozq98","slide":8,"name":"endpoint-151","text":"/trust","textPreview":"/trust","textChars":6,"textLines":1,"bbox":[644,563,500,24]}
+{"kind":"notes","id":"nt/n1c0wj","slide":8,"text":""}
+{"kind":"slide","id":"sl/6enffv","slide":9,"title":"LIVE PRODUCT · FULL-SIZE PDF PREVIEW","textShapes":2}
+{"kind":"shape","id":"sh/h0bu10j6","slide":9,"name":"proof-header-153","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/udkv6lkv","slide":9,"name":"proof-title-154","text":"LIVE PRODUCT · FULL-SIZE PDF PREVIEW","textPreview":"LIVE PRODUCT · FULL-SIZE PDF PREVIEW","textChars":36,"textLines":1,"bbox":[58,18,900,22]}
+{"kind":"textbox","id":"sh/vetczq10","slide":9,"name":"page-155","text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1164,18,58,22]}
+{"kind":"image","id":"im/l4fm14z6","slide":9,"name":"","geometry":"roundRect","alt":"Full-size live generated PDF preview","bbox":[0,70,1280,630]}
+{"kind":"notes","id":"nt/6enffv","slide":9,"text":""}
+{"kind":"slide","id":"sl/eg5x7j","slide":10,"title":"PILOT ROADMAP","textShapes":19}
+{"kind":"textbox","id":"sh/e5wfmhgf","slide":10,"name":"eyebrow-157","text":"PILOT ROADMAP","textPreview":"PILOT ROADMAP","textChars":13,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/18nyxwfq","slide":10,"name":"title-158","text":"A 90-day pilot can prove value safely.","textPreview":"A 90-day pilot can prove value safely.","textChars":38,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/g7exory5","slide":10,"name":"footer-159","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/r25wr2ho","slide":10,"name":"page-160","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/61wfixg3","slide":10,"name":"lede-161","text":"Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.","textPreview":"Start narrow with birth registration, measure rigorously, and scale only after the evidence is strong.","textChars":102,"textLines":1,"bbox":[58,151,1050,48]}
+{"kind":"shape","id":"sh/t4nytczu","slide":10,"name":"rule-162","bbox":[102,362,1060,3]}
+{"kind":"shape","id":"sh/s3exk7y9","slide":10,"name":"milestone-163","bbox":[104,341,44,44]}
+{"kind":"shape","id":"sh/jelwn2hs","slide":10,"name":"milestone-164","bbox":[509,341,44,44]}
+{"kind":"shape","id":"sh/idcfexg7","slide":10,"name":"milestone-165","bbox":[914,341,44,44]}
+{"kind":"textbox","id":"sh/0ve94nyh","slide":10,"name":"milestone-number-166","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[104,353,44,18]}
+{"kind":"textbox","id":"sh/1wnadszm","slide":10,"name":"milestone-number-167","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[509,353,44,18]}
+{"kind":"textbox","id":"sh/etwr2dgb","slide":10,"name":"milestone-number-168","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[914,353,44,18]}
+{"kind":"textbox","id":"sh/zu5sbihw","slide":10,"name":"phase-label-169","text":"WEEKS 0–2","textPreview":"WEEKS 0–2","textChars":9,"textLines":1,"bbox":[58,239,250,20]}
+{"kind":"textbox","id":"sh/cre90ny5","slide":10,"name":"phase-title-170","text":"Align","textPreview":"Align","textChars":5,"textLines":1,"bbox":[58,274,250,34]}
+{"kind":"textbox","id":"sh/dsna98zq","slide":10,"name":"phase-copy-171","text":"Confirm local rules, source ownership, audit process, and pilot baseline.","textPreview":"Confirm local rules, source ownership, audit process, and pilot baseline.","textChars":73,"textLines":1,"bbox":[58,410,300,86]}
+{"kind":"textbox","id":"sh/qpcryd0z","slide":10,"name":"phase-label-172","text":"WEEKS 3–6","textPreview":"WEEKS 3–6","textChars":9,"textLines":1,"bbox":[463,239,250,20]}
+{"kind":"textbox","id":"sh/rq5s7ihk","slide":10,"name":"phase-title-173","text":"Integrate","textPreview":"Integrate","textChars":9,"textLines":1,"bbox":[463,274,250,34]}
+{"kind":"textbox","id":"sh/wnytc7y9","slide":10,"name":"phase-copy-174","text":"Embed in one portal, onboard two pilot offices, and validate end-to-end operations.","textPreview":"Embed in one portal, onboard two pilot offices, and validate end-to-end operations.","textChars":83,"textLines":1,"bbox":[463,410,300,86]}
+{"kind":"textbox","id":"sh/xo7alczu","slide":10,"name":"phase-label-175","text":"WEEKS 7–12","textPreview":"WEEKS 7–12","textChars":10,"textLines":1,"bbox":[868,239,250,20]}
+{"kind":"textbox","id":"sh/54napcry","slide":10,"name":"phase-title-176","text":"Measure","textPreview":"Measure","textChars":7,"textLines":1,"bbox":[868,274,250,34]}
+{"kind":"textbox","id":"sh/k3u9w7qt","slide":10,"name":"phase-copy-177","text":"Audit accuracy, citizen completion, preventable corrections, and officer workload.","textPreview":"Audit accuracy, citizen completion, preventable corrections, and officer workload.","textChars":82,"textLines":1,"bbox":[868,410,300,86]}
+{"kind":"shape","id":"sh/j2lsn298","slide":10,"name":"partners-178","bbox":[58,554,1164,84]}
+{"kind":"textbox","id":"sh/ihcrux8n","slide":10,"name":"partners-label-179","text":"PILOT PARTNERS","textPreview":"PILOT PARTNERS","textChars":14,"textLines":1,"bbox":[82,577,200,18]}
+{"kind":"textbox","id":"sh/xg3alsr2","slide":10,"name":"partners-copy-180","text":"1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison","textPreview":"1 portal owner   ·   2 pilot offices   ·   NIDit regulatory liaison","textChars":67,"textLines":1,"bbox":[82,605,1080,24]}
+{"kind":"notes","id":"nt/eg5x7j","slide":10,"text":""}
+{"kind":"slide","id":"sl/oxui2y","slide":11,"title":"PROPOSED DECISION GATES","textShapes":18}
+{"kind":"textbox","id":"sh/a50n6907","slide":11,"name":"eyebrow-182","text":"PROPOSED DECISION GATES","textPreview":"PROPOSED DECISION GATES","textChars":23,"textLines":1,"bbox":[58,40,700,22]}
+{"kind":"textbox","id":"sh/x8r614ji","slide":11,"name":"title-183","text":"Pilot success is measurable.","textPreview":"Pilot success is measurable.","textChars":28,"textLines":1,"bbox":[58,72,1130,74]}
+{"kind":"textbox","id":"sh/w7i58jix","slide":11,"name":"footer-184","text":"CivicPath AI · Smart Government","textPreview":"CivicPath AI · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/ni9ovu1g","slide":11,"name":"page-185","text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"textbox","id":"sh/mhgn2p0v","slide":11,"name":"target-note-186","text":"These are targets for the 90-day pilot—not claimed production results.","textPreview":"These are targets for the 90-day pilot—not claimed production results.","textChars":70,"textLines":1,"bbox":[58,151,900,32]}
+{"kind":"shape","id":"sh/9kr6x4jm","slide":11,"name":"target-187","bbox":[58,226,267,351]}
+{"kind":"shape","id":"sh/oji54zi1","slide":11,"name":"target-188","bbox":[357,226,267,351]}
+{"kind":"shape","id":"sh/7eto7y1k","slide":11,"name":"target-189","bbox":[656,226,267,351]}
+{"kind":"shape","id":"sh/6dknet0f","slide":11,"name":"target-190","bbox":[955,226,267,351]}
+{"kind":"textbox","id":"sh/gbilgnix","slide":11,"name":"metric-191","text":"≥95%","textPreview":"≥95%","textChars":4,"textLines":1,"bbox":[82,261,220,70]}
+{"kind":"textbox","id":"sh/1cr29sji","slide":11,"name":"metric-label-192","text":"Checklist alignment","textPreview":"Checklist alignment","textChars":19,"textLines":1,"bbox":[82,359,220,54]}
+{"kind":"textbox","id":"sh/e90jed0r","slide":11,"name":"metric-copy-193","text":"with current regulation in monthly expert audits","textPreview":"with current regulation in monthly expert audits","textChars":48,"textLines":1,"bbox":[82,442,220,78]}
+{"kind":"textbox","id":"sh/fa9k7i1c","slide":11,"name":"metric-194","text":"≥30%","textPreview":"≥30%","textChars":4,"textLines":1,"bbox":[381,261,220,70]}
+{"kind":"textbox","id":"sh/s7i1c3i1","slide":11,"name":"metric-label-195","text":"Fewer preventable\ncorrections","textPreview":"Fewer preventable | corrections","textChars":29,"textLines":2,"bbox":[381,359,220,60]}
+{"kind":"textbox","id":"sh/t8r258j6","slide":11,"name":"metric-copy-196","text":"versus the pilot baseline","textPreview":"versus the pilot baseline","textChars":25,"textLines":1,"bbox":[381,462,220,50]}
+{"kind":"textbox","id":"sh/650jad0v","slide":11,"name":"metric-197","text":"≥25%","textPreview":"≥25%","textChars":4,"textLines":1,"bbox":[680,261,220,70]}
+{"kind":"textbox","id":"sh/r69k3i1g","slide":11,"name":"metric-label-198","text":"Fewer routine\nclarification contacts","textPreview":"Fewer routine | clarification contacts","textChars":36,"textLines":2,"bbox":[680,359,220,60]}
+{"kind":"textbox","id":"sh/4jy183ip","slide":11,"name":"metric-copy-199","text":"for questions covered by the guide","textPreview":"for questions covered by the guide","textChars":34,"textLines":1,"bbox":[680,462,220,50]}
+{"kind":"textbox","id":"sh/547218ja","slide":11,"name":"metric-200","text":"≥80%","textPreview":"≥80%","textChars":4,"textLines":1,"bbox":[979,261,220,70]}
+{"kind":"textbox","id":"sh/lozqp07m","slide":11,"name":"metric-label-201","text":"Guided-flow\ncompletion","textPreview":"Guided-flow | completion","textChars":22,"textLines":2,"bbox":[979,359,220,60]}
+{"kind":"textbox","id":"sh/kn69gvqh","slide":11,"name":"metric-copy-202","text":"across mobile and desktop citizens","textPreview":"across mobile and desktop citizens","textChars":34,"textLines":1,"bbox":[979,462,220,50]}
+{"kind":"textbox","id":"sh/zmx8nqpw","slide":11,"name":"decision-rule-203","text":"Scale only when accuracy and safety gates pass.","textPreview":"Scale only when accuracy and safety gates pass.","textChars":47,"textLines":1,"bbox":[58,610,1164,28]}
+{"kind":"notes","id":"nt/oxui2y","slide":11,"text":""}
+{"kind":"slide","id":"sl/0f1g8t","slide":12,"title":"THE DECISION","textShapes":16}
+{"kind":"shape","id":"sh/sn65sfu9","slide":12,"name":"box-205","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/rmx4zado","slide":12,"name":"box-206","bbox":[0,0,12,720]}
+{"kind":"textbox","id":"sh/qlonqpc3","slide":12,"name":"eyebrow-207","text":"THE DECISION","textPreview":"THE DECISION","textChars":12,"textLines":1,"bbox":[58,48,320,20]}
+{"kind":"textbox","id":"sh/1cz654vq","slide":12,"name":"closing-title-208","text":"Let every citizen\narrive ready.","textPreview":"Let every citizen | arrive ready.","textChars":31,"textLines":2,"bbox":[58,108,650,150]}
+{"kind":"textbox","id":"sh/0b65wzu5","slide":12,"name":"closing-lede-209","text":"Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.","textPreview":"Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.","textChars":132,"textLines":1,"bbox":[58,300,650,92]}
+{"kind":"shape","id":"sh/faxo3udk","slide":12,"name":"rule-210","bbox":[58,433,632,1]}
+{"kind":"textbox","id":"sh/e9onupcf","slide":12,"name":"ask-number-211","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[58,469,46,24]}
+{"kind":"textbox","id":"sh/pgz694v2","slide":12,"name":"ask-212","text":"Approve the pilot","textPreview":"Approve the pilot","textChars":17,"textLines":1,"bbox":[116,469,235,24]}
+{"kind":"textbox","id":"sh/ofq50zuh","slide":12,"name":"ask-number-213","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[58,518,46,24]}
+{"kind":"textbox","id":"sh/qpc3u1g3","slide":12,"name":"ask-214","text":"Appoint a regulatory liaison","textPreview":"Appoint a regulatory liaison","textChars":28,"textLines":1,"bbox":[116,518,310,24]}
+{"kind":"textbox","id":"sh/rql436xo","slide":12,"name":"ask-number-215","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[58,567,46,24]}
+{"kind":"textbox","id":"sh/crulwby9","slide":12,"name":"ask-216","text":"Connect one portal and two offices","textPreview":"Connect one portal and two offices","textChars":34,"textLines":1,"bbox":[116,567,360,24]}
+{"kind":"shape","id":"sh/dsnm5gfu","slide":12,"name":"closing-card-217","bbox":[790,88,402,518]}
+{"kind":"textbox","id":"sh/edwny1gf","slide":12,"name":"brand-218","text":"CIVICPATH AI","textPreview":"CIVICPATH AI","textChars":12,"textLines":1,"bbox":[842,204,300,34]}
+{"kind":"textbox","id":"sh/ze5476xk","slide":12,"name":"closing-product-219","text":"AI-guided public service procedures","textPreview":"AI-guided public service procedures","textChars":35,"textLines":1,"bbox":[842,265,300,62]}
+{"kind":"textbox","id":"sh/0fe50be5","slide":12,"name":"live-label-220","text":"LIVE DEMO","textPreview":"LIVE DEMO","textChars":9,"textLines":1,"bbox":[842,380,300,18]}
+{"kind":"textbox","id":"sh/1gnm9gfq","slide":12,"name":"closing-url-221","text":"ai-guided-public-service-\nprocedures.vercel.app","textPreview":"ai-guided-public-service- | procedures.vercel.app","textChars":47,"textLines":2,"bbox":[842,412,300,60]}
+{"kind":"textbox","id":"sh/uhs3mhgv","slide":12,"name":"institute-222","text":"National Institute for Digital Technologies\nand Digital Transformation (NIDit)","textPreview":"National Institute for Digital Technologies | and Digital Transformation (NIDit)","textChars":78,"textLines":2,"bbox":[842,522,300,46]}
+{"kind":"textbox","id":"sh/fi14vmxg","slide":12,"name":"footer-223","text":"Lonely Stone · Smart Government","textPreview":"Lonely Stone · Smart Government","textChars":31,"textLines":1,"bbox":[58,679,520,18]}
+{"kind":"textbox","id":"sh/j2h03id8","slide":12,"name":"page-224","text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1164,679,58,18]}
+{"kind":"image","id":"im/14jitovi","slide":12,"name":"","geometry":"roundRect","alt":"CivicPath AI logo","bbox":[946,116,88,66]}
+{"kind":"notes","id":"nt/0f1g8t","slide":12,"text":""}

@@ -1,0 +1,2770 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/uas0ap",
+    "id": "uas0ap",
+    "slide": 12,
+    "layoutId": "ac4842fc-ce61-40d8-9218-084279eb5e4a",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "32a3e6de-5213-4865-8a1a-9d12aa8d5f5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#063B82",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ac4842fc-ce61-40d8-9218-084279eb5e4a",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "32a3e6de-5213-4865-8a1a-9d12aa8d5f5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "32a3e6de-5213-4865-8a1a-9d12aa8d5f5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/elcnetcr",
+      "id": "1",
+      "name": "box-214",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#063B82",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1o3698b2",
+      "id": "2",
+      "name": "box-215",
+      "bbox": [
+        0,
+        0,
+        12,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#6DCBF4",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gnu5g3ux",
+      "id": "3",
+      "name": "eyebrow-216",
+      "bbox": [
+        58,
+        48,
+        320,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "THE DECISION",
+      "textPreview": "THE DECISION",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#6DCBF4",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "THE DECISION"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "THE DECISION",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#6DCBF4",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "THE DECISION",
+              "anchor": 1,
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#6DCBF4",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3alobit8",
+      "id": "4",
+      "name": "closing-title-217",
+      "bbox": [
+        58,
+        108,
+        650,
+        150
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "Let every citizen\narrive ready.",
+      "textPreview": "Let every citizen | arrive ready.",
+      "resolvedFontSize": 62,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 62,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Let every citizen"
+          },
+          {
+            "index": 2,
+            "text": "arrive ready."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Let every citizen\narrive ready.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 62,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Let every citizen\narrive ready.",
+              "anchor": 1,
+              "fontSize": 62,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29cnidcn",
+      "id": "5",
+      "name": "closing-lede-218",
+      "bbox": [
+        58,
+        300,
+        650,
+        92
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.",
+      "textPreview": "Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#D7E8FF",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Launch a 90-day birth-registration pilot and prove that accurate"
+          },
+          {
+            "index": 2,
+            "text": "guidance can be both safer for government and simpler for"
+          },
+          {
+            "index": 3,
+            "text": "citizens."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 23,
+            "typeface": "Arial",
+            "color": "#D7E8FF",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.",
+              "anchor": 1,
+              "fontSize": 23,
+              "typeface": "Arial",
+              "color": "#D7E8FF",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pc36d8be",
+      "id": "6",
+      "name": "rule-219",
+      "bbox": [
+        58,
+        433,
+        632,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "fillColor": "#3E6FA8",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/obu5knat",
+      "id": "7",
+      "name": "ask-number-220",
+      "bbox": [
+        58,
+        469,
+        46,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "text": "01",
+      "textPreview": "01",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#6DCBF4",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "01"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 16,
+            "typeface": "Arial",
+            "color": "#6DCBF4",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01",
+              "anchor": 1,
+              "fontSize": 16,
+              "typeface": "Arial",
+              "color": "#6DCBF4",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/be5ofitk",
+      "id": "8",
+      "name": "ask-221",
+      "bbox": [
+        116,
+        469,
+        235,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.7"
+      },
+      "geometry": "rect",
+      "text": "Approve the pilot",
+      "textPreview": "Approve the pilot",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Approve the pilot"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Approve the pilot",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Approve the pilot",
+              "anchor": 1,
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qdwnmdsz",
+      "id": "9",
+      "name": "ask-number-222",
+      "bbox": [
+        58,
+        518,
+        46,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.8"
+      },
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#6DCBF4",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 16,
+            "typeface": "Arial",
+            "color": "#6DCBF4",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "anchor": 1,
+              "fontSize": 16,
+              "typeface": "Arial",
+              "color": "#6DCBF4",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czatcvqx",
+      "id": "10",
+      "name": "ask-223",
+      "bbox": [
+        116,
+        518,
+        310,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "text": "Appoint a regulatory liaison",
+      "textPreview": "Appoint a regulatory liaison",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Appoint a regulatory liaison"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Appoint a regulatory liaison",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Appoint a regulatory liaison",
+              "anchor": 1,
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0ja507i",
+      "id": "11",
+      "name": "ask-number-224",
+      "bbox": [
+        58,
+        567,
+        46,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.10"
+      },
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#6DCBF4",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 16,
+            "typeface": "Arial",
+            "color": "#6DCBF4",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "anchor": 1,
+              "fontSize": 16,
+              "typeface": "Arial",
+              "color": "#6DCBF4",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qdsbal8r",
+      "id": "12",
+      "name": "ask-225",
+      "bbox": [
+        116,
+        567,
+        360,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.11"
+      },
+      "geometry": "rect",
+      "text": "Connect one portal and two offices",
+      "textPreview": "Connect one portal and two offices",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Connect one portal and two offices"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Connect one portal and two offices",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Connect one portal and two offices",
+              "anchor": 1,
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/by1s3qpc",
+      "id": "13",
+      "name": "closing-card-226",
+      "bbox": [
+        790,
+        88,
+        402,
+        518
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.12"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/03utgvqt",
+      "id": "14",
+      "name": "brand-227",
+      "bbox": [
+        842,
+        204,
+        300,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.13"
+      },
+      "geometry": "rect",
+      "text": "CIVICPATH AI",
+      "textPreview": "CIVICPATH AI",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#063B82",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CIVICPATH AI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CIVICPATH AI",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 24,
+            "typeface": "Arial",
+            "color": "#063B82",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CIVICPATH AI",
+              "anchor": 1,
+              "fontSize": 24,
+              "typeface": "Arial",
+              "color": "#063B82",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l43u907e",
+      "id": "15",
+      "name": "closing-product-228",
+      "bbox": [
+        842,
+        265,
+        300,
+        62
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.14"
+      },
+      "geometry": "rect",
+      "text": "AI-guided public service procedures",
+      "textPreview": "AI-guided public service procedures",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "Arial",
+        "color": "#0A1628",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AI-guided public service"
+          },
+          {
+            "index": 2,
+            "text": "procedures"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AI-guided public service procedures",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 25,
+            "typeface": "Arial",
+            "color": "#0A1628",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI-guided public service procedures",
+              "anchor": 1,
+              "fontSize": 25,
+              "typeface": "Arial",
+              "color": "#0A1628",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1sbe583",
+      "id": "16",
+      "name": "live-label-229",
+      "bbox": [
+        842,
+        380,
+        300,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.15"
+      },
+      "geometry": "rect",
+      "text": "LIVE DEMO",
+      "textPreview": "LIVE DEMO",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#0B5ED7",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LIVE DEMO"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LIVE DEMO",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#0B5ED7",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LIVE DEMO",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#0B5ED7",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z21c7apo",
+      "id": "17",
+      "name": "closing-url-230",
+      "bbox": [
+        842,
+        412,
+        300,
+        60
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.16"
+      },
+      "geometry": "rect",
+      "text": "ai-guided-public-service-\nprocedures.vercel.app",
+      "textPreview": "ai-guided-public-service- | procedures.vercel.app",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Arial",
+        "color": "#063B82",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ai-guided-public-service-"
+          },
+          {
+            "index": 2,
+            "text": "procedures.vercel.app"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ai-guided-public-service-\nprocedures.vercel.app",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 18,
+            "typeface": "Arial",
+            "color": "#063B82",
+            "bold": true,
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ai-guided-public-service-\nprocedures.vercel.app",
+              "anchor": 1,
+              "fontSize": 18,
+              "typeface": "Arial",
+              "color": "#063B82",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87utkf65",
+      "id": "18",
+      "name": "institute-231",
+      "bbox": [
+        842,
+        522,
+        300,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.17"
+      },
+      "geometry": "rect",
+      "text": "National Institute for Digital Technologies\nand Digital Transformation (NIDit)",
+      "textPreview": "National Institute for Digital Technologies | and Digital Transformation (NIDit)",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Arial",
+        "color": "#5D6B80",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "National Institute for Digital Technologies"
+          },
+          {
+            "index": 2,
+            "text": "and Digital Transformation (NIDit)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "National Institute for Digital Technologies\nand Digital Transformation (NIDit)",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 14,
+            "typeface": "Arial",
+            "color": "#5D6B80",
+            "alignment": "center",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "National Institute for Digital Technologies\nand Digital Transformation (NIDit)",
+              "anchor": 1,
+              "fontSize": 14,
+              "typeface": "Arial",
+              "color": "#5D6B80",
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/983udk7q",
+      "id": "19",
+      "name": "footer-232",
+      "bbox": [
+        58,
+        679,
+        520,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.18"
+      },
+      "geometry": "rect",
+      "text": "Lonely Stone · Smart Government",
+      "textPreview": "Lonely Stone · Smart Government",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#9CC3F5",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Lonely Stone · Smart Government"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Lonely Stone · Smart Government",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#9CC3F5",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Lonely Stone · Smart Government",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#9CC3F5",
+              "alignment": "left",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hozaxkzu",
+      "id": "20",
+      "name": "page-233",
+      "bbox": [
+        1164,
+        679,
+        58,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.19"
+      },
+      "geometry": "rect",
+      "text": "12",
+      "textPreview": "12",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial",
+        "color": "#9CC3F5",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 11,
+            "typeface": "Arial",
+            "color": "#9CC3F5",
+            "alignment": "right",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12",
+              "anchor": 1,
+              "fontSize": 11,
+              "typeface": "Arial",
+              "color": "#9CC3F5",
+              "alignment": "right",
+              "verticalAlignment": "top",
+              "wrap": "square",
+              "autoFit": "none",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/nmtsvid0",
+      "id": "21",
+      "bbox": [
+        946,
+        116,
+        88,
+        66
+      ],
+      "geometry": "roundRect",
+      "alt": "CivicPath AI logo",
+      "contentType": "image/jpeg",
+      "imageFit": "contain",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 18182"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "1ee1c606-8bb7-4438-9b9d-8e0935107adb",
+        "contentType": "image/jpeg",
+        "byteLength": 55357
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "baseUnit": 1,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "slide-layer-234",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "box-214",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/elcnetcr",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "name": "box-215",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 12
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 12,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 12,
+              "height": 720
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 12,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/1o3698b2",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "name": "eyebrow-216",
+            "position": {
+              "left": 58,
+              "top": 48
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 320
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 20
+              }
+            },
+            "intrinsicSize": {
+              "width": 320,
+              "height": 20
+            },
+            "frame": {
+              "left": 58,
+              "top": 48,
+              "width": 320,
+              "height": 20
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 48,
+              "width": 320,
+              "height": 20
+            },
+            "children": [],
+            "text": "THE DECISION",
+            "transform": "none",
+            "element": {
+              "aid": "sh/gnu5g3ux",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "name": "closing-title-217",
+            "position": {
+              "left": 58,
+              "top": 108
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 650
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 150
+              }
+            },
+            "intrinsicSize": {
+              "width": 650,
+              "height": 150
+            },
+            "frame": {
+              "left": 58,
+              "top": 108,
+              "width": 650,
+              "height": 150
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 108,
+              "width": 650,
+              "height": 150
+            },
+            "children": [],
+            "text": "Let every citizen\narrive ready.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/3alobit8",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "name": "closing-lede-218",
+            "position": {
+              "left": 58,
+              "top": 300
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 650
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 92
+              }
+            },
+            "intrinsicSize": {
+              "width": 650,
+              "height": 92
+            },
+            "frame": {
+              "left": 58,
+              "top": 300,
+              "width": 650,
+              "height": 92
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 300,
+              "width": 650,
+              "height": 92
+            },
+            "children": [],
+            "text": "Launch a 90-day birth-registration pilot and prove that accurate guidance can be both safer for government and simpler for citizens.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/29cnidcn",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "shape",
+            "name": "rule-219",
+            "position": {
+              "left": 58,
+              "top": 433
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 632
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 632,
+              "height": 1
+            },
+            "frame": {
+              "left": 58,
+              "top": 433,
+              "width": 632,
+              "height": 1
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 433,
+              "width": 632,
+              "height": 1
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/pc36d8be",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "text",
+            "name": "ask-number-220",
+            "position": {
+              "left": 58,
+              "top": 469
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 46
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 46,
+              "height": 24
+            },
+            "frame": {
+              "left": 58,
+              "top": 469,
+              "width": 46,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 469,
+              "width": 46,
+              "height": 24
+            },
+            "children": [],
+            "text": "01",
+            "transform": "none",
+            "element": {
+              "aid": "sh/obu5knat",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "text",
+            "name": "ask-221",
+            "position": {
+              "left": 116,
+              "top": 469
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 235
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 235,
+              "height": 24
+            },
+            "frame": {
+              "left": 116,
+              "top": 469,
+              "width": 235,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 116,
+              "top": 469,
+              "width": 235,
+              "height": 24
+            },
+            "children": [],
+            "text": "Approve the pilot",
+            "transform": "none",
+            "element": {
+              "aid": "sh/be5ofitk",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "text",
+            "name": "ask-number-222",
+            "position": {
+              "left": 58,
+              "top": 518
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 46
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 46,
+              "height": 24
+            },
+            "frame": {
+              "left": 58,
+              "top": 518,
+              "width": 46,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 518,
+              "width": 46,
+              "height": 24
+            },
+            "children": [],
+            "text": "02",
+            "transform": "none",
+            "element": {
+              "aid": "sh/qdwnmdsz",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "text",
+            "name": "ask-223",
+            "position": {
+              "left": 116,
+              "top": 518
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 310
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 310,
+              "height": 24
+            },
+            "frame": {
+              "left": 116,
+              "top": 518,
+              "width": 310,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 116,
+              "top": 518,
+              "width": 310,
+              "height": 24
+            },
+            "children": [],
+            "text": "Appoint a regulatory liaison",
+            "transform": "none",
+            "element": {
+              "aid": "sh/czatcvqx",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "text",
+            "name": "ask-number-224",
+            "position": {
+              "left": 58,
+              "top": 567
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 46
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 46,
+              "height": 24
+            },
+            "frame": {
+              "left": 58,
+              "top": 567,
+              "width": 46,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 567,
+              "width": 46,
+              "height": 24
+            },
+            "children": [],
+            "text": "03",
+            "transform": "none",
+            "element": {
+              "aid": "sh/d0ja507i",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "text",
+            "name": "ask-225",
+            "position": {
+              "left": 116,
+              "top": 567
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 360
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 360,
+              "height": 24
+            },
+            "frame": {
+              "left": 116,
+              "top": 567,
+              "width": 360,
+              "height": 24
+            },
+            "snappedFrame": {
+              "left": 116,
+              "top": 567,
+              "width": 360,
+              "height": 24
+            },
+            "children": [],
+            "text": "Connect one portal and two offices",
+            "transform": "none",
+            "element": {
+              "aid": "sh/qdsbal8r",
+              "id": "12",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.12",
+            "kind": "shape",
+            "name": "closing-card-226",
+            "position": {
+              "left": 790,
+              "top": 88
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 402
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 518
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 518
+            },
+            "frame": {
+              "left": 790,
+              "top": 88,
+              "width": 402,
+              "height": 518
+            },
+            "snappedFrame": {
+              "left": 790,
+              "top": 88,
+              "width": 402,
+              "height": 518
+            },
+            "children": [],
+            "geometry": "roundRect",
+            "element": {
+              "aid": "sh/by1s3qpc",
+              "id": "13",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.13",
+            "kind": "text",
+            "name": "brand-227",
+            "position": {
+              "left": 842,
+              "top": 204
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 34
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 34
+            },
+            "frame": {
+              "left": 842,
+              "top": 204,
+              "width": 300,
+              "height": 34
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 204,
+              "width": 300,
+              "height": 34
+            },
+            "children": [],
+            "text": "CIVICPATH AI",
+            "transform": "none",
+            "element": {
+              "aid": "sh/03utgvqt",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.14",
+            "kind": "text",
+            "name": "closing-product-228",
+            "position": {
+              "left": 842,
+              "top": 265
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 62
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 62
+            },
+            "frame": {
+              "left": 842,
+              "top": 265,
+              "width": 300,
+              "height": 62
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 265,
+              "width": 300,
+              "height": 62
+            },
+            "children": [],
+            "text": "AI-guided public service procedures",
+            "transform": "none",
+            "element": {
+              "aid": "sh/l43u907e",
+              "id": "15",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.15",
+            "kind": "text",
+            "name": "live-label-229",
+            "position": {
+              "left": 842,
+              "top": 380
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 18
+            },
+            "frame": {
+              "left": 842,
+              "top": 380,
+              "width": 300,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 380,
+              "width": 300,
+              "height": 18
+            },
+            "children": [],
+            "text": "LIVE DEMO",
+            "transform": "none",
+            "element": {
+              "aid": "sh/y1sbe583",
+              "id": "16",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.16",
+            "kind": "text",
+            "name": "closing-url-230",
+            "position": {
+              "left": 842,
+              "top": 412
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 60
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 60
+            },
+            "frame": {
+              "left": 842,
+              "top": 412,
+              "width": 300,
+              "height": 60
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 412,
+              "width": 300,
+              "height": 60
+            },
+            "children": [],
+            "text": "ai-guided-public-service-\nprocedures.vercel.app",
+            "transform": "none",
+            "element": {
+              "aid": "sh/z21c7apo",
+              "id": "17",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.17",
+            "kind": "text",
+            "name": "institute-231",
+            "position": {
+              "left": 842,
+              "top": 522
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 300
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 46
+              }
+            },
+            "intrinsicSize": {
+              "width": 300,
+              "height": 46
+            },
+            "frame": {
+              "left": 842,
+              "top": 522,
+              "width": 300,
+              "height": 46
+            },
+            "snappedFrame": {
+              "left": 842,
+              "top": 522,
+              "width": 300,
+              "height": 46
+            },
+            "children": [],
+            "text": "National Institute for Digital Technologies\nand Digital Transformation (NIDit)",
+            "transform": "none",
+            "element": {
+              "aid": "sh/87utkf65",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.18",
+            "kind": "text",
+            "name": "footer-232",
+            "position": {
+              "left": 58,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 18
+            },
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            },
+            "children": [],
+            "text": "Lonely Stone · Smart Government",
+            "transform": "none",
+            "element": {
+              "aid": "sh/983udk7q",
+              "id": "19",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.19",
+            "kind": "text",
+            "name": "page-233",
+            "position": {
+              "left": 1164,
+              "top": 679
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 58
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 18
+              }
+            },
+            "intrinsicSize": {
+              "width": 58,
+              "height": 18
+            },
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "snappedFrame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            },
+            "children": [],
+            "text": "12",
+            "transform": "none",
+            "element": {
+              "aid": "sh/hozaxkzu",
+              "id": "20",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 12,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 58,
+              "top": 48,
+              "width": 320,
+              "height": 20
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 58,
+              "top": 108,
+              "width": 650,
+              "height": 150
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 58,
+              "top": 300,
+              "width": 650,
+              "height": 92
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 58,
+              "top": 433,
+              "width": 632,
+              "height": 1
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 58,
+              "top": 469,
+              "width": 46,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 116,
+              "top": 469,
+              "width": 235,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 58,
+              "top": 518,
+              "width": 46,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 116,
+              "top": 518,
+              "width": 310,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 58,
+              "top": 567,
+              "width": 46,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 116,
+              "top": 567,
+              "width": 360,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.12",
+            "frame": {
+              "left": 790,
+              "top": 88,
+              "width": 402,
+              "height": 518
+            }
+          },
+          {
+            "path": "0.13",
+            "frame": {
+              "left": 842,
+              "top": 204,
+              "width": 300,
+              "height": 34
+            }
+          },
+          {
+            "path": "0.14",
+            "frame": {
+              "left": 842,
+              "top": 265,
+              "width": 300,
+              "height": 62
+            }
+          },
+          {
+            "path": "0.15",
+            "frame": {
+              "left": 842,
+              "top": 380,
+              "width": 300,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.16",
+            "frame": {
+              "left": 842,
+              "top": 412,
+              "width": 300,
+              "height": 60
+            }
+          },
+          {
+            "path": "0.17",
+            "frame": {
+              "left": 842,
+              "top": 522,
+              "width": 300,
+              "height": 46
+            }
+          },
+          {
+            "path": "0.18",
+            "frame": {
+              "left": 58,
+              "top": 679,
+              "width": 520,
+              "height": 18
+            }
+          },
+          {
+            "path": "0.19",
+            "frame": {
+              "left": 1164,
+              "top": 679,
+              "width": 58,
+              "height": 18
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
